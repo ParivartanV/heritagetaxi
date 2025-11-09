@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home — Heritage Taxi Mysore</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>body{font-family:'Inter',sans-serif}.form-section{transition:all .3s ease-in-out}</style>
+    <script>tailwind.config={theme:{extend:{colors:{primary:tailwind.colors.amber,secondary:tailwind.colors.gray}}}}</script>
+</head>
+<body class="bg-secondary-100 overflow-x-hidden">
+
+  <header class="bg-white/95 backdrop-blur-sm shadow-lg sticky top-0 z-40">
+    <nav class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <div class="flex-shrink-0 flex items-center gap-4">
+          <a href="home.html" class="text-2xl font-bold text-primary-600">Heritage Taxi Mysore</a>
+        </div>
+        <div class="hidden md:flex md:items-center md:space-x-4 lg:space-x-6">
+          <a href="home.html#home" class="font-semibold text-secondary-700 hover:text-primary-600">Home</a>
+          <a href="home.html#services" class="font-semibold text-secondary-700 hover:text-primary-600">Services</a>
+          <a href="home.html#tours" class="font-semibold text-secondary-700 hover:text-primary-600">Tours</a>
+          <a href="home.html#booking-widget" class="font-semibold text-white bg-primary-600 hover:bg-primary-700 px-4 py-2 rounded-lg">Book Now</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container px-4 py-12 mx-auto">
+    <h2 class="text-3xl font-bold text-secondary-900">About</h2>
+    <p class="mt-4 text-secondary-700">A short about page. Explain who you are or what the project does.</p>
+  </main>
+
+  <footer class="bg-secondary-900" aria-labelledby="footer-heading">
+    <h2 id="footer-heading" class="sr-only">Footer</h2>
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div>
+          <h3 class="text-xl font-bold text-white">Heritage Taxi Service Mysore</h3>
+          <p class="mt-4 text-base text-secondary-300">Your trusted partner for exploring Mysore and beyond.</p>
+        </div>
+        <div>
+          <h3 class="text-sm font-semibold text-secondary-400 tracking-wider uppercase">Quick Links</h3>
+        </div>
+        <div>
+          <h3 class="text-sm font-semibold text-secondary-400 tracking-wider uppercase">Contact</h3>
+          <p class="mt-4 text-base text-secondary-300">+91 96112 88339</p>
+        </div>
+      </div>
+      <div class="mt-8 border-t border-secondary-700 pt-8 text-center">
+        <p class="text-base text-secondary-400">&copy; 2025 Heritage Taxi Service Mysore. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/919611288339?text=Hi%20Heritage%20Taxi" target="_blank" class="fixed bottom-6 right-6 z-50 p-4 bg-green-500 rounded-full shadow-lg text-white hover:bg-green-600 transition-transform hover:scale-110">Chat on WhatsApp</a>
+
+</body>
+</html>
