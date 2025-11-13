@@ -1,49 +1,437 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Explore the best of Mysore with our 1-day tour packages. Visit top attractions like Mysore Palace, Chamundi Hills, and more with our reliable taxi service.">
-    <link rel="canonical" href="https://www.heritagetaximysore.com/1-day-tour.html">
-    <title>1 Day Tour Packages - Heritage Taxi Mysore</title>
-    <!-- We'll use Tailwind for modern styling -->
+    <title>Mysore 1-Day Tour Packages | Heritage Taxi Mysore</title>
+    <meta name="description" content="Explore curated 1-day tour packages from Mysore covering royal heritage, temples, waterfalls, wildlife, and scenic escapes with Heritage Taxi Mysore.">
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
     <style>
-        /* Use Inter as the default font */
+        :root {
+            --color-primary-300: #93c5fd;
+            --color-primary-500: #2563eb;
+            --color-primary-600: #1d4ed8;
+            --color-primary-700: #1e3a8a;
+            --color-emerald-500: #059669;
+            --color-emerald-600: #047857;
+            --color-amber-400: #fbbf24;
+            --color-amber-500: #f59e0b;
+            --color-midnight: #0f172a;
+            --color-slate-100: #f1f5f9;
+            --color-slate-200: #e2e8f0;
+            --glass-border: rgba(148, 163, 184, 0.28);
+            --glass-border-strong: rgba(148, 163, 184, 0.45);
+            --glass-shadow: 0 28px 60px -30px rgba(15, 23, 42, 0.6);
+            --glass-shadow-strong: 0 40px 80px -35px rgba(15, 23, 42, 0.75);
+            --radius-xl: 1.5rem;
+            --radius-lg: 1rem;
+            --transition-base: all 0.35s ease;
+        }
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            background-color: #f8fafc; /* Light gray background */
+            font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+            background-image: url('pictures/mehal2.jpeg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: var(--color-midnight);
+            min-height: 100vh;
+            position: relative;
+            line-height: 1.6;
         }
-        /* Removed accordion styles as blocks are now fixed */
-        .dropdown:hover .dropdown-content {
-            display: block;
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(15, 23, 42, 0.85), rgba(30, 64, 175, 0.55), rgba(6, 95, 70, 0.5));
+            opacity: 0.9;
+            backdrop-filter: blur(8px);
+            z-index: 0;
         }
+        body > * {
+            position: relative;
+            z-index: 1;
+        }
+        main {
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+        }
+        .dropdown:hover .dropdown-content { display: block; }
         .dropdown-content {
             display: none;
             position: absolute;
-            background-color: #f9f9f9;
-            min-width: 160px;
-            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            top: calc(100% + 0.5rem);
+            left: 0;
+            background: rgba(10, 12, 17, 0.85);
+            padding: 0.6rem 0;
+            min-width: 220px;
+            border-radius: 1rem;
+            border: 1px solid rgba(148, 163, 184, 0.35);
+            box-shadow: 0 30px 60px -25px rgba(15, 23, 42, 0.7);
+            backdrop-filter: blur(14px);
+            z-index: 50;
+        }
+        .dropdown-content a {
+            display: block;
+            padding: 0.55rem 1rem;
+            font-size: 0.9rem;
+            color: rgba(226, 232, 240, 0.92);
+            transition: var(--transition-base);
+        }
+        .dropdown-content a:hover {
+            background: rgba(37, 99, 235, 0.2);
+            color: #fff;
+            padding-left: 1.2rem;
+        }
+        .site-header {
+            background: rgba(15, 23, 42, 0.82);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(148, 163, 184, 0.25);
+            box-shadow: 0 22px 48px -28px rgba(15, 23, 42, 0.65);
+        }
+        .logo-text {
+            color: #fff;
+            letter-spacing: 0.02em;
+        }
+        .nav-link {
+            font-weight: 600;
+            color: rgba(226, 232, 240, 0.92);
+            padding: 0.35rem 0.65rem;
+            border-radius: 999px;
+            transition: var(--transition-base);
+        }
+        .nav-link svg { opacity: 0.85; }
+        .nav-link:hover {
+            color: #fff;
+            background: rgba(37, 99, 235, 0.18);
+            box-shadow: 0 12px 26px -18px rgba(37, 99, 235, 0.65);
+        }
+        #mobile-menu {
+            background: rgba(15, 23, 42, 0.92);
+            border-bottom: 1px solid rgba(148, 163, 184, 0.25);
+            box-shadow: 0 20px 45px -30px rgba(15, 23, 42, 0.7);
+        }
+        #mobile-menu a {
+            color: rgba(226, 232, 240, 0.9);
+            border-radius: 0.75rem;
+        }
+        #mobile-menu a:hover {
+            background: rgba(37, 99, 235, 0.18);
+            color: #fff;
+        }
+        .primary-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.35rem;
+            padding: 0.6rem 1.4rem;
+            border-radius: 999px;
+            font-weight: 600;
+            color: var(--color-midnight);
+            background: linear-gradient(135deg, var(--color-amber-400), var(--color-amber-500));
+            box-shadow: 0 18px 32px -20px rgba(245, 158, 11, 0.6);
+            transition: var(--transition-base);
+        }
+        .primary-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 26px 44px -18px rgba(245, 158, 11, 0.7);
+            color: var(--color-midnight);
+        }
+        .inner-hero {
+            position: relative;
+            padding: clamp(4rem, 8vw, 6rem) 0;
+            margin: clamp(1.5rem, 5vw, 3rem) clamp(1rem, 4vw, 3rem) 0;
+            border-radius: var(--radius-xl);
+            overflow: hidden;
+            background: linear-gradient(135deg, rgba(15, 23, 42, 0.92), rgba(30, 64, 175, 0.75));
+            box-shadow: 0 40px 80px -50px rgba(15, 23, 42, 0.8);
+            color: #fff;
+        }
+        .inner-hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at 10% 15%, rgba(59, 130, 246, 0.45), transparent 55%), radial-gradient(circle at 80% 80%, rgba(6, 95, 70, 0.55), transparent 65%);
+            opacity: 0.9;
+            pointer-events: none;
+        }
+        .inner-hero > * {
+            position: relative;
             z-index: 1;
         }
-    </style>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'primary': tailwind.colors.amber, // A warm, heritage color
-                        'secondary': tailwind.colors.gray,
-                    }
-                }
+        .inner-hero h1 {
+            font-size: clamp(2.5rem, 5vw, 3.75rem);
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            background: linear-gradient(120deg, #fff, var(--color-primary-300));
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+        .inner-hero p {
+            max-width: 48rem;
+            margin-top: 1rem;
+            color: rgba(226, 232, 240, 0.86);
+            font-size: clamp(1.05rem, 2vw, 1.25rem);
+        }
+        .accent-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.4rem 0.9rem;
+            border-radius: 999px;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.18em;
+            background: rgba(236, 254, 255, 0.2);
+            color: rgba(191, 219, 254, 0.95);
+            font-weight: 700;
+        }
+        .breadcrumb {
+            margin-top: 1.75rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            font-size: 0.95rem;
+            color: rgba(226, 232, 240, 0.78);
+        }
+        .breadcrumb a {
+            color: rgba(224, 231, 255, 0.95);
+            transition: var(--transition-base);
+        }
+        .breadcrumb a:hover { color: #fff; }
+        .page-section {
+            margin: clamp(2.25rem, 5vw, 3.5rem) clamp(1rem, 4vw, 3rem);
+            border-radius: var(--radius-xl);
+            background: linear-gradient(150deg, rgba(255, 255, 255, 0.88), rgba(226, 232, 240, 0.72));
+            border: 1px solid var(--glass-border);
+            box-shadow: var(--glass-shadow);
+            backdrop-filter: blur(16px);
+            position: relative;
+            overflow: hidden;
+            isolation: isolate;
+        }
+        .page-section::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at top left, rgba(148, 197, 255, 0.28), transparent 55%), radial-gradient(circle at bottom right, rgba(16, 185, 129, 0.18), transparent 60%);
+            opacity: 0.85;
+            pointer-events: none;
+            z-index: 0;
+        }
+        .page-section > * {
+            position: relative;
+            z-index: 1;
+        }
+        .section-header {
+            text-align: center;
+            max-width: 50rem;
+            margin: 0 auto clamp(2rem, 4vw, 3rem);
+        }
+        .section-title {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-size: clamp(2rem, 3.5vw, 2.75rem);
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            background: linear-gradient(120deg, var(--color-midnight), var(--color-primary-600));
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+        .section-subtitle {
+            margin-top: 1rem;
+            color: rgba(71, 85, 105, 0.85);
+            font-size: clamp(1rem, 2vw, 1.15rem);
+        }
+        .tour-item {
+            position: relative;
+            border-radius: var(--radius-lg);
+            background: linear-gradient(160deg, rgba(255, 255, 255, 0.92), rgba(241, 245, 249, 0.78));
+            border: 1px solid var(--glass-border);
+            box-shadow: 0 22px 48px -30px rgba(15, 23, 42, 0.55);
+            backdrop-filter: blur(14px);
+            overflow: hidden;
+            transition: var(--transition-base);
+        }
+        .tour-item::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at top right, rgba(59, 130, 246, 0.18), transparent 60%);
+            opacity: 0.9;
+            pointer-events: none;
+        }
+        .tour-item:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--glass-shadow-strong);
+        }
+        .tour-item > * {
+            position: relative;
+            z-index: 1;
+        }
+        .tour-item .fixed-header {
+            background: linear-gradient(120deg, rgba(59, 130, 246, 0.12), rgba(14, 116, 144, 0.1));
+            display: flex;
+            flex-direction: column;
+            gap: 0.6rem;
+            padding: 1.75rem;
+        }
+        .tour-item .fixed-header span {
+            font-size: clamp(1.3rem, 2.5vw, 1.6rem);
+            font-weight: 700;
+            color: var(--color-midnight);
+        }
+        .tour-item .badge-soft {
+            align-self: flex-start;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            padding: 0.3rem 0.75rem;
+            border-radius: 999px;
+            font-size: 0.75rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            background: rgba(37, 99, 235, 0.15);
+            color: var(--color-primary-700);
+            font-weight: 600;
+        }
+        .tour-content {
+            padding: clamp(1.75rem, 3vw, 2.25rem);
+            display: grid;
+            gap: 1.75rem;
+        }
+        .tour-content h3 {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--color-midnight);
+            letter-spacing: 0.01em;
+        }
+        .tour-content ul {
+            color: rgba(51, 65, 85, 0.88);
+            line-height: 1.7;
+        }
+        .tour-content ul li {
+            position: relative;
+            padding-left: 1.25rem;
+        }
+        .tour-content ul li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: var(--color-primary-600);
+            font-weight: 700;
+        }
+        .info-section {
+            display: grid;
+            gap: 1.5rem;
+        }
+        @media (min-width: 768px) {
+            .info-section { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+        }
+        .info-card {
+            border-radius: var(--radius-lg);
+            padding: 2rem;
+            background: linear-gradient(160deg, rgba(236, 254, 255, 0.92), rgba(255, 255, 255, 0.88));
+            border: 1px solid rgba(59, 130, 246, 0.25);
+            box-shadow: 0 20px 42px -28px rgba(14, 116, 144, 0.45);
+        }
+        .info-card--warning {
+            background: linear-gradient(160deg, rgba(254, 243, 199, 0.92), rgba(255, 255, 255, 0.88));
+            border-color: rgba(245, 158, 11, 0.32);
+            box-shadow: 0 20px 42px -28px rgba(217, 119, 6, 0.45);
+        }
+        .info-card h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1.25rem;
+            color: var(--color-midnight);
+        }
+        .info-card ul {
+            color: rgba(30, 41, 59, 0.85);
+            display: grid;
+            gap: 0.75rem;
+        }
+        .info-card li {
+            display: flex;
+            gap: 0.65rem;
+            align-items: flex-start;
+        }
+        .info-card svg {
+            flex-shrink: 0;
+            width: 1.2rem;
+            height: 1.2rem;
+            margin-top: 0.2rem;
+        }
+        .callout-card {
+            border-radius: var(--radius-lg);
+            padding: 1.25rem 1.5rem;
+            background: linear-gradient(135deg, rgba(250, 204, 21, 0.18), rgba(253, 230, 138, 0.3));
+            border: 1px solid rgba(250, 204, 21, 0.38);
+            color: rgba(120, 53, 15, 0.9);
+            font-weight: 600;
+        }
+        footer {
+            background: rgba(10, 14, 23, 0.88);
+            border-top: 1px solid rgba(148, 163, 184, 0.25);
+            backdrop-filter: blur(12px);
+            color: rgba(226, 232, 240, 0.85);
+        }
+        footer a {
+            transition: var(--transition-base);
+            color: rgba(226, 232, 240, 0.75);
+        }
+        footer a:hover { color: #fff; }
+        .floating-whatsapp {
+            position: fixed;
+            bottom: 1.5rem;
+            right: 1.5rem;
+            z-index: 60;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1.1rem;
+            border-radius: 999px;
+            background: linear-gradient(135deg, #22c55e, #16a34a);
+            color: #fff;
+            box-shadow: 0 20px 40px -18px rgba(22, 163, 74, 0.55);
+            transition: var(--transition-base);
+        }
+        .floating-whatsapp:hover {
+            transform: translateY(-4px) scale(1.05);
+            box-shadow: 0 28px 55px -20px rgba(22, 163, 74, 0.65);
+        }
+        @media (max-width: 768px) {
+            .site-header { background: rgba(15, 23, 42, 0.92); }
+            .page-section {
+                margin: clamp(1.5rem, 6vw, 2.5rem) 1rem;
+                border-radius: 1.25rem;
+            }
+            .inner-hero {
+                margin: clamp(1.5rem, 6vw, 2.5rem) 1rem 0;
+                border-radius: 1.5rem;
+                padding: clamp(3rem, 12vw, 4.5rem) 1.25rem;
+            }
+            .tour-content { padding: 1.75rem 1.5rem; }
+            .dropdown-content {
+                position: static;
+                width: 100%;
+                margin-top: 0.75rem;
+                border: none;
+                box-shadow: none;
+                background: rgba(15, 23, 42, 0.92);
             }
         }
-    </script>
+    </style>
+
     <meta property="og:title" content="1 Day Tour Packages - Heritage Taxi Mysore">
     <meta property="og:description" content="Explore the best of Mysore with our 1-day tour packages. Visit top attractions like Mysore Palace, Chamundi Hills, and more with our reliable taxi service.">
     <meta property="og:url" content="https://www.heritagetaximysore.com/1-day-tour.html">
     <meta property="og:image" content="https://www.heritagetaximysore.com/pictures/mysore-palace.jpg">
+
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -63,72 +451,70 @@
     }
     </script>
 </head>
-<body class="bg-secondary-100">
+<body>
 
-    <!-- Header -->
-    <header class="bg-white/95 backdrop-blur-sm shadow-lg sticky top-0 z-40">
+    <header class="site-header sticky top-0 z-40">
         <nav class="container mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
-                <!-- Logo / Website Name -->
                 <div class="flex-shrink-0 flex items-center">
-                    <a href="index.html" class="text-2xl font-bold text-primary-600">
+                    <a href="index.html" class="logo-text text-2xl font-bold">
                         Heritage Taxi Mysore
                     </a>
                 </div>
-                
-                <!-- Desktop Navigation Links -->
+
                 <div class="hidden md:flex md:items-center md:space-x-4 lg:space-x-6">
-                    <a href="index.html#home" class="font-semibold text-secondary-700 hover:text-primary-600 inline-flex items-center gap-1.5">
+                    <a href="index.html#home" class="nav-link inline-flex items-center gap-1.5">
                         <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" /></svg>
                         <span>Home</span>
                     </a>
-                    <a href="index.html#services" class="font-semibold text-secondary-700 hover:text-primary-600 inline-flex items-center gap-1.5">
+                    <a href="index.html#services" class="nav-link inline-flex items-center gap-1.5">
                         <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" /></svg>
                         <span>Services</span>
                     </a>
                     <div class="relative dropdown">
-                        <a href="index.html#tours" class="font-semibold text-secondary-700 hover:text-primary-600 inline-flex items-center gap-1.5">
+                        <a href="index.html#tours" class="nav-link inline-flex items-center gap-1.5 dropbtn">
                             <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 6.75V15m6-6v8.25m.5 3.375c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125h1.5c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125h-1.5Zm-6 0c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125h1.5c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125h-1.5ZM6.375 6.375a1.125 1.125 0 1 1-2.25 0 1.125 1.125 0 0 1 2.25 0ZM17.625 6.375a1.125 1.125 0 1 1-2.25 0 1.125 1.125 0 0 1 2.25 0Z" /></svg>
                             <span>Tour Packages</span>
                         </a>
-                        <div class="dropdown-content rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5">
-                            <div class="py-1" role="none">
-                                <a href="Mysore 1 day tour.html" class="text-sm text-secondary-700 hover:bg-secondary-100 block px-4 py-2">Mysore 1 Day Tour</a>
-                                <a href="1-day-tour.html" class="text-sm text-secondary-700 hover:bg-secondary-100 block px-4 py-2">1 Day Tour</a>
-                                <a href="2-days-tour.html" class="text-sm text-secondary-700 hover:bg-secondary-100 block px-4 py-2">2 Days Tour</a>
-                                <a href="3-days-tour.html" class="text-sm text-secondary-700 hover:bg-secondary-100 block px-4 py-2">3 Days Tour</a>
-                                <a href="4-days-tour.html" class="text-sm text-secondary-700 hover:bg-secondary-100 block px-4 py-2">4 Days Tour</a>
-                                <a href="5-days-tour.html" class="text-sm text-secondary-700 hover:bg-secondary-100 block px-4 py-2">5 Days Tour</a>
-                                <a href="6-days-tour.html" class="text-sm text-secondary-700 hover:bg-secondary-100 block px-4 py-2">6 Days Tour</a>
-                                <a href="7-days-tour.html" class="text-sm text-secondary-700 hover:bg-secondary-100 block px-4 py-2">7 Days Tour</a>
-                                <a href="8-days-tour.html" class="text-sm text-secondary-700 hover:bg-secondary-100 block px-4 py-2">8 Days Tour</a>
-                            </div>
+                        <div class="dropdown-content">
+                            <a href="Mysore 1 day tour.html" class="text-sm">Mysore 1 Day Tour</a>
+                            <a href="1-day-tour.html" class="text-sm">1 Day Tour</a>
+                            <a href="2-days-tour.html" class="text-sm">2 Days Tour</a>
+                            <a href="3-days-tour.html" class="text-sm">3 Days Tour</a>
+                            <a href="4-days-tour.html" class="text-sm">4 Days Tour</a>
+                            <a href="5-days-tour.html" class="text-sm">5 Days Tour</a>
+                            <a href="6-days-tour.html" class="text-sm">6 Days Tour</a>
+                            <a href="7-days-tour.html" class="text-sm">7 Days Tour</a>
+                            <a href="8-days-tour.html" class="text-sm">8 Days Tour</a>
                         </div>
                     </div>
-                    <a href="index.html#fleet" class="font-semibold text-secondary-700 hover:text-primary-600 inline-flex items-center gap-1.5"> <!-- Updated href -->
-                        <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 18.75a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 0 1-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m3 0h1.125c.621 0 1.125-.504 1.125-1.125V14.25m-17.25 4.5v-1.875a.375.375 0 0 0-.375-.375h-1.5a.375.375 0 0 0-.375.375V18.75m17.25 0v-1.875a.375.375 0 0 1 .375-.375h1.5a.375.375 0 0 1 .375.375V18.75m-17.25 0h17.25m-17.25 0H3.375m0 0V9.375c0-1.036.84-1.875 1.875-1.875h.375c.621 0 1.125.504 1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125h3.375c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621.504-1.125 1.125-1.125h.375c1.035 0 1.875.84 1.875 1.875v9.375m-17.25 0h17.25" /></svg>
+                    <a href="index.html#fleet" class="nav-link inline-flex items-center gap-1.5">
+                        <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 16.5v-2.25a2.25 2.25 0 0 1 2.25-2.25H6c.56 0 1.064-.316 1.312-.816l1.134-2.268A1.5 1.5 0 0 1 9.83 7.5h4.34a1.5 1.5 0 0 1 1.383.916l1.134 2.268c.248.5.752.816 1.312.816h1.5a2.25 2.25 0 0 1 2.25 2.25V16.5" />
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 16.5h19.5" />
+                            <circle cx="7.5" cy="18" r="1.5" />
+                            <circle cx="18" cy="18" r="1.5" />
+                        </svg>
                         <span>Our Fleet</span>
                     </a>
-                    <a href="index.html#blog" class="font-semibold text-secondary-700 hover:text-primary-600 inline-flex items-center gap-1.5"> <!-- Updated href -->
+                    <a href="index.html#blog" class="nav-link inline-flex items-center gap-1.5">
                         <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18c-2.305 0-4.408.867-6 2.292m0-14.25v14.25" /></svg>
                         <span>Travel Guide</span>
                     </a>
-                    <a href="tel:+919611288339" class="font-semibold text-secondary-700 hover:text-primary-600 inline-flex items-center gap-1.5">
+                    <a href="tel:+919611288339" class="nav-link inline-flex items-center gap-1.5">
                         <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-2.836-.184-5.233-2.58-5.417-5.417l1.293-.97c.362-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" /></svg>
                         <span>Call: +91 96112 88339</span>
                     </a>
                 </div>
-                
-                <!-- Desktop Book Now Button -->
+
                 <div class="hidden md:block">
-                    <a href="index.html#booking-widget" class="inline-flex items-center px-4 py-2 border border-transparent rounded-lg shadow-sm text-sm font-medium text-white bg-primary-600 hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500">
+                    <a href="index.html#booking-widget" class="primary-button text-sm md:text-base">
                         Book Now
                     </a>
                 </div>
 
-                <!-- Mobile Menu Button (Icon) -->
                 <div class="md:hidden flex items-center">
-                    <button id="mobile-menu-button" class="inline-flex items-center justify-center p-2 rounded-md text-secondary-400 hover:text-secondary-500 hover:bg-secondary-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary-500">
+                    <button id="mobile-menu-button" class="inline-flex items-center justify-center p-2 rounded-md text-slate-200/80 hover:text-slate-100 hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-400">
                         <span class="sr-only">Open main menu</span>
                         <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
@@ -138,495 +524,339 @@
             </div>
         </nav>
 
-        <!-- Mobile Menu (Dropdown) -->
         <div id="mobile-menu" class="md:hidden hidden">
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <a href="index.html#home" class="flex items-center gap-3 px-3 py-2 rounded-md text-base font-medium text-secondary-700 hover:bg-secondary-50 hover:text-primary-600">
+                <a href="index.html#home" class="flex items-center gap-3 px-3 py-2 rounded-lg text-base font-medium">
                     <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" /></svg>
                     <span>Home</span>
                 </a>
-                <a href="index.html#services" class="flex items-center gap-3 px-3 py-2 rounded-md text-base font-medium text-secondary-700 hover:bg-secondary-50 hover:text-primary-600">
+                <a href="index.html#services" class="flex items-center gap-3 px-3 py-2 rounded-lg text-base font-medium">
                     <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" /></svg>
                     <span>Services</span>
                 </a>
-                <a href="index.html#tours" class="flex items-center gap-3 px-3 py-2 rounded-md text-base font-medium text-secondary-700 hover:bg-secondary-50 hover:text-primary-600"> <!-- Updated href -->
+                <a href="index.html#tours" class="flex items-center gap-3 px-3 py-2 rounded-lg text-base font-medium">
                     <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 6.75V15m6-6v8.25m.5 3.375c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125h1.5c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125h-1.5Zm-6 0c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125h1.5c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125h-1.5ZM6.375 6.375a1.125 1.125 0 1 1-2.25 0 1.125 1.125 0 0 1 2.25 0ZM17.625 6.375a1.125 1.125 0 1 1-2.25 0 1.125 1.125 0 0 1 2.25 0Z" /></svg>
                     <span>Tour Packages</span>
                 </a>
-                <a href="index.html#fleet" class="flex items-center gap-3 px-3 py-2 rounded-md text-base font-medium text-secondary-700 hover:bg-secondary-50 hover:text-primary-600"> <!-- Updated href -->
-                    <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 18.75a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 0 1-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m3 0h1.125c.621 0 1.125-.504 1.125-1.125V14.25m-17.25 4.5v-1.875a.375.375 0 0 0-.375-.375h-1.5a.375.375 0 0 0-.375.375V18.75m17.25 0v-1.875a.375.375 0 0 1 .375-.375h1.5a.375.375 0 0 1 .375.375V18.75m-17.25 0h17.25m-17.25 0H3.375m0 0V9.375c0-1.036.84-1.875 1.875-1.875h.375c.621 0 1.125.504 1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125h3.375c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621.504-1.125 1.125-1.125h.375c1.035 0 1.875.84 1.875 1.875v9.375m-17.25 0h17.25" /></svg>
+                <a href="index.html#fleet" class="flex items-center gap-3 px-3 py-2 rounded-lg text-base font-medium">
+                    <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 16.5v-2.25a2.25 2.25 0 0 1 2.25-2.25H6c.56 0 1.064-.316 1.312-.816l1.134-2.268A1.5 1.5 0 0 1 9.83 7.5h4.34a1.5 1.5 0 0 1 1.383.916l1.134 2.268c.248.5.752.816 1.312.816h1.5a2.25 2.25 0 0 1 2.25 2.25V16.5" />
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 16.5h19.5" />
+                        <circle cx="7.5" cy="18" r="1.5" />
+                        <circle cx="18" cy="18" r="1.5" />
+                    </svg>
                     <span>Our Fleet</span>
                 </a>
-                <a href="index.html#blog" class="flex items-center gap-3 px-3 py-2 rounded-md text-base font-medium text-secondary-700 hover:bg-secondary-50 hover:text-primary-600"> <!-- Updated href -->
+                <a href="index.html#blog" class="flex items-center gap-3 px-3 py-2 rounded-lg text-base font-medium">
                     <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18c-2.305 0-4.408.867-6 2.292m0-14.25v14.25" /></svg>
                     <span>Travel Guide</span>
                 </a>
-                <a href="tel:+919611288339" class="flex items-center gap-3 px-3 py-2 rounded-md text-base font-medium text-secondary-700 hover:bg-secondary-50 hover:text-primary-600">
+                <a href="tel:+919611288339" class="flex items-center gap-3 px-3 py-2 rounded-lg text-base font-medium">
                     <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-2.836-.184-5.233-2.58-5.417-5.417l1.293-.97c.362-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" /></svg>
-<span>Call: +91 96112 88339</span>
+                    <span>Call: +91 96112 88339</span>
                 </a>
             </div>
-            <div class="pt-4 pb-3 border-t border-secondary-200">
-                <a href="index.html#booking-widget" class="block w-full text-left px-4 py-2 text-base font-medium text-white bg-primary-600 hover:bg-primary-700">
+            <div class="pt-4 pb-3 border-t border-white/10">
+                <a href="index.html#booking-widget" class="primary-button w-full justify-center text-base">
                     Book Now
                 </a>
             </div>
         </div>
     </header>
 
-    <div class="container mx-auto px-6 py-10">
-        <h1 class="text-4xl md:text-5xl font-bold text-center text-primary-600 mb-12">Mysore 1-Day Tour Packages</h1>
-        <!-- Breadcrumbs -->
-        <nav class="text-sm text-gray-600 mb-8">
-            <a href="index.html" class="hover:text-primary-600">Home</a> / 
-            <a href="index.html#tours" class="hover:text-primary-600">Tour Packages</a> / 
-            <span class="font-medium text-gray-800">1 Day Tour</span>
-        </nav>
-
-        <!-- Tour Packages Container -->
-        <div class="space-y-6">
-
-            <!-- Tour 1: Mysore City Tour -->
-            <div class="tour-item bg-white rounded-lg shadow-md border border-gray-200 overflow-hidden">
-                <!-- Fixed Header -->
-                <div class="fixed-header w-full flex justify-between items-center text-left px-6 py-5">
-                    <span class="text-xl md:text-2xl font-semibold text-blue-700">Tour 1: Mysore City Tour (One Day)</span>
-                </div>
-                <!-- Fixed Content Block -->
-                <div class="tour-content border-t border-gray-200">
-                    <div class="p-6">
-                        <h3 class="text-lg font-semibold mb-3 text-gray-900">Itinerary</h3>
-                        <ul class="list-disc list-inside text-gray-700 space-y-2 mb-6 md:columns-2">
-                            <li>Chamundeshwari Temple (Chamundi Hill)</li>
-                            <li>Nandi Bull Temple</li>
-                            <li>Mysore City View Point</li>
-                            <li>Wax Museum</li>
-                            <li>Mysore Zoo</li>
-                            <li>Mysore Maharaja Palace</li>
-                            <li>St. Philomena Church</li>
-                            <li>Sri Ranganathaswamy Temple (Srirangapatna)</li>
-                            <li>Tippu Gumbaz</li>
-                            <li>Tippu Summer Palace</li>
-                            <li>Brindavan Garden (KRS Dam)</li>
-                        </ul>
-                        <h3 class="text-lg font-semibold mb-4 text-gray-900">Vehicle Rates</h3>
-                        <div id="table-1"></div> <!-- Table will be injected here -->
-                    </div>
-                </div>
-            </div>
-
-            <!-- Tour 2: Belur & Halebid -->
-            <div class="tour-item bg-white rounded-lg shadow-md border border-gray-200 overflow-hidden">
-                <div class="fixed-header w-full flex justify-between items-center text-left px-6 py-5">
-                    <span class="text-xl md:text-2xl font-semibold text-blue-700">Tour 2: Mysore to Belur & Halebid (One Day)</span>
-                </div>
-                <div class="tour-content border-t border-gray-200">
-                    <div class="p-6">
-                        <h3 class="text-lg font-semibold mb-3 text-gray-900">Itinerary</h3>
-                        <ul class="list-disc list-inside text-gray-700 space-y-2 mb-6">
-                            <li>Melukote Cheluvarayaswamy Temple</li>
-                            <li>Shravanabelagola Bahubali Temple</li>
-                            <li>Halebidu Hoysaleshwara Temple</li>
-                            <li>Belur Chennakeshava Temple</li>
-                        </ul>
-                        <h3 class="text-lg font-semibold mb-4 text-gray-900">Vehicle Rates</h3>
-                        <div id="table-2"></div> <!-- Table will be injected here -->
-                    </div>
-                </div>
-            </div>
-
-            <!-- Tour 3: Shivanasamudra Falls -->
-            <div class="tour-item bg-white rounded-lg shadow-md border border-gray-200 overflow-hidden">
-                <div class="fixed-header w-full flex justify-between items-center text-left px-6 py-5">
-                    <span class="text-xl md:text-2xl font-semibold text-blue-700">Tour 3: Mysore to Shivanasamudra Falls (One Day)</span>
-                </div>
-                <div class="tour-content border-t border-gray-200">
-                    <div class="p-6">
-                        <h3 class="text-lg font-semibold mb-3 text-gray-900">Itinerary</h3>
-                        <ul class="list-disc list-inside text-gray-700 space-y-2 mb-6">
-                            <li>Somnathpur Chennakeshava Temple</li>
-                            <li>Talakadu Shiva Temples</li>
-                            <li>Mudukuthore Mallikarjuna Temple</li>
-                            <li>Shivanasamudra Falls (Gaganachukki and Barachukki Falls)</li>
-                        </ul>
-                        <h3 class="text-lg font-semibold mb-4 text-gray-900">Vehicle Rates</h3>
-                        <div id="table-3"></div> <!-- Table will be injected here -->
-                    </div>
-                </div>
-            </div>
-
-            <!-- Tour 4: Madikeri (Coorg) -->
-            <div class="tour-item bg-white rounded-lg shadow-md border border-gray-200 overflow-hidden">
-                <div class="fixed-header w-full flex justify-between items-center text-left px-6 py-5">
-                    <span class="text-xl md:text-2xl font-semibold text-blue-700">Tour 4: Mysore to Madikeri (Coorg) (One Day)</span>
-                </div>
-                <div class="tour-content border-t border-gray-200">
-                    <div class="p-6">
-                        <h3 class="text-lg font-semibold mb-3 text-gray-900">Itinerary</h3>
-                        <ul class="list-disc list-inside text-gray-700 space-y-2 mb-6 md:columns-2">
-                            <li>Tibetian monastery - Tibetian golden temple</li>
-                            <li>Kaveri nisargadhama forest park</li>
-                            <li>Dubare Elephant camp and Boat River rafting</li>
-                            <li>Abhi Falls</li>
-                            <li>Talakaveri kaveri river birthplace</li>
-                            <li>Bhagamandala triveni sangam and Sri Bhagandeshwara Temple</li>
-                            <li>Raja seat sunset view point and musical fountain</li>
-                            <li>Omkareshwara historical temple</li>
-                        </ul>
-                        <h3 class="text-lg font-semibold mb-4 text-gray-900">Vehicle Rates</h3>
-                        <div id="table-4"></div> <!-- Table will be injected here -->
-                    </div>
-                </div>
-            </div>
-
-            <!-- Tour 5: Madikeri Jungle Safari -->
-            <div class="tour-item bg-white rounded-lg shadow-md border border-gray-200 overflow-hidden">
-                <div class="fixed-header w-full flex justify-between items-center text-left px-6 py-5">
-                    <span class="text-xl md:text-2xl font-semibold text-blue-700">Tour 5: Mysore to Madikeri (Coorg) Jungle Safari</span>
-                </div>
-                <div class="tour-content border-t border-gray-200">
-                    <div class="p-6">
-                        <h3 class="text-lg font-semibold mb-3 text-gray-900">Itinerary</h3>
-                        <ul class="list-disc list-inside text-gray-700 space-y-2 mb-6">
-                            <li>Irppu Falls Coorg</li>
-                            <li>Nagarhole National Park jungle safari Tour</li>
-                        </ul>
-                        <div class="bg-yellow-100 border-l-4 border-yellow-500 text-yellow-800 p-4 rounded-md mb-6">
-                            <strong>Safari Timing:</strong> 3:00 PM to 5:00 PM
-                        </div>
-                        <h3 class="text-lg font-semibold mb-4 text-gray-900">Vehicle Rates</h3>
-                        <div id="table-5"></div> <!-- Table will be injected here -->
-                    </div>
-                </div>
-            </div>
-
-            <!-- Tour 6: Ooty -->
-            <div class="tour-item bg-white rounded-lg shadow-md border border-gray-200 overflow-hidden">
-                <div class="fixed-header w-full flex justify-between items-center text-left px-6 py-5">
-                    <span class="text-xl md:text-2xl font-semibold text-blue-700">Tour 6: Mysore to Ooty (One Day)</span>
-                </div>
-                <div class="tour-content border-t border-gray-200">
-                    <div class="p-6">
-                        <h3 class="text-lg font-semibold mb-3 text-gray-900">Itinerary</h3>
-                        <ul class="list-disc list-inside text-gray-700 space-y-2 mb-6 md:columns-2">
-                            <li>Bandipur national park safari</li>
-                            <li>Mudumalai national park</li>
-                            <li>Gudalur nidal rock View Point</li>
-                            <li>6th main shooting view point</li>
-                            <li>Pykara boat house</li>
-                            <li>Botanical garden</li>
-                            <li>Rose garden</li>
-                            <li>Boathouse and lake</li>
-                            <li>Doddabetta peak</li>
-                            <li>Tea factory</li>
-                        </ul>
-                        <div class="bg-yellow-100 border-l-4 border-yellow-500 text-yellow-800 p-4 rounded-md mb-6 space-y-2">
-                            <p><strong>Bandipur Safari Timings:</strong> 6:00 AM - 9:00 AM and 3:00 PM - 5:00 PM</p>
-                            <p><strong>Mysore/Ooty Road Timings:</strong> Open 6:00 AM, Closes 7:30 PM</p>
-                        </div>
-                        <h3 class="text-lg font-semibold mb-4 text-gray-900">Vehicle Rates</h3>
-                        <div id="table-6"></div> <!-- Table will be injected here -->
-                    </div>
-                </div>
-            </div>
-
-            <!-- Tour 7: Wayanad -->
-            <div class="tour-item bg-white rounded-lg shadow-md border border-gray-200 overflow-hidden">
-                <div class="fixed-header w-full flex justify-between items-center text-left px-6 py-5">
-                    <span class="text-xl md:text-2xl font-semibold text-blue-700">Tour 7: Mysore to Wayanad (One Day)</span>
-                </div>
-                <div class="tour-content border-t border-gray-200">
-                    <div class="p-6">
-                        <h3 class="text-lg font-semibold mb-3 text-gray-900">Itinerary</h3>
-                        <ul class="list-disc list-inside text-gray-700 space-y-2 mb-6 md:columns-2">
-                            <li>Banasura Sagar Dam</li>
-                            <li>Chembra Peak</li>
-                            <li>Edakkal Caves</li>
-                            <li>Soochippara Waterfall</li>
-                            <li>Pookot Lake</li>
-                            <li>Meenmutty Falls</li>
-                        </ul>
-                        <div class="bg-yellow-100 border-l-4 border-yellow-500 text-yellow-800 p-4 rounded-md mb-6">
-                            <p><strong>Mysore/Wayanad Road Timings:</strong> Open 6:00 AM, Closes 7:30 PM</p>
-                        </div>
-                        <h3 class="text-lg font-semibold mb-4 text-gray-900">Vehicle Rates</h3>
-                        <div id="table-7"></div> <!-- Table will be injected here -->
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Booking Information -->
-        <section class="mt-12 bg-white rounded-lg shadow-lg border border-gray-200 overflow-hidden">
-            <h2 class="text-3xl font-semibold text-center py-6 bg-gray-50 border-b border-gray-200 text-gray-900">Booking Information</h2>
-            <div class="p-6 md:p-8 grid md:grid-cols-2 gap-8">
-                <!-- Inclusions -->
-                <div class="bg-green-50 border border-green-200 rounded-lg p-6">
-                    <h3 class="text-2xl font-semibold text-green-700 mb-4">Package Includes</h3>
-                    <ul class="space-y-3">
-                        <li class="flex items-start">
-                            <svg class="w-6 h-6 text-green-600 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                            <span class="text-gray-700">Driver Bata</span>
-                        </li>
-                        <li class="flex items-start">
-                            <svg class="w-6 h-6 text-green-600 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                            <span class="text-gray-700">Vehicle Charges</span>
-                        </li>
-                        <li class="flex items-start">
-                            <svg class="w-6 h-6 text-green-600 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                            <span class="text-gray-700">Sightseeing Charges</span>
-                        </li>
-                        <li class="flex items-start">
-                            <svg class="w-6 h-6 text-green-600 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                            <span class="text-gray-700">Fuel Charges</span>
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- Exclusions -->
-                <div class="bg-red-50 border border-red-200 rounded-lg p-6">
-                    <h3 class="text-2xl font-semibold text-red-700 mb-4">Package Excludes</h3>
-                    <ul class="space-y-3">
-                        <li class="flex items-start">
-                            <svg class="w-6 h-6 text-red-600 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
-                            <span class="text-gray-700">All types of food</span>
-                        </li>
-                        <li class="flex items-start">
-                            <svg class="w-6 h-6 text-red-600 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
-                            <span class="text-gray-700">Personal expenses (tips, telephone, etc.)</span>
-                        </li>
-                        <li class="flex items-start">
-                            <svg class="w-6 h-6 text-red-600 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
-                            <span class="text-gray-700">Sightseeing place entry fees</span>
-                        </li>
-                        <li class="flex items-start">
-                            <svg class="w-6 h-6 text-red-600 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
-                            <span class="text-gray-700">Parking charges</span>
-                        </li>
-                        <li class="flex items-start">
-                            <svg class="w-6 h-6 text-red-600 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
-                            <span class="text-gray-700">Toll charges</span>
-                        </li>
-                    </ul>
-                </div>
+    <main>
+        <section class="inner-hero">
+            <div class="container mx-auto px-6 lg:px-10">
+                <span class="accent-badge">Curated Day Trips</span>
+                <h1>Mysore 1-Day Tour Packages</h1>
+                <p>Experience Mysore's royal heritage, sacred temples, and scenic escapes in a single unforgettable day. Choose the route that matches your pace and interests.</p>
+                <nav class="breadcrumb" aria-label="Breadcrumb">
+                    <a href="index.html">Home</a>
+                    <span>/</span>
+                    <a href="index.html#tours">Tour Packages</a>
+                    <span>/</span>
+                    <span>1 Day Tour</span>
+                </nav>
             </div>
         </section>
 
-    </div>
+        <section class="page-section">
+            <div class="container mx-auto px-6 lg:px-10 py-12 space-y-12">
+                <div class="section-header">
+                    <h2 class="section-title">Discover Mysore In A Day</h2>
+                    <p class="section-subtitle">Choose from hand-crafted itineraries tailored for families, friends, and solo explorers. Every journey is chauffeur-driven, immaculately maintained, and tuned to your schedule.</p>
+                </div>
 
-  <!-- Footer -->
-  <footer class="bg-secondary-900" aria-labelledby="footer-heading">
-    <h2 id="footer-heading" class="sr-only">Footer</h2>
-    <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div>
-          <h3 class="text-xl font-bold text-white">Heritage Taxi Service Mysore</h3>
-          <p class="mt-4 text-base text-gray-300">Your trusted partner for exploring Mysore and beyond.</p>
-          <div class="mt-6 space-y-4">
-            <p class="flex items-center text-base text-gray-300"><a href="tel:+919611288339" class="hover:text-white">+91 96112 88339</a></p>
-            <p class="flex items-center text-base text-gray-300"><a href="mailto:info@heritagetaximysore.com" class="hover:text-white">info@heritagetaximysore.com</a></p>
-          </div>
+                <div class="space-y-8">
+                    <article class="tour-item">
+                        <div class="fixed-header">
+                            <span class="badge-soft">Tour 1</span>
+                            <h3>Tour 1: Mysore City Tour (One Day)</h3>
+                        </div>
+                        <div class="tour-content">
+                            <div>
+                                <h3>Itinerary Highlights</h3>
+                                <ul class="space-y-2 md:columns-2 md:space-y-1">
+                                    <li>Chamundeshwari Temple (Chamundi Hill)</li>
+                                    <li>Nandi Bull Temple</li>
+                                    <li>Mysore City View Point</li>
+                                    <li>Wax Museum</li>
+                                    <li>Mysore Zoo</li>
+                                    <li>Mysore Maharaja Palace</li>
+                                    <li>St. Philomena Church</li>
+                                    <li>Sri Ranganathaswamy Temple (Srirangapatna)</li>
+                                    <li>Tippu Gumbaz</li>
+                                    <li>Tippu Summer Palace</li>
+                                    <li>Brindavan Garden (KRS Dam)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="tour-item">
+                        <div class="fixed-header">
+                            <span class="badge-soft">Tour 2</span>
+                            <h3>Tour 2: Mysore to Belur &amp; Halebid (One Day)</h3>
+                        </div>
+                        <div class="tour-content">
+                            <div>
+                                <h3>Itinerary Highlights</h3>
+                                <ul class="space-y-2">
+                                    <li>Melukote Cheluvarayaswamy Temple</li>
+                                    <li>Shravanabelagola Bahubali Temple</li>
+                                    <li>Halebidu Hoysaleshwara Temple</li>
+                                    <li>Belur Chennakeshava Temple</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="tour-item">
+                        <div class="fixed-header">
+                            <span class="badge-soft">Tour 3</span>
+                            <h3>Tour 3: Mysore to Shivanasamudra Falls (One Day)</h3>
+                        </div>
+                        <div class="tour-content">
+                            <div>
+                                <h3>Itinerary Highlights</h3>
+                                <ul class="space-y-2">
+                                    <li>Somnathpur Chennakeshava Temple</li>
+                                    <li>Talakadu Shiva Temples</li>
+                                    <li>Mudukuthore Mallikarjuna Temple</li>
+                                    <li>Shivanasamudra Falls (Gaganachukki &amp; Barachukki)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="tour-item">
+                        <div class="fixed-header">
+                            <span class="badge-soft">Tour 4</span>
+                            <h3>Tour 4: Mysore to Madikeri (Coorg) (One Day)</h3>
+                        </div>
+                        <div class="tour-content">
+                            <div>
+                                <h3>Itinerary Highlights</h3>
+                                <ul class="space-y-2 md:columns-2 md:space-y-1">
+                                    <li>Tibetan Golden Temple (Bylakuppe)</li>
+                                    <li>Kaveri Nisargadhama Forest Park</li>
+                                    <li>Dubare Elephant Camp &amp; River Rafting</li>
+                                    <li>Abbey Falls</li>
+                                    <li>Talakaveri (River Source)</li>
+                                    <li>Bhagamandala Triveni Sangam</li>
+                                    <li>Raja's Seat Sunset Point</li>
+                                    <li>Omkareshwara Temple</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="tour-item">
+                        <div class="fixed-header">
+                            <span class="badge-soft">Tour 5</span>
+                            <h3>Tour 5: Mysore to Madikeri Jungle Safari</h3>
+                        </div>
+                        <div class="tour-content">
+                            <div class="space-y-4">
+                                <div>
+                                    <h3>Itinerary Highlights</h3>
+                                    <ul class="space-y-2">
+                                        <li>Irupu Falls</li>
+                                        <li>Nagarhole National Park Jungle Safari</li>
+                                    </ul>
+                                </div>
+                                <div class="callout-card">
+                                    <strong>Safari Timing:</strong> 3:00 PM to 5:00 PM
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="tour-item">
+                        <div class="fixed-header">
+                            <span class="badge-soft">Tour 6</span>
+                            <h3>Tour 6: Mysore to Ooty (One Day)</h3>
+                        </div>
+                        <div class="tour-content">
+                            <div class="space-y-4">
+                                <div>
+                                    <h3>Itinerary Highlights</h3>
+                                    <ul class="space-y-2 md:columns-2 md:space-y-1">
+                                        <li>Bandipur National Park Safari</li>
+                                        <li>Mudumalai National Park</li>
+                                        <li>Gudalur Needle Rock View Point</li>
+                                        <li>Sixth Mile Shooting Spot</li>
+                                        <li>Pykara Boat House</li>
+                                        <li>Botanical Garden</li>
+                                        <li>Rose Garden</li>
+                                        <li>Ooty Lake</li>
+                                        <li>Doddabetta Peak</li>
+                                        <li>Tea Factory Visit</li>
+                                    </ul>
+                                </div>
+                                <div class="callout-card space-y-1.5">
+                                    <p><strong>Bandipur Safari:</strong> 6:00 AM – 9:00 AM &amp; 3:00 PM – 5:00 PM</p>
+                                    <p><strong>Mysore–Ooty Road:</strong> Open 6:00 AM, Closes 7:30 PM</p>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="tour-item">
+                        <div class="fixed-header">
+                            <span class="badge-soft">Tour 7</span>
+                            <h3>Tour 7: Mysore to Wayanad (One Day)</h3>
+                        </div>
+                        <div class="tour-content">
+                            <div class="space-y-4">
+                                <div>
+                                    <h3>Itinerary Highlights</h3>
+                                    <ul class="space-y-2 md:columns-2 md:space-y-1">
+                                        <li>Banasura Sagar Dam</li>
+                                        <li>Chembra Peak</li>
+                                        <li>Edakkal Caves</li>
+                                        <li>Soochippara Waterfall</li>
+                                        <li>Pookode Lake</li>
+                                        <li>Meenmutty Falls</li>
+                                    </ul>
+                                </div>
+                                <div class="callout-card">
+                                    <strong>Mysore–Wayanad Road:</strong> Open 6:00 AM, Closes 7:30 PM
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="section-header">
+                    <h2 class="section-title">Booking Information</h2>
+                    <p class="section-subtitle">Transparent inclusions and exclusions so you can plan without surprises.</p>
+                </div>
+
+                <div class="info-section">
+                    <div class="info-card">
+                        <h3>Package Includes</h3>
+                        <ul>
+                            <li class="flex items-start gap-3">
+                                <svg class="w-5 h-5 text-emerald-500 flex-shrink-0 mt-0.5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+                                <span>Driver Bata</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <svg class="w-5 h-5 text-emerald-500 flex-shrink-0 mt-0.5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+                                <span>Vehicle Charges</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <svg class="w-5 h-5 text-emerald-500 flex-shrink-0 mt-0.5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+                                <span>Sightseeing Charges</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <svg class="w-5 h-5 text-emerald-500 flex-shrink-0 mt-0.5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+                                <span>Fuel Charges</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="info-card info-card--warning">
+                        <h3>Package Excludes</h3>
+                        <ul>
+                            <li class="flex items-start gap-3">
+                                <svg class="w-5 h-5 text-amber-600 flex-shrink-0 mt-0.5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" /></svg>
+                                <span>All meals and refreshments</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <svg class="w-5 h-5 text-amber-600 flex-shrink-0 mt-0.5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" /></svg>
+                                <span>Personal expenses (tips, telephone, etc.)</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <svg class="w-5 h-5 text-amber-600 flex-shrink-0 mt-0.5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" /></svg>
+                                <span>Entry fees at sightseeing locations</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <svg class="w-5 h-5 text-amber-600 flex-shrink-0 mt-0.5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" /></svg>
+                                <span>Parking and toll charges</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="text-slate-200" aria-labelledby="footer-heading">
+        <h2 id="footer-heading" class="sr-only">Footer</h2>
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold text-white">Heritage Taxi Service Mysore</h3>
+                    <p class="mt-4 text-base text-gray-300">Your trusted partner for exploring Mysore and beyond.</p>
+                    <div class="mt-6 space-y-4">
+                        <p class="flex items-center text-base text-gray-300"><a href="tel:+919611288339" class="hover:text-white">+91 96112 88339</a></p>
+                        <p class="flex items-center text-base text-gray-300"><a href="mailto:info@heritagetaximysore.com" class="hover:text-white">info@heritagetaximysore.com</a></p>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-sm font-semibold text-slate-400 tracking-wider uppercase">Quick Links</h3>
+                    <ul role="list" class="mt-4 space-y-4">
+                        <li><a href="index.html#services" class="text-base text-slate-300 hover:text-white">Our Services</a></li>
+                        <li><a href="index.html#tours" class="text-base text-slate-300 hover:text-white">Tour Packages</a></li>
+                        <li><a href="index.html#fleet" class="text-base text-slate-300 hover:text-white">Our Fleet</a></li>
+                        <li><a href="index.html#blog" class="text-base text-slate-300 hover:text-white">Mysore Travel Guide</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-sm font-semibold text-slate-400 tracking-wider uppercase">Services</h3>
+                    <ul role="list" class="mt-4 space-y-4">
+                        <li><a href="index.html#services" class="text-base text-gray-300 hover:text-white">Mysore Local Sightseeing</a></li>
+                        <li><a href="index.html#services" class="text-base text-slate-300 hover:text-white">Outstation Taxi</a></li>
+                        <li><a href="index.html#services" class="text-base text-slate-300 hover:text-white">Airport Transfers</a></li>
+                        <li><a href="index.html#tours" class="text-base text-slate-300 hover:text-white">Coorg &amp; Ooty Packages</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-8 border-t border-white/10 pt-8 text-center">
+                <p class="text-base text-slate-400">&copy; 2025 Heritage Taxi Service Mysore. All rights reserved.</p>
+            </div>
         </div>
-        <div>
-          <h3 class="text-sm font-semibold text-gray-400 tracking-wider uppercase">Quick Links</h3>
-          <ul role="list" class="mt-4 space-y-4">
-            <li><a href="index.html#services" class="text-base text-secondary-300 hover:text-white">Our Services</a></li>
-            <li><a href="index.html#tours" class="text-base text-secondary-300 hover:text-white">Tour Packages</a></li>
-            <li><a href="index.html#fleet" class="text-base text-secondary-300 hover:text-white">Our Fleet</a></li>
-            <li><a href="index.html#blog" class="text-base text-secondary-300 hover:text-white">Mysore Travel Guide</a></li>
-          </ul>
-        </div>
-        <div>
-          <h3 class="text-sm font-semibold text-gray-400 tracking-wider uppercase">Services</h3>
-          <ul role="list" class="mt-4 space-y-4">
-            <li><a href="index.html#services" class="text-base text-gray-300 hover:text-white">Mysore Local Sightseeing</a></li>
-            <li><a href="index.html#services" class="text-base text-secondary-300 hover:text-white">Outstation Taxi</a></li>
-            <li><a href="index.html#services" class="text-base text-secondary-300 hover:text-white">Airport Transfers</a></li>
-            <li><a href="index.html#tours" class="text-base text-secondary-300 hover:text-white">Coorg & Ooty Packages</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="mt-8 border-t border-secondary-700 pt-8 text-center">
-        <p class="text-base text-secondary-400">&copy; 2025 Heritage Taxi Service Mysore. All rights reserved.</p>
-      </div>
-    </div>
-  </footer>
+    </footer>
+
+    <a href="https://wa.me/919611288339?text=Hi%20Heritage%20Taxi" target="_blank" class="floating-whatsapp" aria-label="Chat on WhatsApp">
+        <svg class="h-8 w-8" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16"><path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/></svg>
+    </a>
 
     <script>
-        // Data for the vehicle rates
-        const vehicleData = [
-            { type: "Tata Indica 4+1", non_ac: "Call for Rates", ac: "Call for Rates" },
-            { type: "Tata Indigo 4+1", non_ac: "Call for Rates", ac: "Call for Rates" },
-            { type: "Mahindra Logon 4+1", non_ac: "Call for Rates", ac: "Call for Rates" },
-            { type: "Mahindra Verito 4+1", non_ac: "Call for Rates", ac: "Call for Rates" },
-            { type: "Swift Dzire 4+1", non_ac: "Call for Rates", ac: "Call for Rates" },
-            { type:A: "Toyota Etios 4+1", non_ac: "Call for Rates", ac: "Call for Rates" },
-            { type: "Chevrolet Tavera 8+1", non_ac: "Call for Rates", ac: "Call for Rates" },
-            { type: "Chevrolet Tavera 9+1", non_ac: "Call for Rates", ac: "Call for Rates" },
-            { type: "Toyota Innova 6+1", non_ac: "Call for Rates", ac: "Call for Rates" },
-            { type: "Toyota Innova 7+1", non_ac: "Call for Rates", ac: "Call for Rates" },
-            { type: "Tempo Traveller 12+1", non_ac: "Call for Rates", ac: "Call for Rates" },
-            { type: "Tempo Traveller 13+1", non_ac: "Call for Rates", ac: "Call for Rates" },
-            { type: "Tempo Traveller 14+1", non_ac: "Call for Rates", ac: "Call for Rates" },
-            { type: "Swaraj Mazda 18+1", non_ac: "Call for Rates", ac: "Call for Rates" },
-            { type: "Swaraj Mazda 20+1", non_ac: "Call for Rates", ac: "Call for Rates" },
-            { type: "Swaraj Mazda 32+1", non_ac: "Call for Rates", ac: "Call for Rates" },
-            { type: "Bus 49+1", non_ac: "Call for Rates", ac: "Call for Rates" }
-        ];
+        const menuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
 
-        // Function to create and inject the rate table
-        function createRateTable(data) {
-            let tableHtml = `
-                <div class="overflow-x-auto rounded-lg border border-gray-200">
-                    <table class="min-w-full divide-y-2 divide-gray-200 bg-white text-sm">
-                        <thead class="bg-gray-100">
-                            <tr>
-                                <th class="whitespace-nowrap px-4 py-3 font-medium text-gray-900 text-left">Types of Cars</th>
-                                <th class="whitespace-nowrap px-4 py-3 font-medium text-gray-900 text-left">Non A/C</th>
-                                <th class="whitespace-nowrap px-4 py-3 font-medium text-gray-900 text-left">With A/C</th>
-                            </tr>
-                        </thead>
-                        <tbody class="divide-y divide-gray-200">
-            `;
-            
-            data.forEach(vehicle => {
-                tableHtml += `
-                    <tr>
-                        <td class="whitespace-nowrap px-4 py-3 font-medium text-gray-800">${vehicle.type}</td>
-                        <td class="whitespace-nowrap px-4 py-3 text-gray-700">${vehicle.non_ac}</td>
-                        <td class="whitespace-nowrap px-4 py-3 text-gray-700">${vehicle.ac}</td>
-                    </tr>
-                `;
+        if (menuButton && mobileMenu) {
+            menuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
             });
 
-            tableHtml += `
-                        </tbody>
-                    </table>
-                </div>
-            `;
-            return tableHtml;
+            mobileMenu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
         }
-
-        // Inject tables into all placeholders
-        document.getElementById('table-1').innerHTML = createRateTable(vehicleData);
-        document.getElementById('table-2').innerHTML = createRateTable(vehicleData);
-        document.getElementById('table-3').innerHTML = createRateTable(vehicleData);
-        document.getElementById('table-4').innerHTML = createRateTable(vehicleData);
-        document.getElementById('table-5').innerHTML = createRateTable(vehicleData);
-        document.getElementById('table-6').innerHTML = createRateTable(vehicleData);
-        document.getElementById('table-7').innerHTML = createRateTable(vehicleData);
-
-        // Accordion functionality has been removed.
-
     </script>
-  <!-- Floating WhatsApp Button -->
-  <a href="https://wa.me/919611288339?text=Hi%20Heritage%20Taxi" target="_blank" class="fixed bottom-6 right-6 z-50 p-4 bg-green-500 rounded-full shadow-lg text-white hover:bg-green-600 transition-transform hover:scale-110">
-    <span class="sr-only">Chat on WhatsApp</span>
-    <svg class="h-8 w-8" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16"><path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/></svg>
-  </a>
-
-  <!-- Booking Inquiry Modal -->
-  <div id="booking-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 hidden">
-      <div class="bg-white rounded-lg shadow-xl p-6 md:p-8 max-w-sm mx-auto text-center">
-          <h3 class="text-2xl font-bold text-secondary-900">Inquiry Sent!</h3>
-          <p class="mt-4 text-secondary-600">Your WhatsApp is opening. Please review the pre-filled details and send the message. We will confirm your booking and send a payment link shortly!</p>
-          <button id="close-modal-btn" class="mt-6 w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-primary-600 text-base font-medium text-white hover:bg-primary-700">
-              Got it
-          </button>
-      </div>
-  </div>
-  <script>
-      // --- Mobile Menu Toggle ---
-      const menuButton = document.getElementById('mobile-menu-button');
-      const mobileMenu = document.getElementById('mobile-menu');
-      const mobileLinks = mobileMenu.querySelectorAll('a');
-      menuButton.addEventListener('click', () => {
-          mobileMenu.classList.toggle('hidden');
-      });
-      // Close menu when a link is clicked
-      mobileLinks.forEach(link => {
-          link.addEventListener('click', () => {
-              mobileMenu.classList.add('hidden');
-          });
-      });
-      // --- Booking Widget Logic ---
-      const serviceTypeSelect = document.getElementById('serviceType');
-      const localOptions = document.getElementById('localOptions');
-      const outstationOptions = document.getElementById('outstationOptions');
-      const airportOptions = document.getElementById('airportOptions');
-      serviceTypeSelect.addEventListener('change', () => {
-          // Hide all dynamic sections first
-          localOptions.classList.add('hidden');
-          outstationOptions.classList.add('hidden');
-          airportOptions.classList.add('hidden');
-          // Show the relevant section
-          const selectedService = serviceTypeSelect.value;
-          if (selectedService === 'local') {
-              localOptions.classList.remove('hidden');
-          } else if (selectedService === 'outstation') {
-              outstationOptions.classList.remove('hidden');
-          } else if (selectedService === 'airport') {
-              airportOptions.classList.remove('hidden');
-          }
-      });
-      // --- Set minimum date for date pickers to today ---
-      const today = new Date().toISOString().split('T')[0];
-      document.getElementById('pickupDate').setAttribute('min', today);
-      document.getElementById('returnDate').setAttribute('min', today);
-      // --- Handle Booking Form Submission ---
-      const bookingForm = document.getElementById('booking-form');
-      const bookingModal = document.getElementById('booking-modal');
-      const closeModalBtn = document.getElementById('close-modal-btn');
-      bookingForm.addEventListener('submit', (event) => {
-          event.preventDefault(); // Stop form from submitting normally
-          
-          // Collect all form data
-          const serviceType = document.getElementById('serviceType').value;
-          const pickupLocation = document.getElementById('pickupLocation').value;
-          const pickupDate = document.getElementById('pickupDate').value;
-          const pickupTime = document.getElementById('pickupTime').value;
-          const vehicleType = document.getElementById('vehicleType').value;
-          let message = '--- New Taxi Booking Inquiry ---\n\n';
-          message += `*Service Type:* ${serviceType}\n`;
-          message += `*Pickup Location:* ${pickupLocation}\n`;
-          message += `*Pickup Date:* ${pickupDate}\n`;
-          message += `*Pickup Time:* ${pickupTime}\n`;
-          message += `*Vehicle:* ${vehicleType}\n\n`;
-          // Add service-specific details
-          if (serviceType === 'local') {
-              const localPackage = document.getElementById('localPackage').value;
-              message += `*Package:* ${localPackage}\n`;
-          } else if (serviceType === 'outstation') {
-              const destination = document.getElementById('outstationDestination').value;
-              const returnDate = document.getElementById('returnDate').value;
-              message += `*Destination:* ${destination}\n`;
-              if (returnDate) {
-                  message += `*Return Date:* ${returnDate}\n`;
-              } else {
-                  message += `*Trip Type:* One-Way\n`;
-              }
-          } else if (serviceType === 'airport') {
-              const airport = document.getElementById('airportName').value;
-              const transfer = document.getElementById('transferType').value;
-              message += `*Airport:* ${airport}\n`;
-              message += `*Transfer:* ${transfer}\n`;
-              // Add Flight Number field if we had one
-              // const flightNumber = document.getElementById('flightNumber').value;
-              // if (flightNumber) message += `*Flight No:* ${flightNumber}\n`;
-          }
-          message += '\n----------------------------------\n';
-          message += 'Please confirm availability and price. My name is:\nMy contact number is:';
-          // --- Open WhatsApp ---
-          const phoneNumber = '919611288339';
-          const encodedMessage = encodeURIComponent(message);
-          const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
-          window.open(whatsappURL, '_blank');
-          // --- Show Modal ---
-          bookingModal.classList.remove('hidden');
-      });
-      closeModalBtn.addEventListener('click', () => {
-          bookingModal.classList.add('hidden');
-      });
-  </script>
 </body>
 </html>
