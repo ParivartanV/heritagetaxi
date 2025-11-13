@@ -109,6 +109,7 @@
                             <span>Tour Packages</span>
                         </a>
                         <div class="dropdown-content">
+                            <a href="Mysore 1 day tour.html" class="text-sm text-secondary-700 hover:bg-secondary-100 block px-4 py-2">Mysore 1 Day Tour</a>
                             <a href="1-day-tour.html" class="text-sm text-secondary-700 hover:bg-secondary-100 block px-4 py-2">1 Day Tour</a>
                             <a href="2-days-tour.html" class="text-sm text-secondary-700 hover:bg-secondary-100 block px-4 py-2">2 Days Tour</a>
                             <a href="3-days-tour.html" class="text-sm text-secondary-700 hover:bg-secondary-100 block px-4 py-2">3 Days Tour</a>
@@ -190,12 +191,8 @@
 
     <main>
         <!-- Hero Section -->
-        <section id="home" class="relative bg-secondary-800 text-white overflow-hidden">
-            <div class="absolute inset-0">
-                <img src="https://placehold.co/1600x900/333/666?text=Clean+Sedan+at+Mysore+Palace" 
-                     alt="Heritage Taxi Mysore car at Mysore Palace" 
-                     class="w-full h-full object-cover opacity-30">
-            </div>
+        <section id="home" class="relative text-white overflow-hidden bg-cover bg-center" style="background-image: url('pictures/mehal2.jpeg');">
+            <div class="absolute inset-0 bg-black/60"></div>
             
             <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center py-16 md:py-24">
@@ -223,7 +220,7 @@
                         <h2 class="text-2xl font-bold text-center text-secondary-900 mb-6">Book Your Ride</h2>
                         <form id="booking-form" class="space-y-4">
                             
-                            <div>
+                            <div class="border border-gray-200 rounded-md p-4">
                                 <label for="serviceType" class="block text-sm font-medium text-secondary-700">Service Type</label>
                                 <select id="serviceType" name="serviceType" class="mt-1 block w-full pl-3 pr-10 py-2 text-base border-secondary-300 focus:outline-none focus:ring-primary-500 focus:border-primary-500 sm:text-sm rounded-md text-secondary-900" required>
                                     <option value="">Select Service</option>
@@ -291,7 +288,7 @@
                                     <input type="time" id="pickupTime" name="pickupTime" class="mt-1 block w-full border border-secondary-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-primary-500 focus:border-primary-500 sm:text-sm text-secondary-900" required>
                                 </div>
                             </div>
-                            <div>
+                            <div class="border border-gray-200 rounded-md p-4">
                                 <label for="vehicleType" class="block text-sm font-medium text-secondary-700">Vehicle Type</label>
                                 <select id="vehicleType" name="vehicleType" class="mt-1 block w-full pl-3 pr-10 py-2 text-base border-secondary-300 focus:outline-none focus:ring-primary-500 focus:border-primary-500 sm:text-sm rounded-md text-secondary-900" required>
                                     <option>Sedan (Etios, Dzire or similar)</option>
@@ -321,6 +318,61 @@
                     <p class="mt-4 max-w-2xl mx-auto text-xl text-secondary-500">
                         We are more than just a taxi service; we are your local travel partner.
                     </p>
+                </div>
+
+                <div class="mt-20">
+                    <div class="grid grid-cols-1 gap-y-12 sm:grid-cols-2 sm:gap-x-6 lg:grid-cols-5 lg:gap-x-8">
+                        <!-- Feature 1: Instant Booking -->
+                        <div class="text-center">
+                            <div class="flex items-center justify-center h-16 w-16 rounded-full bg-primary-100 text-primary-600 mx-auto transition-transform duration-300 transform hover:scale-110">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                            </div>
+                            <h3 class="mt-6 text-lg font-bold text-secondary-900">Instant Online Booking & Confirmation</h3>
+                            <p class="mt-2 text-base text-secondary-500">Book your ride in seconds with our easy-to-use online form.</p>
+                        </div>
+                        <!-- Feature 2: Transparent Pricing -->
+                        <div class="text-center">
+                            <div class="flex items-center justify-center h-16 w-16 rounded-full bg-primary-100 text-primary-600 mx-auto transition-transform duration-300 transform hover:scale-110">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M7 7h.01M7 3h5a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h2zM17 17h.01M17 13h5a2 2 0 012 2v5a2 2 0 01-2 2h-5a2 2 0 01-2-2v-5a2 2 0 012-2h2z" />
+                                </svg>
+                            </div>
+                            <h3 class="mt-6 text-lg font-bold text-secondary-900">Transparent "No Hidden Fee" Pricing</h3>
+                            <p class="mt-2 text-base text-secondary-500">What you see is what you pay. No surprises.</p>
+                        </div>
+                        <!-- Feature 3: Professional Drivers -->
+                        <div class="text-center">
+                            <div class="flex items-center justify-center h-16 w-16 rounded-full bg-primary-100 text-primary-600 mx-auto transition-transform duration-300 transform hover:scale-110">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                                </svg>
+                            </div>
+                            <h3 class="mt-6 text-lg font-bold text-secondary-900">Professional, Vetted Drivers</h3>
+                            <p class="mt-2 text-base text-secondary-500">Courteous, experienced, and background-checked drivers.</p>
+                        </div>
+                        <!-- Feature 4: Sanitized Fleet -->
+                        <div class="text-center">
+                            <div class="flex items-center justify-center h-16 w-16 rounded-full bg-primary-100 text-primary-600 mx-auto transition-transform duration-300 transform hover:scale-110">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m-6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                            </div>
+                            <h3 class="mt-6 text-lg font-bold text-secondary-900">Sanitized & Well-Maintained Fleet</h3>
+                            <p class="mt-2 text-base text-secondary-500">Clean, safe, and comfortable vehicles for every journey.</p>
+                        </div>
+                        <!-- Feature 5: 24/7 Support -->
+                        <div class="text-center">
+                            <div class="flex items-center justify-center h-16 w-16 rounded-full bg-primary-100 text-primary-600 mx-auto transition-transform duration-300 transform hover:scale-110">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                            </div>
+                            <h3 class="mt-6 text-lg font-bold text-secondary-900">24/7 Customer Support</h3>
+                            <p class="mt-2 text-base text-secondary-500">We're here to help you anytime, day or night.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -463,6 +515,19 @@
             <!-- Grid for Tour Cards -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
 
+                <!-- Mysore 1 Day Tour -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col transform transition-all duration-300 hover:shadow-2xl hover:-translate-y-1">
+                    <div class="p-6 flex-grow flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-xl font-bold text-blue-800 mb-2">Mysore 1 Day Tour</h3>
+                            <p class="text-gray-600 text-sm">Explore the best of Mysore in a single day.</p>
+                        </div>
+                        <div class="text-center mt-4">
+                            <a href="Mysore 1 day tour.html" class="bg-blue-600 text-white font-semibold px-5 py-2.5 rounded-lg shadow-md hover:bg-blue-700 transition-colors text-sm">View Details</a>
+                        </div>
+                    </div>
+                </div>
+
                 <!-- 1 Day Tour -->
                 <div class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col transform transition-all duration-300 hover:shadow-2xl hover:-translate-y-1">
                     <div class="p-6 flex-grow flex flex-col justify-between">
@@ -583,7 +648,7 @@
             <div class="mt-16 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
                 <!-- Fleet 1: Sedan -->
                 <div class="bg-white rounded-xl shadow-lg overflow-hidden">
-                    <img class="h-56 w-full object-cover" src="https://placehold.co/600x400/FFF/999?text=Clean+Sedan+(Etios/Dzire)" alt="Sedan car">
+                    <img class="h-56 w-full object-cover" src="pictures/swift2.webp" alt="Sedan car">
                     <div class="p-6">
                         <h3 class="text-xl font-bold text-secondary-900">Sedans</h3>
                         <p class="mt-2 text-base text-secondary-500">Toyota Etios, Maruti Dzire, or similar.</p>
@@ -596,7 +661,7 @@
                 </div>
                 <!-- Fleet 2: SUV -->
                 <div class="bg-white rounded-xl shadow-lg overflow-hidden">
-                    <img class="h-56 w-full object-cover" src="https://placehold.co/600x400/FFF/999?text=Spacious+SUV+(Innova)" alt="SUV car">
+                    <img class="h-56 w-full object-cover" src="pictures/innova.jpg" alt="SUV car">
                     <div class="p-6">
                         <h3 class="text-xl font-bold text-secondary-900">SUVs</h3>
                         <p class="mt-2 text-base text-secondary-500">Toyota Innova, Innova Crysta, or similar.</p>
@@ -609,7 +674,7 @@
                 </div>
                 <!-- Fleet 3: Tempo Traveller -->
                 <div class="bg-white rounded-xl shadow-lg overflow-hidden">
-                    <img class="h-56 w-full object-cover" src="https://placehold.co/600x400/FFF/999?text=Tempo+Traveller+(12+Seater)" alt="Tempo Traveller van">
+                    <img class="h-56 w-full object-cover" src="pictures/traveller.webp" alt="Tempo Traveller van">
                     <div class="p-6">
                         <h3 class="text-xl font-bold text-secondary-900">Tempo Traveller</h3>
                         <p class="mt-2 text-base text-secondary-500">Force Motors Tempo Traveller.</p>

@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mysore 1-Day Sightseeing Tour</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Chosen Palette: Warm Neutrals -->
+    <!-- Application Structure Plan: Single-page vertical layout with clear thematic sections: 1) Hero/Title, 2) Interactive Itinerary, 3) Time Allocation Chart, 4) Vehicle/Pricing, 5) Inclusions/Exclusions, 6) Booking CTA. Interactions: Itinerary (Click-to-expand list items to show stop details), Pricing (Tabs/buttons to select vehicle type, which dynamically updates the price display), Chart (Hover-to-see tooltips on the time allocation chart). User Flow: User lands, sees the package title. Scrolls to the itinerary, clicks stops they're interested in. Views the chart to understand time commitments. Checks pricing for their group size (vehicle type). Sees inclusions/exclusions. Clicks "Book Now." Why this structure: This mirrors a user's natural "shopping" process for a tour package: What is it? What do I see? How long does it take? How much does it cost? What's included? How do I buy? It's task-oriented and logical. -->
+    <!-- Visualization & Content Choices: [Report Info: Day-wise itinerary -> Goal: Organize & Inform -> Viz/Presentation: Interactive vertical list -> Interaction: On-click reveals details (description, time) for each stop -> Justification: More engaging and less overwhelming than a static text block -> Library/Method: Vanilla JS, HTML, Tailwind], [Report Info: List of locations and suggested timings -> Goal: Compare -> Viz/Presentation: Horizontal Bar Chart -> Interaction: Tooltips on hover -> Justification: Visually represents which stops take the most time -> Library/Method: Chart.js (Canvas)], [Report Info: Vehicle types and corresponding prices -> Goal: Compare & Inform -> Viz/Presentation: Interactive pricing cards with tabs for vehicle selection -> Interaction: Clicking a vehicle type updates the displayed price -> Justification: Allows users to easily see pricing for their specific need -> Library/Method: Vanilla JS, HTML, Tailwind] -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #FDFBF8;
+            color: #3D3A36;
+        }
+        .nav-btn {
+            @apply px-4 py-2 rounded-lg transition-all duration-300;
+        }
+        .nav-btn.active {
+            @apply bg-amber-700 text-white shadow-md;
+        }
+        .nav-btn:not(.active) {
+            @apply text-amber-800 hover:bg-amber-100;
+        }
+        .vehicle-btn {
+            @apply px-4 py-2 rounded-lg transition-all duration-300 border-2 border-transparent cursor-pointer;
+        }
+        .vehicle-btn.active {
+            @apply bg-amber-700 text-white border-amber-700 shadow-lg;
+        }
+        .vehicle-btn:not(.active) {
+            @apply bg-white text-amber-800 border-amber-200 hover:bg-amber-50;
+        }
+        .itinerary-item {
+            @apply bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden cursor-pointer transition-all duration-300;
+        }
+        .itinerary-item.open {
+            @apply shadow-lg;
+        }
+        .itinerary-header {
+            @apply flex justify-between items-center p-4;
+        }
+        .itinerary-content {
+            @apply max-h-0 overflow-hidden transition-all duration-500 ease-in-out;
+        }
+        .itinerary-item.open .itinerary-content {
+            @apply max-h-screen;
+        }
+        .itinerary-arrow {
+            @apply transition-transform duration-500;
+        }
+        .itinerary-item.open .itinerary-arrow {
+            @apply rotate-180;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+            }
+        }
+        .section-intro {
+            @apply text-lg text-gray-700 max-w-3xl mx-auto mb-8;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-4 sm:px-6 lg:px-8 py-3 flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-amber-800">Devi Travels Mysore</h1>
+            <div class="hidden md:flex space-x-2">
+                <a href="#itinerary" class="nav-btn active">Itinerary</a>
+                <a href="#timing" class="nav-btn">Timings</a>
+                <a href="#pricing" class="nav-btn">Pricing</a>
+                <a href="#details" class="nav-btn">Details</a>
+            </div>
+            <a href="#book" class="bg-amber-700 text-white px-5 py-2 rounded-lg shadow hover:bg-amber-800 transition-all font-medium">Book Now</a>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
+        
+        <section id="hero" class="text-center mb-16">
+            <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Mysore 1-Day Sightseeing Package</h2>
+            <p class="text-xl text-gray-700 max-w-3xl mx-auto">Explore the City of Palaces with our all-inclusive one-day tour. This interactive guide helps you plan your day, understand timings, and see pricing.
+            </p>
+        </section>
+
+        <section id="itinerary" class="mb-16">
+            <h3 class="text-3xl font-bold text-center text-gray-900 mb-4">Interactive Itinerary</h3>
+            <p class="section-intro text-center">
+                This is the suggested plan for your full-day tour, covering the most iconic landmarks of Mysore. Click on any stop to see more details, a brief description, and the recommended time to spend.
+            </p>
+            <div class="max-w-3xl mx-auto space-y-4" id="itinerary-list">
+            </div>
+        </section>
+
+        <section id="timing" class="mb-16">
+            <h3 class="text-3xl font-bold text-center text-gray-900 mb-4">Suggested Time Allocation</h3>
+            <p class="section-intro text-center">
+                To help you plan, this chart visualizes the recommended time to spend at each major location. Use this to understand the pace of the tour and which activities take the most time.
+            </p>
+            <div class="bg-white p-4 sm:p-6 rounded-xl shadow-lg border border-gray-200">
+                <div class="chart-container">
+                    <canvas id="timingChart"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <section id="pricing" class="mb-16">
+            <h3 class="text-3xl font-bold text-center text-gray-900 mb-4">Vehicle & Pricing</h3>
+            <p class="section-intro text-center">
+                We offer a range of vehicles to suit your group size and comfort. Select a vehicle type below to see the all-inclusive price for the full-day tour.
+            </p>
+            <div class="max-w-4xl mx-auto">
+                <div class="flex flex-wrap justify-center gap-2 sm:gap-4 mb-8" id="vehicle-tabs">
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-lg border border-gray-200 p-8 text-center transition-all duration-300">
+                    <p class="text-lg text-gray-600 mb-2">Price for</p>
+                    <h4 class="text-3xl font-bold text-gray-900 mb-4" id="vehicle-name">Sedan</h4>
+                    <div class="text-5xl font-extrabold text-amber-800 mb-4" id="vehicle-price">₹2500</div>
+                    <p class="text-md text-gray-500" id="vehicle-capacity">Up to 4 Passengers</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="details" class="mb-16">
+            <h3 class="text-3xl font-bold text-center text-gray-900 mb-4">Tour Details</h3>
+            <p class="section-intro text-center">
+                Here’s a clear breakdown of what's included in the package price and what's not, so there are no surprises.
+            </p>
+            <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white p-6 rounded-xl shadow-lg border border-gray-200">
+                    <h4 class="text-2xl font-bold text-green-700 mb-4">What's Included</h4>
+                    <ul class="space-y-3 text-gray-700 text-lg" id="inclusions-list">
+                    </ul>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg border border-gray-200">
+                    <h4 class="text-2xl font-bold text-red-700 mb-4">What's Excluded</h4>
+                    <ul class="space-y-3 text-gray-700 text-lg" id="exclusions-list">
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="book" class="text-center bg-white p-10 rounded-xl shadow-xl border border-gray-200 max-w-4xl mx-auto">
+            <h3 class="text-3xl font-bold text-gray-900 mb-4">Ready to Book Your Tour?</h3>
+            <p class="text-lg text-gray-700 mb-8">
+                Contact us today to confirm your booking or to ask any further questions. We're here to make your Mysore trip memorable!
+            </p>
+            <a href="tel:+910000000000" class="bg-amber-700 text-white px-8 py-4 rounded-lg shadow-lg hover:bg-amber-800 transition-all text-xl font-bold">
+                Call to Book Now
+            </a>
+        </section>
+    </main>
+    
+    <footer class="text-center py-8 mt-12 border-t border-gray-200">
+        <p class="text-gray-600">&copy; 2025 Devi Travels Mysore. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            const itineraryData = [
+                { 
+                    id: 1,
+                    title: "Chamundi Hill",
+                    time: "Pickup at 8:30 AM",
+                    description: "Start your day with a visit to the famous Chamundeshwari Temple, perched atop Chamundi Hill. Enjoy panoramic views of Mysore city.",
+                    duration: "1.5 Hours"
+                },
+                { 
+                    id: 2,
+                    title: "Mysore Zoo",
+                    time: "Around 10:30 AM",
+                    description: "Visit one of the oldest and most popular zoos in India, known for its rich collection of animals and birds in spacious enclosures.",
+                    duration: "2 Hours"
+                },
+                { 
+                    id: 3,
+                    title: "Mysore Palace",
+                    time: "Around 1:30 PM (after lunch break)",
+                    description: "Explore the magnificent Mysore Palace, the former seat of the Wodeyar dynasty. Marvel at its stunning architecture, intricate carvings, and beautiful paintings.",
+                    duration: "2 Hours"
+                },
+                { 
+                    id: 4,
+                    title: "St. Philomena's Church",
+                    time: "Around 3:45 PM",
+                    description: "Visit one of the tallest churches in Asia, an architectural marvel built in the Neo-Gothic style, inspired by the Cologne Cathedral in Germany.",
+                    duration: "30 Minutes"
+                },
+                { 
+                    id: 5,
+                    title: "Brindavan Gardens (KRS)",
+                    time: "Around 5:00 PM",
+                    description: "Conclude your day at the beautiful Brindavan Gardens, located at the Krishnaraja Sagar (KRS) Dam. Enjoy the musical fountain show in the evening.",
+                    duration: "2 Hours (including show)"
+                },
+                { 
+                    id: 6,
+                    title: "Drop-off",
+                    time: "Around 8:30 PM",
+                    description: "You will be dropped back at your hotel or preferred location in Mysore.",
+                    duration: ""
+                }
+            ];
+
+            const vehicleData = [
+                { id: 'sedan', name: 'Sedan', price: '₹2500', capacity: 'Up to 4 Passengers', default: true },
+                { id: 'suv', name: 'SUV', price: '₹3500', capacity: 'Up to 7 Passengers', default: false },
+                { id: 'van', name: 'Tempo Traveller', price: '₹5000', capacity: 'Up to 12 Passengers', default: false }
+            ];
+
+            const inclusionsData = [
+                "Private Air-Conditioned Vehicle",
+                "Professional Driver & Driver Bata",
+                "Toll & Parking Fees",
+                "Pickup & Drop-off from your Hotel"
+            ];
+
+            const exclusionsData = [
+                "All Monument Entry Fees",
+                "Food & Beverages",
+                "Tour Guide Charges",
+                "Personal Expenses"
+            ];
+
+            const timingData = {
+                labels: ["Chamundi Hill", "Mysore Zoo", "Mysore Palace", "St. Philomena's", "Brindavan Gardens"],
+                data: [1.5, 2, 2, 0.5, 2]
+            };
+
+            const itineraryList = document.getElementById('itinerary-list');
+            itineraryData.forEach(item => {
+                const el = document.createElement('div');
+                el.className = 'itinerary-item';
+                el.innerHTML = `
+                    <div class="itinerary-header">
+                        <div>
+                            <h4 class="text-xl font-semibold text-gray-900">${item.title}</h4>
+                            <p class="text-md text-amber-700 font-medium">${item.time}</p>
+                        </div>
+                        <span class="itinerary-arrow text-2xl text-amber-700">&#x25BC;</span>
+                    </div>
+                    <div class="itinerary-content">
+                        <div class="p-4 border-t border-gray-100">
+                            <p class="text-gray-700 mb-2">${item.description}</p>
+                            ${item.duration ? `<p class="text-sm text-gray-500 font-medium">Suggested Duration: ${item.duration}</p>` : ''}
+                        </div>
+                    </div>
+                `;
+                el.addEventListener('click', () => {
+                    el.classList.toggle('open');
+                });
+                itineraryList.appendChild(el);
+            });
+
+            const vehicleTabs = document.getElementById('vehicle-tabs');
+            const vehicleName = document.getElementById('vehicle-name');
+            const vehiclePrice = document.getElementById('vehicle-price');
+            const vehicleCapacity = document.getElementById('vehicle-capacity');
+
+            vehicleData.forEach(vehicle => {
+                const btn = document.createElement('button');
+                btn.className = 'vehicle-btn font-semibold';
+                btn.textContent = vehicle.name;
+                btn.dataset.id = vehicle.id;
+                if (vehicle.default) {
+                    btn.classList.add('active');
+                }
+                btn.addEventListener('click', () => {
+                    document.querySelectorAll('.vehicle-btn').forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    
+                    const activeVehicle = vehicleData.find(v => v.id === btn.dataset.id);
+                    if (activeVehicle) {
+                        vehicleName.textContent = activeVehicle.name;
+                        vehiclePrice.textContent = activeVehicle.price;
+                        vehicleCapacity.textContent = activeVehicle.capacity;
+                    }
+                });
+                vehicleTabs.appendChild(btn);
+            });
+
+            const inclusionsList = document.getElementById('inclusions-list');
+            inclusionsData.forEach(item => {
+                const li = document.createElement('li');
+                li.className = 'flex items-center';
+                li.innerHTML = `
+                    <span class="text-green-700 mr-3 text-2xl">&#x2713;</span>
+                    ${item}
+                `;
+                inclusionsList.appendChild(li);
+            });
+
+            const exclusionsList = document.getElementById('exclusions-list');
+            exclusionsData.forEach(item => {
+                const li = document.createElement('li');
+                li.className = 'flex items-center';
+                li.innerHTML = `
+                    <span class="text-red-700 mr-3 text-2xl">&#x2717;</span>
+                    ${item}
+                `;
+                exclusionsList.appendChild(li);
+            });
+
+            const ctx = document.getElementById('timingChart').getContext('2d');
+            const timingChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: timingData.labels,
+                    datasets: [{
+                        label: 'Suggested Hours',
+                        data: timingData.data,
+                        backgroundColor: 'rgba(180, 83, 9, 0.7)',
+                        borderColor: 'rgba(180, 83, 9, 1)',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    indexAxis: 'y',
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        x: {
+                            beginAtZero: true,
+                            title: {
+                                display: true,
+                                text: 'Suggested Hours'
+                            }
+                        }
+                    },
+                    plugins: {
+                        legend: {
+                            display: false
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    return ` ${context.dataset.label}: ${context.raw} hours`;
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+
+            const navButtons = document.querySelectorAll('.nav-btn');
+            const sections = document.querySelectorAll('section[id]');
+
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.4
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const id = entry.target.getAttribute('id');
+                        navButtons.forEach(btn => {
+                            btn.classList.remove('active');
+                            if (btn.getAttribute('href') === `#${id}`) {
+                                btn.classList.add('active');
+                            }
+                        });
+                    }
+                });
+            }, observerOptions);
+
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+
+        });
+    </script>
+</body>
+</html>
