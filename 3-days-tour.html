@@ -1,409 +1,1121 @@
-<!DOCTYPE html>
-<html lang="en">
+﻿<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
 <head>
-    <meta charset="UTF-8"> 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="3-Day Tour Packages - Heritage Taxi Mysore">
-    <title>3 Days Tour Packages - Heritage Taxi Mysore</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-      body {
-        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-        background-color: #f8fafc;
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mysore 3-Day Tour Packages | Heritage Taxi Mysore</title>
+  <meta name="description" content="Explore curated 3-day tour packages from Mysore covering heritage circuits, Coorg coffee country, Wayanad wilderness, and Ooty hill escapes with chauffeur-driven comfort.">
+  <link rel="canonical" href="https://www.heritagetaximysore.com/3-days-tour.html">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --color-primary-300: #93c5fd;
+      --color-primary-500: #2563eb;
+      --color-primary-600: #1d4ed8;
+      --color-primary-700: #1e3a8a;
+      --color-emerald-500: #059669;
+      --color-emerald-600: #047857;
+      --color-amber-400: #fbbf24;
+      --color-amber-500: #f59e0b;
+      --color-midnight: #0f172a;
+      --color-slate-100: #f1f5f9;
+      --color-slate-200: #e2e8f0;
+      --glass-border: rgba(148, 163, 184, 0.28);
+      --glass-border-strong: rgba(148, 163, 184, 0.45);
+      --glass-shadow: 0 28px 60px -30px rgba(15, 23, 42, 0.6);
+      --glass-shadow-strong: 0 40px 80px -35px rgba(15, 23, 42, 0.75);
+      --radius-xl: 1.5rem;
+      --radius-lg: 1rem;
+      --transition-base: all 0.35s ease;
+    }
+    body {
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+      background-image: url('pictures/mehal2.jpeg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      color: var(--color-midnight);
+      min-height: 100vh;
+      position: relative;
+      line-height: 1.6;
+    }
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(15, 23, 42, 0.85), rgba(30, 64, 175, 0.55), rgba(6, 95, 70, 0.5));
+      opacity: 0.9;
+      backdrop-filter: blur(8px);
+      z-index: 0;
+    }
+    body > * {
+      position: relative;
+      z-index: 1;
+    }
+    main {
+      display: flex;
+      flex-direction: column;
+    }
+    .dropdown:hover .dropdown-content { display: block; }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      top: calc(100% + 0.5rem);
+      left: 0;
+      background: rgba(10, 12, 17, 0.85);
+      padding: 0.6rem 0;
+      min-width: 220px;
+      border-radius: 1rem;
+      border: 1px solid rgba(148, 163, 184, 0.35);
+      box-shadow: 0 30px 60px -25px rgba(15, 23, 42, 0.7);
+      backdrop-filter: blur(14px);
+      z-index: 50;
+    }
+    .dropdown-content a {
+      display: block;
+      padding: 0.55rem 1rem;
+      font-size: 0.9rem;
+      color: rgba(226, 232, 240, 0.92);
+      transition: var(--transition-base);
+    }
+    .dropdown-content a:hover {
+      background: rgba(37, 99, 235, 0.2);
+      color: #fff;
+      padding-left: 1.2rem;
+    }
+    .site-header {
+      background: rgba(15, 23, 42, 0.82);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(148, 163, 184, 0.25);
+      box-shadow: 0 22px 48px -28px rgba(15, 23, 42, 0.65);
+    }
+    .logo-text {
+      color: #fff;
+      letter-spacing: 0.02em;
+    }
+    .nav-link {
+      font-weight: 600;
+      color: rgba(226, 232, 240, 0.92);
+      padding: 0.35rem 0.65rem;
+      border-radius: 999px;
+      transition: var(--transition-base);
+    }
+    .nav-link svg { opacity: 0.85; }
+    .nav-link:hover {
+      color: #fff;
+      background: rgba(37, 99, 235, 0.18);
+      box-shadow: 0 12px 26px -18px rgba(37, 99, 235, 0.65);
+    }
+    #mobile-menu {
+      background: rgba(15, 23, 42, 0.92);
+      border-bottom: 1px solid rgba(148, 163, 184, 0.25);
+      box-shadow: 0 20px 45px -30px rgba(15, 23, 42, 0.7);
+    }
+    #mobile-menu a {
+      color: rgba(226, 232, 240, 0.9);
+      border-radius: 0.75rem;
+    }
+    #mobile-menu a:hover {
+      background: rgba(37, 99, 235, 0.18);
+      color: #fff;
+    }
+    .primary-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.35rem;
+      padding: 0.6rem 1.4rem;
+      border-radius: 999px;
+      font-weight: 600;
+      color: var(--color-midnight);
+      background: linear-gradient(135deg, var(--color-amber-400), var(--color-amber-500));
+      box-shadow: 0 18px 32px -20px rgba(245, 158, 11, 0.6);
+      transition: var(--transition-base);
+    }
+    .primary-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 26px 44px -18px rgba(245, 158, 11, 0.7);
+      color: var(--color-midnight);
+    }
+    .inner-hero {
+      position: relative;
+      padding: clamp(4rem, 8vw, 6rem) 0;
+      margin: clamp(1.5rem, 5vw, 3rem) clamp(1rem, 4vw, 3rem) 0;
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      background: linear-gradient(135deg, rgba(15, 23, 42, 0.92), rgba(30, 64, 175, 0.75));
+      box-shadow: 0 40px 80px -50px rgba(15, 23, 42, 0.8);
+      color: #fff;
+    }
+    .inner-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 10% 15%, rgba(59, 130, 246, 0.45), transparent 55%), radial-gradient(circle at 80% 80%, rgba(6, 95, 70, 0.55), transparent 65%);
+      opacity: 0.9;
+      pointer-events: none;
+    }
+    .inner-hero > * { position: relative; z-index: 1; }
+    .inner-hero h1 {
+      font-size: clamp(2.5rem, 5vw, 3.75rem);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      background: linear-gradient(120deg, #fff, var(--color-primary-300));
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+    .inner-hero p {
+      max-width: 48rem;
+      margin-top: 1rem;
+      color: rgba(226, 232, 240, 0.86);
+      font-size: clamp(1.05rem, 2vw, 1.25rem);
+    }
+    .accent-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.4rem 0.9rem;
+      border-radius: 999px;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      background: rgba(236, 254, 255, 0.2);
+      color: rgba(191, 219, 254, 0.95);
+      font-weight: 700;
+    }
+    .breadcrumb {
+      margin-top: 1.75rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      font-size: 0.95rem;
+      color: rgba(226, 232, 240, 0.78);
+    }
+    .breadcrumb a {
+      color: rgba(224, 231, 255, 0.95);
+      transition: var(--transition-base);
+    }
+    .breadcrumb a:hover { color: #fff; }
+    .page-section {
+      margin: clamp(2.25rem, 5vw, 3.5rem) clamp(1rem, 4vw, 3rem);
+      border-radius: var(--radius-xl);
+      background: linear-gradient(150deg, rgba(255, 255, 255, 0.88), rgba(226, 232, 240, 0.72));
+      border: 1px solid var(--glass-border);
+      box-shadow: var(--glass-shadow);
+      backdrop-filter: blur(16px);
+      position: relative;
+      overflow: hidden;
+      isolation: isolate;
+    }
+    .page-section::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at top left, rgba(148, 197, 255, 0.28), transparent 55%), radial-gradient(circle at bottom right, rgba(16, 185, 129, 0.18), transparent 60%);
+      opacity: 0.85;
+      pointer-events: none;
+      z-index: 0;
+    }
+    .page-section > * { position: relative; z-index: 1; }
+    .section-header {
+      text-align: center;
+      max-width: 50rem;
+      margin: 0 auto clamp(2rem, 4vw, 3rem);
+    }
+    .section-title {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-size: clamp(2rem, 3.5vw, 2.75rem);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      background: linear-gradient(120deg, var(--color-midnight), var(--color-primary-600));
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+    .section-subtitle {
+      margin-top: 1rem;
+      color: rgba(71, 85, 105, 0.85);
+      font-size: clamp(1rem, 2vw, 1.15rem);
+    }
+    .tour-item {
+      position: relative;
+      border-radius: var(--radius-lg);
+      background: linear-gradient(160deg, rgba(255, 255, 255, 0.92), rgba(241, 245, 249, 0.78));
+      border: 1px solid var(--glass-border);
+      box-shadow: 0 22px 48px -30px rgba(15, 23, 42, 0.55);
+      backdrop-filter: blur(14px);
+      overflow: hidden;
+      transition: var(--transition-base);
+    }
+    .tour-item::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at top right, rgba(59, 130, 246, 0.18), transparent 60%);
+      opacity: 0.9;
+      pointer-events: none;
+    }
+    .tour-item:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--glass-shadow-strong);
+    }
+    .tour-item > * { position: relative; z-index: 1; }
+    .tour-item .fixed-header {
+      background: linear-gradient(120deg, rgba(59, 130, 246, 0.12), rgba(14, 116, 144, 0.1));
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+      padding: 1.75rem;
+    }
+    .tour-item .badge-soft {
+      align-self: flex-start;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.3rem 0.75rem;
+      border-radius: 999px;
+      font-size: 0.75rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      background: rgba(37, 99, 235, 0.15);
+      color: var(--color-primary-700);
+      font-weight: 600;
+    }
+    .tour-item .fixed-header h3 {
+      font-size: clamp(1.3rem, 2.5vw, 1.6rem);
+      font-weight: 700;
+      color: var(--color-midnight);
+      letter-spacing: -0.01em;
+    }
+    .tour-content {
+      padding: clamp(1.75rem, 3vw, 2.25rem);
+      display: grid;
+      gap: 1.75rem;
+    }
+    .tour-content h3 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--color-midnight);
+      letter-spacing: 0.01em;
+    }
+    .tour-content ul {
+      color: rgba(51, 65, 85, 0.88);
+      line-height: 1.7;
+    }
+    .tour-content ul li {
+      position: relative;
+      padding-left: 1.25rem;
+    }
+    .tour-content ul li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      color: var(--color-primary-600);
+      font-weight: 700;
+    }
+    .callout-card {
+      border-radius: var(--radius-lg);
+      padding: 1.25rem 1.5rem;
+      background: linear-gradient(135deg, rgba(250, 204, 21, 0.18), rgba(253, 230, 138, 0.3));
+      border: 1px solid rgba(250, 204, 21, 0.38);
+      color: rgba(120, 53, 15, 0.9);
+      font-weight: 600;
+    }
+    .info-section {
+      display: grid;
+      gap: 1.5rem;
+    }
+    @media (min-width: 768px) {
+      .info-section { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+    .info-card {
+      border-radius: var(--radius-lg);
+      padding: 2rem;
+      background: linear-gradient(160deg, rgba(236, 254, 255, 0.92), rgba(255, 255, 255, 0.88));
+      border: 1px solid rgba(59, 130, 246, 0.25);
+      box-shadow: 0 20px 42px -28px rgba(14, 116, 144, 0.45);
+    }
+    .info-card--warning {
+      background: linear-gradient(160deg, rgba(254, 243, 199, 0.92), rgba(255, 255, 255, 0.88));
+      border-color: rgba(245, 158, 11, 0.32);
+      box-shadow: 0 20px 42px -28px rgba(217, 119, 6, 0.45);
+    }
+    .info-card h3 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 1.25rem;
+      color: var(--color-midnight);
+    }
+    .info-card ul {
+      color: rgba(30, 41, 59, 0.85);
+      display: grid;
+      gap: 0.75rem;
+    }
+    .info-card li {
+      display: flex;
+      gap: 0.65rem;
+      align-items: flex-start;
+    }
+    .info-card svg {
+      flex-shrink: 0;
+      width: 1.2rem;
+      height: 1.2rem;
+      margin-top: 0.2rem;
+    }
+    footer {
+      background: rgba(10, 14, 23, 0.88);
+      border-top: 1px solid rgba(148, 163, 184, 0.25);
+      backdrop-filter: blur(12px);
+      color: rgba(226, 232, 240, 0.85);
+    }
+    footer a {
+      transition: var(--transition-base);
+      color: rgba(226, 232, 240, 0.75);
+    }
+    footer a:hover { color: #fff; }
+    .floating-whatsapp {
+      position: fixed;
+      bottom: 1.5rem;
+      right: 1.5rem;
+      z-index: 60;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.1rem;
+      border-radius: 999px;
+      background: linear-gradient(135deg, #22c55e, #16a34a);
+      color: #fff;
+      box-shadow: 0 20px 40px -18px rgba(22, 163, 74, 0.55);
+      transition: var(--transition-base);
+    }
+    .floating-whatsapp:hover {
+      transform: translateY(-4px) scale(1.05);
+      box-shadow: 0 28px 55px -20px rgba(22, 163, 74, 0.65);
+    }
+    @media (max-width: 768px) {
+      .site-header { background: rgba(15, 23, 42, 0.92); }
+      .page-section {
+        margin: clamp(1.5rem, 6vw, 2.5rem) 1rem;
+        border-radius: 1.25rem;
       }
-      .dropdown:hover .dropdown-content {
-        display: block;
+      .inner-hero {
+        margin: clamp(1.5rem, 6vw, 2.5rem) 1rem 0;
+        border-radius: 1.5rem;
+        padding: clamp(3rem, 12vw, 4.5rem) 1.25rem;
       }
+      .tour-content { padding: 1.75rem 1.5rem; }
       .dropdown-content {
-        display: none;
-        position: absolute;
-        background-color: #f9f9f9;
-        min-width: 160px;
-        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-        z-index: 50;
+        position: static;
+        width: 100%;
+        margin-top: 0.75rem;
+        border: none;
+        box-shadow: none;
+        background: rgba(15, 23, 42, 0.92);
       }
-    </style>
-    <script>
-        tailwind.config = { theme: { extend: { colors: { 'primary': tailwind.colors.amber, 'secondary': tailwind.colors.gray } } } }
-    </script>
+    }
+  </style>
+
+  <meta property="og:title" content="3-Day Tour Packages - Heritage Taxi Mysore">
+  <meta property="og:description" content="Book chauffeur-driven 3-day tour packages from Mysore across Coorg, Wayanad, and Ooty with curated stays and flexible itineraries.">
+  <meta property="og:url" content="https://www.heritagetaximysore.com/3-days-tour.html">
+  <meta property="og:image" content="https://www.heritagetaximysore.com/pictures/mysore-palace.jpg">
 </head>
-<body class="bg-secondary-100">
-    <!-- Header -->
-    <header class="bg-white/95 backdrop-blur-sm shadow-lg sticky top-0 z-40">
-      <nav class="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between items-center h-16">
-          <!-- Logo / Website Name -->
-          <div class="flex-shrink-0 flex items-center">
-            <a href="index.html" class="text-2xl font-bold text-primary-600">
-              Heritage Taxi Mysore
-            </a>
-          </div>
-
-          <!-- Desktop Navigation Links -->
-          <div class="hidden md:flex md:items-center md:space-x-4 lg:space-x-6">
-            <a href="index.html#home" class="font-semibold text-secondary-700 hover:text-primary-600 inline-flex items-center gap-1.5">
-              <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" /></svg>
-              <span>Home</span>
-            </a>
-            <a href="index.html#services" class="font-semibold text-secondary-700 hover:text-primary-600 inline-flex items-center gap-1.5">
-              <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" /></svg>
-              <span>Services</span>
-            </a>
-            <div class="relative dropdown">
-              <a href="index.html#tours" class="font-semibold text-secondary-700 hover:text-primary-600 inline-flex items-center gap-1.5">
-                <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 6.75V15m6-6v8.25m.5 3.375c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125h1.5c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125h-1.5Zm-6 0c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125h1.5c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125h-1.5ZM6.375 6.375a1.125 1.125 0 1 1-2.25 0 1.125 1.125 0 0 1 2.25 0ZM17.625 6.375a1.125 1.125 0 1 1-2.25 0 1.125 1.125 0 0 1 2.25 0Z" /></svg>
-                <span>Tour Packages</span>
-              </a>
-              <div class="dropdown-content rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5">
-                <div class="py-1" role="none">
-                  <a href="Mysore 1 day tour.html" class="text-sm text-secondary-700 hover:bg-secondary-100 block px-4 py-2">Mysore 1 Day Tour</a>
-                  <a href="1-day-tour.html" class="text-sm text-secondary-700 hover:bg-secondary-100 block px-4 py-2">1 Day Tour</a>
-                  <a href="2-days-tour.html" class="text-sm text-secondary-700 hover:bg-secondary-100 block px-4 py-2">2 Days Tour</a>
-                  <a href="3-days-tour.html" class="text-sm text-secondary-700 hover:bg-secondary-100 block px-4 py-2">3 Days Tour</a>
-                  <a href="4-days-tour.html" class="text-sm text-secondary-700 hover:bg-secondary-100 block px-4 py-2">4 Days Tour</a>
-                  <a href="5-days-tour.html" class="text-sm text-secondary-700 hover:bg-secondary-100 block px-4 py-2">5 Days Tour</a>
-                  <a href="6-days-tour.html" class="text-sm text-secondary-700 hover:bg-secondary-100 block px-4 py-2">6 Days Tour</a>
-                  <a href="7-days-tour.html" class="text-sm text-secondary-700 hover:bg-secondary-100 block px-4 py-2">7 Days Tour</a>
-                  <a href="8-days-tour.html" class="text-sm text-secondary-700 hover:bg-secondary-100 block px-4 py-2">8 Days Tour</a>
-                </div>
-              </div>
-            </div>
-            <a href="index.html#fleet" class="font-semibold text-secondary-700 hover:text-primary-600 inline-flex items-center gap-1.5">
-              <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 18.75a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 0 1-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m3 0h1.125c.621 0 1.125-.504 1.125-1.125V14.25m-17.25 4.5v-1.875a.375.375 0 0 0-.375-.375h-1.5a.375.375 0 0 0-.375.375V18.75m17.25 0v-1.875a.375.375 0 0 1 .375-.375h1.5a.375.375 0 0 1 .375.375V18.75m-17.25 0h17.25m-17.25 0H3.375m0 0V9.375c0-1.036.84-1.875 1.875-1.875h.375c.621 0 1.125.504 1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125h3.375c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621.504-1.125 1.125-1.125h.375c1.035 0 1.875.84 1.875 1.875v9.375m-17.25 0h17.25" /></svg>
-              <span>Our Fleet</span>
-            </a>
-            <a href="index.html#blog" class="font-semibold text-secondary-700 hover:text-primary-600 inline-flex items-center gap-1.5">
-              <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 0 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 1 18 18c-2.305 0-4.408.867-6 2.292m0-14.25v14.25" /></svg>
-              <span>Travel Guide</span>
-            </a>
-            <a href="tel:+919611288339" class="font-semibold text-secondary-700 hover:text-primary-600 inline-flex items-center gap-1.5">
-              <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-2.836-.184-5.233-2.58-5.417-5.417l1.293-.97c.362-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" /></svg>
-              <span>Call: +91 96112 88339</span>
-            </a>
-          </div>
-
-          <!-- Desktop Book Now Button -->
-          <div class="hidden md:block">
-            <a href="index.html#booking-widget" class="inline-flex items-center px-4 py-2 border border-transparent rounded-lg shadow-sm text-sm font-medium text-white bg-primary-600 hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500">
-              Book Now
-            </a>
-          </div>
-
-          <!-- Mobile Menu Button (Icon) -->
-          <div class="md:hidden flex items-center">
-            <button id="mobile-menu-button" class="inline-flex items-center justify-center p-2 rounded-md text-secondary-400 hover:text-secondary-500 hover:bg-secondary-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary-500">
-              <span class="sr-only">Open main menu</span>
-              <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-              </svg>
-            </button>
-          </div>
+<body>
+  <header class="site-header sticky top-0 z-40">
+    <nav class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <div class="flex-shrink-0 flex items-center">
+          <a href="index.html" class="logo-text text-2xl font-bold">
+            Heritage Taxi Mysore
+          </a>
         </div>
-      </nav>
 
-      <!-- Mobile Menu (Dropdown) -->
-      <div id="mobile-menu" class="md:hidden hidden">
-        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-          <a href="index.html#home" class="flex items-center gap-3 px-3 py-2 rounded-md text-base font-medium text-secondary-700 hover:bg-secondary-50 hover:text-primary-600">
-            <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" /></svg>
+        <div class="hidden md:flex md:items-center md:space-x-4 lg:space-x-6">
+          <a href="index.html#home" class="nav-link inline-flex items-center gap-1.5">
+            <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"/></svg>
             <span>Home</span>
           </a>
-          <a href="index.html#services" class="flex items-center gap-3 px-3 py-2 rounded-md text-base font-medium text-secondary-700 hover:bg-secondary-50 hover:text-primary-600">
-            <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" /></svg>
+          <a href="index.html#services" class="nav-link inline-flex items-center gap-1.5">
+            <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"/></svg>
             <span>Services</span>
           </a>
-          <a href="index.html#tours" class="flex items-center gap-3 px-3 py-2 rounded-md text-base font-medium text-secondary-700 hover:bg-secondary-50 hover:text-primary-600">
-            <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 6.75V15m6-6v8.25m.5 3.375c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125h1.5c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125h-1.5Zm-6 0c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125h1.5c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125h-1.5ZM6.375 6.375a1.125 1.125 0 1 1-2.25 0 1.125 1.125 0 0 1 2.25 0ZM17.625 6.375a1.125 1.125 0 1 1-2.25 0 1.125 1.125 0 0 1 2.25 0Z" /></svg>
-            <span>Tour Packages</span>
-          </a>
-          <a href="index.html#fleet" class="flex items-center gap-3 px-3 py-2 rounded-md text-base font-medium text-secondary-700 hover:bg-secondary-50 hover:text-primary-600">
-            <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 18.75a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 0 1-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m3 0h1.125c.621 0 1.125-.504 1.125-1.125V14.25m-17.25 4.5v-1.875a.375.375 0 0 0-.375-.375h-1.5a.375.375 0 0 0-.375.375V18.75m17.25 0v-1.875a.375.375 0 0 1 .375-.375h1.5a.375.375 0 0 1 .375.375V18.75m-17.25 0h17.25" /></svg>
+          <div class="relative dropdown">
+            <a href="index.html#tours" class="nav-link inline-flex items-center gap-1.5 dropbtn">
+              <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 6.75V15m6-6v8.25m.5 3.375c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125h1.5c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125h-1.5Zm-6 0c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125h1.5c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125h-1.5ZM6.375 6.375a1.125 1.125 0 1 1-2.25 0 1.125 1.125 0 0 1 2.25 0ZM17.625 6.375a1.125 1.125 0 1 1-2.25 0 1.125 1.125 0 0 1 2.25 0Z"/></svg>
+              <span>Tour Packages</span>
+            </a>
+            <div class="dropdown-content">
+              <a href="Mysore 1 day tour.html" class="text-sm">Mysore 1 Day Tour</a>
+              <a href="1-day-tour.html" class="text-sm">1 Day Tour</a>
+              <a href="2-days-tour.html" class="text-sm">2 Days Tour</a>
+              <a href="3-days-tour.html" class="text-sm">3 Days Tour</a>
+              <a href="4-days-tour.html" class="text-sm">4 Days Tour</a>
+              <a href="5-days-tour.html" class="text-sm">5 Days Tour</a>
+              <a href="6-days-tour.html" class="text-sm">6 Days Tour</a>
+              <a href="7-days-tour.html" class="text-sm">7 Days Tour</a>
+              <a href="8-days-tour.html" class="text-sm">8 Days Tour</a>
+            </div>
+          </div>
+          <a href="index.html#fleet" class="nav-link inline-flex items-center gap-1.5">
+            <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 16.5v-2.25a2.25 2.25 0 0 1 2.25-2.25H6c.56 0 1.064-.316 1.312-.816l1.134-2.268A1.5 1.5 0 0 1 9.83 7.5h4.34a1.5 1.5 0 0 1 1.383.916l1.134 2.268c.248.5.752.816 1.312.816h1.5a2.25 2.25 0 0 1 2.25 2.25V16.5"/><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 16.5h19.5"/><circle cx="7.5" cy="18" r="1.5"/><circle cx="18" cy="18" r="1.5"/></svg>
             <span>Our Fleet</span>
           </a>
-          <a href="index.html#blog" class="flex items-center gap-3 px-3 py-2 rounded-md text-base font-medium text-secondary-700 hover:bg-secondary-50 hover:text-primary-600">
-            <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 0 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18c-2.305 0-4.408.867-6 2.292m0-14.25v14.25" /></svg>
+          <a href="index.html#blog" class="nav-link inline-flex items-center gap-1.5">
+            <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 0 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 1 18 18c-2.305 0-4.408.867-6 2.292m0-14.25v14.25"/></svg>
             <span>Travel Guide</span>
           </a>
-          <a href="tel:+919611288339" class="flex items-center gap-3 px-3 py-2 rounded-md text-base font-medium text-secondary-700 hover:bg-secondary-50 hover:text-primary-600">
-            <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-2.836-.184-5.233-2.58-5.417-5.417l1.293-.97c.362-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" /></svg>
+          <a href="tel:+919611288339" class="nav-link inline-flex items-center gap-1.5">
+            <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-2.836-.184-5.233-2.58-5.417-5.417l1.293-.97c.362-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z"/></svg>
             <span>Call: +91 96112 88339</span>
           </a>
         </div>
-        <div class="pt-4 pb-3 border-t border-secondary-200">
-          <a href="index.html#booking-widget" class="block w-full text-left px-4 py-2 text-base font-medium text-white bg-primary-600 hover:bg-primary-700">
+
+        <div class="hidden md:block">
+          <a href="index.html#booking-widget" class="primary-button text-sm md:text-base">
             Book Now
           </a>
         </div>
-      </div>
-    </header>
 
-  <main class="container mx-auto px-6 py-10">
-    <h1 class="text-4xl md:text-5xl font-bold text-center text-primary-600 mb-8">3-Days Tour Packages</h1>
-    <nav class="text-sm text-gray-600 mb-6">
-      <a href="index.html" class="hover:text-primary-600">Home</a> / <span class="font-medium">Mysore And Coorg Three days tour</span>
+        <div class="md:hidden flex items-center">
+          <button id="mobile-menu-button" class="inline-flex items-center justify-center p-2 rounded-md text-slate-200/80 hover:text-slate-100 hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-400">
+            <span class="sr-only">Open main menu</span>
+            <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+          </button>
+        </div>
+      </div>
     </nav>
 
-    <div class="space-y-6">
-
-      <!-- Tour 1 -->
-      <div class="tour-item bg-white rounded-lg shadow-md border border-gray-200 overflow-hidden">
-        <div class="fixed-header px-6 py-5">
-          <span class="text-xl md:text-2xl font-semibold text-blue-700">Tour No 1: 3 Days / 2 Nights — 1 Night Mysore / 1 Night Madikeri (Arrival & Dropping - Mysore)</span>
-        </div>
-        <div class="tour-content border-t border-gray-200 p-6">
-          <p class="text-sm text-gray-600 mb-4"><strong>Arrival & Dropping:</strong> Mysore</p>
-          <h4 class="text-lg font-semibold mb-2">Day 1</h4>
-          <p class="text-gray-700 mb-3">Arrive Mysore, meet assist and visit Chamundeshwari Temple, Nandi Bull Temple, Mysore City View Point, Karanji Lake, Mysore Zoo and Brindavan Garden. Night stay in Mysore.</p>
-          <h4 class="text-lg font-semibold mb-2">Day 2</h4>
-          <p class="text-gray-700 mb-3">Breakfast, checkout and proceed to Coorg. En route visit Kushalnagar Dalai Lama Golden Temple, Kaveri Nisargadhama and Dubare Forest (boat rafting). Check in Madikeri hotel, visit Omkareshwara Temple and shopping. Night stay in Madikeri.</p>
-          <h4 class="text-lg font-semibold mb-2">Day 3</h4>
-          <p class="text-gray-700">Breakfast, checkout and visit Talakaveri, Bhagamandala, Raja Seat, Abbey Falls before returning to Mysore for onward journey.</p>
-          <div class="mt-4">
-            <h3 class="font-semibold">Hotel Details</h3>
-            <p class="text-sm text-gray-700">Mysore: Sahara Residency, Krishna Kuteera Serviced Apartment, Sunflower Hotel<br>Madikeri: Hotel Hill View, Madikeri Heritage, Abbydhama Estate Stay</p>
-          </div>
-          <div class="mt-4">
-            <h3 class="font-semibold">Price (per package)</h3>
-            <table class="w-full text-sm border-collapse">
-              <thead><tr class="bg-gray-100"><th class="p-2 text-left">Category</th><th class="p-2">Min. 2 Pax</th><th class="p-2">Min. 4 Pax</th><th class="p-2">Min. 6 Pax</th><th class="p-2">Extra Bed</th></tr></thead>
-              <tbody>
-                <tr><td class="p-2">Economy</td><td class="p-2">12,500/-</td><td class="p-2">19,500/-</td><td class="p-2">24,500/-</td><td class="p-2">1,000/-</td></tr>
-                <tr><td class="p-2">Standard</td><td class="p-2">15,000/-</td><td class="p-2">24,000/-</td><td class="p-2">30,500/-</td><td class="p-2">1,000/-</td></tr>
-                <tr><td class="p-2">Deluxe</td><td class="p-2">16,000/-</td><td class="p-2">26,000/-</td><td class="p-2">33,500/-</td><td class="p-2">1,000/-</td></tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
+    <div id="mobile-menu" class="md:hidden hidden">
+      <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+        <a href="index.html#home" class="flex items-center gap-3 px-3 py-2 rounded-lg text-base font-medium">
+          <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"/></svg>
+          <span>Home</span>
+        </a>
+        <a href="index.html#services" class="flex items-center gap-3 px-3 py-2 rounded-lg text-base font-medium">
+          <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"/></svg>
+          <span>Services</span>
+        </a>
+        <a href="index.html#tours" class="flex items-center gap-3 px-3 py-2 rounded-lg text-base font-medium">
+          <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 6.75V15m6-6v8.25m.5 3.375c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125h1.5c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125h-1.5Zm-6 0c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125h1.5c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125h-1.5ZM6.375 6.375a1.125 1.125 0 1 1-2.25 0 1.125 1.125 0 0 1 2.25 0ZM17.625 6.375a1.125 1.125 0 1 1-2.25 0 1.125 1.125 0 0 1 2.25 0Z"/></svg>
+          <span>Tour Packages</span>
+        </a>
+        <a href="index.html#fleet" class="flex items-center gap-3 px-3 py-2 rounded-lg text-base font-medium">
+          <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 16.5v-2.25a2.25 2.25 0 0 1 2.25-2.25H6c.56 0 1.064-.316 1.312-.816l1.134-2.268A1.5 1.5 0 0 1 9.83 7.5h4.34a1.5 1.5 0 0 1 1.383.916l1.134 2.268c.248.5.752.816 1.312.816h1.5a2.25 2.25 0 0 1 2.25 2.25V16.5"/><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 16.5h19.5"/><circle cx="7.5" cy="18" r="1.5"/><circle cx="18" cy="18" r="1.5"/></svg>
+          <span>Our Fleet</span>
+        </a>
+        <a href="index.html#blog" class="flex items-center gap-3 px-3 py-2 rounded-lg text-base font-medium">
+          <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 0 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 1 18 18c-2.305 0-4.408.867-6 2.292m0-14.25v14.25"/></svg>
+          <span>Travel Guide</span>
+        </a>
+        <a href="tel:+919611288339" class="flex items-center gap-3 px-3 py-2 rounded-lg text-base font-medium">
+          <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-2.836-.184-5.233-2.58-5.417-5.417l1.293-.97c.362-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z"/></svg>
+          <span>Call: +91 96112 88339</span>
+        </a>
       </div>
-
-      <!-- Tour 2 -->
-      <div class="tour-item bg-white rounded-lg shadow-md border border-gray-200 overflow-hidden">
-        <div class="fixed-header px-6 py-5"><span class="text-xl md:text-2xl font-semibold text-blue-700">Tour No 2: 3 Days / 2 Nights — 2 Night Mysore (Arrival & Dropping - Mysore)</span></div>
-        <div class="tour-content border-t border-gray-200 p-6">
-          <p class="text-sm text-gray-600 mb-4"><strong>Arrival & Dropping:</strong> Mysore</p>
-          <h4 class="text-lg font-semibold mb-2">Day 1</h4>
-          <p class="text-gray-700 mb-3">Arrive Mysore, visit Chamundeshwari Temple, Nandi Bull Temple, Mysore City View Point, Karanji Lake, Mysore Zoo and Brindavan Garden. Night stay in Mysore.</p>
-          <h4 class="text-lg font-semibold mb-2">Day 2</h4>
-          <p class="text-gray-700 mb-3">Breakfast, visit Somnathpur Chennakeshava Temple, Mudukuthore Mallikarjuna Temple, Shivanasamudra Falls and Talakadu temples. Night stay in Mysore.</p>
-          <h4 class="text-lg font-semibold mb-2">Day 3</h4>
-          <p class="text-gray-700">Breakfast, visit Mysore Palace, Railway Museum, St. Philomena Church, Ranganathittu Sanctuary, Srirangapatna sites and shopping before departure.</p>
-          <div class="mt-4">
-            <h3 class="font-semibold">Price</h3>
-            <table class="w-full text-sm"><tbody>
-              <tr><td>Economy</td><td>11,500/- (2 Pax)</td><td>17,000/- (4 Pax)</td><td>21,000/- (6 Pax)</td></tr>
-              <tr><td>Standard</td><td>14,500/-</td><td>23,000/-</td><td>29,000/-</td></tr>
-              <tr><td>Deluxe</td><td>15,500/-</td><td>25,000/-</td><td>32,000/-</td></tr>
-            </tbody></table>
-          </div>
-        </div>
+      <div class="pt-4 pb-3 border-t border-white/10">
+        <a href="index.html#booking-widget" class="primary-button w-full justify-center text-base">
+          Book Now
+        </a>
       </div>
-
-      <!-- Tour 3 -->
-      <div class="tour-item bg-white rounded-lg shadow-md border border-gray-200 overflow-hidden">
-        <div class="fixed-header px-6 py-5"><span class="text-xl md:text-2xl font-semibold text-blue-700">Tour No 3: 3 Days / 2 Nights — 2 Night Madikeri (Arrival & Dropping - Mysore)</span></div>
-        <div class="tour-content border-t border-gray-200 p-6">
-          <p class="text-sm text-gray-600 mb-4"><strong>Arrival & Dropping:</strong> Mysore</p>
-          <h4 class="text-lg font-semibold mb-2">Day 1</h4>
-          <p class="text-gray-700 mb-3">Arrive Mysore, transfer to Madikeri visiting Kushalnagar Dalai Lama Golden Temple, Kaveri Nisargadhama and Dubare Forest. Night in Madikeri.</p>
-          <h4 class="text-lg font-semibold mb-2">Day 2</h4>
-          <p class="text-gray-700 mb-3">Visit Talakaveri, Bhagamandala and Raja Seat; night in Madikeri.</p>
-          <h4 class="text-lg font-semibold mb-2">Day 3</h4>
-          <p class="text-gray-700">Visit Omkareshwara Temple, Abbey Falls, Harangi Dam then return to Mysore for onward journey.</p>
-          <div class="mt-4"><h3 class="font-semibold">Price</h3>
-            <table class="w-full text-sm"><tbody>
-              <tr><td>Economy</td><td>13,500/- (2 Pax)</td><td>21,000/- (4 Pax)</td><td>27,000/- (6 Pax)</td></tr>
-              <tr><td>Standard</td><td>15,500/-</td><td>25,000/-</td><td>32,000/-</td></tr>
-              <tr><td>Deluxe</td><td>16,500/-</td><td>27,000/-</td><td>35,000/-</td></tr>
-            </tbody></table>
-          </div>
-        </div>
-      </div>
-
-      <!-- Tour 4 -->
-      <div class="tour-item bg-white rounded-lg shadow-md border border-gray-200 overflow-hidden">
-        <div class="fixed-header px-6 py-5"><span class="text-xl md:text-2xl font-semibold text-blue-700">Tour No 4: 3 Days / 2 Nights — 2 Night Mysore (Arrival & Dropping - Bangalore)</span></div>
-        <div class="tour-content border-t border-gray-200 p-6">
-          <h4 class="text-lg font-semibold mb-2">Day 1</h4>
-          <p class="text-gray-700 mb-3">Arrive Bangalore, visit Cubbon Park, Vidhana Soudha, Visvesvaraya Museum, Lalbagh and ISKCON. Night stay in Mysore.</p>
-          <h4 class="text-lg font-semibold mb-2">Day 2</h4>
-          <p class="text-gray-700 mb-3">Visit Srirangapatna, Tippu Gumbaz, Tippu Summer Palace and Brindavan Garden. Night in Mysore.</p>
-          <h4 class="text-lg font-semibold mb-2">Day 3</h4>
-          <p class="text-gray-700">Visit Chamundeshwari Temple, Nandi Bull, Wax Museum, Mysore Zoo and Mysore Palace before departure to Bangalore.</p>
-          <div class="mt-4"><h3 class="font-semibold">Price</h3>
-            <table class="w-full text-sm"><tbody>
-              <tr><td>Economy</td><td>15,000/-</td><td>21,000/-</td><td>25,000/-</td></tr>
-              <tr><td>Standard</td><td>18,000/-</td><td>27,000/-</td><td>33,000/-</td></tr>
-              <tr><td>Deluxe</td><td>19,500/-</td><td>29,000/-</td><td>36,000/-</td></tr>
-            </tbody></table>
-          </div>
-        </div>
-      </div>
-
-      <!-- Tour 6 -->
-      <div class="tour-item bg-white rounded-lg shadow-md border border-gray-200 overflow-hidden">
-        <div class="fixed-header px-6 py-5"><span class="text-xl md:text-2xl font-semibold text-blue-700">Tour No 6: 3 Days / 2 Nights — 1 Night Mysore / 1 Night Wayanad (Arrival & Dropping - Mysore)</span></div>
-        <div class="tour-content border-t border-gray-200 p-6">
-          <h4 class="text-lg font-semibold mb-2">Day 1</h4>
-          <p class="text-gray-700 mb-3">Arrive Mysore, visit Chamundeshwari Temple, Nandi Bull, Mysore Palace and Brindavan Garden. Night in Mysore.</p>
-          <h4 class="text-lg font-semibold mb-2">Day 2</h4>
-          <p class="text-gray-700 mb-3">Proceed to Wayanad visiting Edakkal Caves and Soochipara. Night in Wayanad.</p>
-          <h4 class="text-lg font-semibold mb-2">Day 3</h4>
-          <p class="text-gray-700">Visit Banasurasagar Dam, Meenmutty Falls and Kalpetta backwaters before returning to Mysore.</p>
-          <div class="mt-4"><h3 class="font-semibold">Price</h3>
-            <table class="w-full text-sm"><tbody>
-              <tr><td>Economy</td><td>12,500/-</td><td>20,500/-</td><td>25,000/-</td></tr>
-              <tr><td>Standard</td><td>16,000/-</td><td>27,500/-</td><td>34,500/-</td></tr>
-              <tr><td>Deluxe</td><td>17,000/-</td><td>29,500/-</td><td>37,500/-</td></tr>
-            </tbody></table>
-          </div>
-        </div>
-      </div>
-
-      <!-- Tour 5 -->
-      <div class="tour-item bg-white rounded-lg shadow-md border border-gray-200 overflow-hidden">
-        <div class="fixed-header px-6 py-5"><span class="text-xl md:text-2xl font-semibold text-blue-700">Tour No 5: 3 Days / 2 Nights — 1 Night Mysore / 1 Night Madikeri (Arrival & Dropping - Mysore)</span></div>
-        <div class="tour-content border-t border-gray-200 p-6">
-          <h4 class="text-lg font-semibold mb-2">Day 1</h4>
-          <p class="text-gray-700 mb-3">Arrive Mysore, visit Somnathpur, Mallikarjuna Temple, Shivanasamudra Falls and Talakadu. Night in Mysore.</p>
-          <h4 class="text-lg font-semibold mb-2">Day 2</h4>
-          <p class="text-gray-700 mb-3">Visit Chamundi Hill, Nandi, Mysore City View Point, Mysore Palace and Brindavan Garden; proceed to Madikeri for night stay.</p>
-          <h4 class="text-lg font-semibold mb-2">Day 3</h4>
-          <p class="text-gray-700">Visit Talakaveri, Bhagamandala, Omkareshwara Temple, Raja Seat, Abbey Falls, Dubare and Kaveri Nisargadhama before departure.</p>
-          <div class="mt-4"><h3 class="font-semibold">Price</h3>
-            <table class="w-full text-sm"><tbody>
-              <tr><td>Economy</td><td>12,500/-</td><td>19,500/-</td><td>24,500/-</td></tr>
-              <tr><td>Standard</td><td>15,000/-</td><td>24,000/-</td><td>30,500/-</td></tr>
-              <tr><td>Deluxe</td><td>16,000/-</td><td>26,000/-</td><td>33,500/-</td></tr>
-            </tbody></table>
-          </div>
-        </div>
-      </div>
-
-      <!-- Tour 8 -->
-      <div class="tour-item bg-white rounded-lg shadow-md border border-gray-200 overflow-hidden">
-        <div class="fixed-header px-6 py-5"><span class="text-xl md:text-2xl font-semibold text-blue-700">Tour No 8: 3 Days / 2 Nights — 1 Night Mysore / 1 Night Ooty (Arrival & Dropping - Mysore)</span></div>
-        <div class="tour-content border-t border-gray-200 p-6">
-          <h4 class="text-lg font-semibold mb-2">Day 1</h4>
-          <p class="text-gray-700 mb-3">Arrive Mysore, visits as usual, then proceed to Ooty; night in Mysore or Ooty depending on schedule.</p>
-          <h4 class="text-lg font-semibold mb-2">Day 2</h4>
-          <p class="text-gray-700 mb-3">Proceed to Bandipur, Mudumalai, Needle Rock Point, Pykara Lake; night in Ooty.</p>
-          <h4 class="text-lg font-semibold mb-2">Day 3</h4>
-          <p class="text-gray-700">Visit Botanical Garden, Rose Garden, Tea Factory, Wax Museum and Ooty Lake before return.</p>
-          <div class="mt-4"><h3 class="font-semibold">Price</h3>
-            <table class="w-full text-sm"><tbody>
-              <tr><td>Economy</td><td>12,500/-</td><td>19,500/-</td><td>24,000/-</td></tr>
-              <tr><td>Standard</td><td>15,500/-</td><td>25,500/-</td><td>32,000/-</td></tr>
-              <tr><td>Deluxe</td><td>17,000/-</td><td>28,500/-</td><td>36,500/-</td></tr>
-            </tbody></table>
-          </div>
-        </div>
-      </div>
-
-      <!-- Tour 9 -->
-      <div class="tour-item bg-white rounded-lg shadow-md border border-gray-200 overflow-hidden">
-        <div class="fixed-header px-6 py-5"><span class="text-xl md:text-2xl font-semibold text-blue-700">Tour No 9: 3 Days / 2 Nights — 2 Night Ooty (Arrival & Dropping - Mysore)</span></div>
-        <div class="tour-content border-t border-gray-200 p-6">
-          <h4 class="text-lg font-semibold mb-2">Day 1</h4>
-          <p class="text-gray-700 mb-3">Arrive Mysore and proceed to Ooty via Bandipur, Mudumalai and Needle Rock; night in Ooty.</p>
-          <h4 class="text-lg font-semibold mb-2">Day 2</h4>
-          <p class="text-gray-700 mb-3">Visit Coonoor by train (8:45 AM), Sims Park, Lamb's Rock, Tea Factory and return to Ooty Lake; night in Ooty.</p>
-          <h4 class="text-lg font-semibold mb-2">Day 3</h4>
-          <p class="text-gray-700">Visit Botanical Garden, Rose Garden, Wax Museum; optional Bandipur safari (afternoon) and depart.</p>
-          <div class="mt-4"><h3 class="font-semibold">Price</h3>
-            <table class="w-full text-sm"><tbody>
-              <tr><td>Economy</td><td>13,000/-</td><td>20,500/-</td><td>25,500/-</td></tr>
-              <tr><td>Standard</td><td>16,000/-</td><td>26,500/-</td><td>33,500/-</td></tr>
-              <tr><td>Deluxe</td><td>18,000/-</td><td>30,500/-</td><td>39,500/-</td></tr>
-            </tbody></table>
-          </div>
-        </div>
-      </div>
-
-      <!-- Tour 7 (Wayanad 2 nights) -->
-      <div class="tour-item bg-white rounded-lg shadow-md border border-gray-200 overflow-hidden">
-        <div class="fixed-header px-6 py-5"><span class="text-xl md:text-2xl font-semibold text-blue-700">Tour No 7: 3 Days / 2 Nights — 2 Night Wayanad (Arrival & Dropping - Mysore)</span></div>
-        <div class="tour-content border-t border-gray-200 p-6">
-          <h4 class="text-lg font-semibold mb-2">Day 1</h4>
-          <p class="text-gray-700 mb-3">Arrive Mysore and proceed to Wayanad visiting Banasura Sagar Dam, Lakkidi View Point and Chembra Peak; night in Wayanad.</p>
-          <h4 class="text-lg font-semibold mb-2">Day 2</h4>
-          <p class="text-gray-700 mb-3">Visit Edakkal Caves, Kuruva Island, Pakshipathalam and Muthanga wildlife area; night in Wayanad.</p>
-          <h4 class="text-lg font-semibold mb-2">Day 3</h4>
-          <p class="text-gray-700">Visit Soochippara, Pookot Lake and Meenmutty Falls before departure.</p>
-          <div class="mt-4"><h3 class="font-semibold">Price</h3>
-            <table class="w-full text-sm"><tbody>
-              <tr><td>Economy</td><td>12,000/-</td><td>19,500/-</td><td>23,500/-</td></tr>
-              <tr><td>Standard</td><td>17,000/-</td><td>29,500/-</td><td>37,500/-</td></tr>
-              <tr><td>Deluxe</td><td>19,000/-</td><td>33,500/-</td><td>43,500/-</td></tr>
-            </tbody></table>
-          </div>
-        </div>
-      </div>
-
     </div>
+  </header>
 
-    <!-- Booking / Includes / Excludes summary -->
-    <section class="mt-12 bg-white rounded-lg shadow-lg border border-gray-200 p-6">
-      <h2 class="text-2xl font-semibold mb-4">Package Includes & Excludes (applies to all packages)</h2>
-      <div class="grid md:grid-cols-2 gap-6">
-        <div class="bg-green-50 border border-green-200 rounded-lg p-4">
-          <h3 class="font-semibold text-green-700 mb-2">Package Includes</h3>
-          <ul class="list-disc list-inside text-gray-700">
-            <li>Accommodation for 2 adults with complimentary breakfast</li>
-            <li>Arrival / Departure transfers and all land transfers by AC cars</li>
-            <li>Pick up from Mysore Railway Station, Bus Station or Airport</li>
-            <li>Driver bata, night charges, toll, parking, fuel and permit charges</li>
-            <li>Hotel check-in/out at 12:00 noon</li>
-          </ul>
-        </div>
-        <div class="bg-red-50 border border-red-200 rounded-lg p-4">
-          <h3 class="font-semibold text-red-700 mb-2">Package Excludes</h3>
-          <ul class="list-disc list-inside text-gray-700">
-            <li>Airfare / train fare and entry fees to sightseeing spots</li>
-            <li>All types of food (except complimentary breakfast)</li>
-            <li>Personal expenses (tips, laundry, telephone etc.)</li>
-            <li>Optional activities mentioned in itineraries</li>
-          </ul>
-        </div>
+  <main>
+    <section class="inner-hero">
+      <div class="container mx-auto px-6 lg:px-10">
+        <span class="accent-badge">Extended Getaways</span>
+        <h1>Curated 3-Day Tour Packages</h1>
+        <p>Blend Mysore's royal heritage with coffee country, misty hill stations, and wild escapes. Every itinerary is chauffeur-driven, thoughtfully paced, and tailored for relaxed three-day journeys.</p>
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="index.html">Home</a>
+          <span>/</span>
+          <a href="index.html#tours">Tour Packages</a>
+          <span>/</span>
+          <span>3 Days Tour</span>
+        </nav>
       </div>
     </section>
 
+    <section class="page-section">
+      <div class="container mx-auto px-6 lg:px-10 py-12 space-y-12">
+        <div class="section-header">
+          <h2 class="section-title">Tailored 3-Day Journeys</h2>
+          <p class="section-subtitle">Nine flexible itineraries take you from palaces to plantations. Choose the circuit that fits your vibe—heritage immersion, coffee-scented Coorg, verdant Wayanad, or breezy Ooty escapes.</p>
+        </div>
+
+        <div class="space-y-8">
+          <article class="tour-item">
+            <div class="fixed-header">
+              <span class="badge-soft">Tour 1</span>
+              <h3>1 Night Mysore &amp; 1 Night Madikeri</h3>
+            </div>
+            <div class="tour-content">
+              <div class="space-y-4">
+                <div class="callout-card">
+                  <strong>Arrival &amp; Departure:</strong> Mysore
+                </div>
+                <div class="grid gap-6 md:grid-cols-3">
+                  <div class="space-y-3">
+                    <h3>Day 1 Highlights</h3>
+                    <ul class="space-y-2">
+                      <li>Meet-and-greet at Mysore railway station or hotel</li>
+                      <li>Chamundeshwari Temple and Nandi Bull Temple</li>
+                      <li>City viewpoint, Karanji Lake, and Mysore Zoo</li>
+                      <li>Musical fountains at Brindavan Gardens (KRS)</li>
+                      <li>Overnight stay in Mysore</li>
+                    </ul>
+                  </div>
+                  <div class="space-y-3">
+                    <h3>Day 2 Highlights</h3>
+                    <ul class="space-y-2">
+                      <li>Breakfast and checkout for Coorg</li>
+                      <li>Kushalnagar Namdroling Golden Temple</li>
+                      <li>Kaveri Nisargadhama nature island</li>
+                      <li>Dubare Forest river rafting experience</li>
+                      <li>Evening stroll at Omkareshwara Temple and Madikeri bazaar</li>
+                    </ul>
+                  </div>
+                  <div class="space-y-3">
+                    <h3>Day 3 Highlights</h3>
+                    <ul class="space-y-2">
+                      <li>Talakaveri (Kaveri River origin) and Bhagamandala</li>
+                      <li>Raja's Seat viewpoint and Abbey Falls</li>
+                      <li>Return transfer to Mysore with shopping time</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="grid gap-4 md:grid-cols-2">
+                  <div class="callout-card space-y-1.5">
+                    <strong>Stay Options</strong>
+                    <ul class="space-y-1.5">
+                      <li>Mysore: Sahara Residency, Krishna Kuteera, Sunflower Hotel</li>
+                      <li>Madikeri: Hotel Hill View, Madikeri Heritage, Abbydhama Estate Stay</li>
+                    </ul>
+                  </div>
+                  <div class="callout-card space-y-1.5">
+                    <strong>Pricing Snapshot</strong>
+                    <ul class="space-y-1.5">
+                      <li>Economy: 12,500/- (2 pax) | 19,500/- (4 pax) | 24,500/- (6 pax)</li>
+                      <li>Standard: 15,000/- (2 pax) | 24,000/- (4 pax) | 30,500/- (6 pax)</li>
+                      <li>Deluxe: 16,000/- (2 pax) | 26,000/- (4 pax) | 33,500/- (6 pax)</li>
+                      <li>Extra Bed: 1,000/-</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="tour-item">
+            <div class="fixed-header">
+              <span class="badge-soft">Tour 2</span>
+              <h3>2 Nights Heritage Mysore</h3>
+            </div>
+            <div class="tour-content">
+              <div class="space-y-4">
+                <div class="callout-card">
+                  <strong>Arrival &amp; Departure:</strong> Mysore
+                </div>
+                <div class="grid gap-6 md:grid-cols-3">
+                  <div class="space-y-3">
+                    <h3>Day 1 Highlights</h3>
+                    <ul class="space-y-2">
+                      <li>Chamundeshwari Temple and Nandi Bull Temple</li>
+                      <li>Mysore city viewpoint and Karanji Lake</li>
+                      <li>Mysore Zoo walkthrough</li>
+                      <li>Sunset at Brindavan Gardens</li>
+                    </ul>
+                  </div>
+                  <div class="space-y-3">
+                    <h3>Day 2 Highlights</h3>
+                    <ul class="space-y-2">
+                      <li>Somnathpur Chennakeshava Temple</li>
+                      <li>Mudukuthore Mallikarjuna Temple</li>
+                      <li>Shivanasamudra Gaganachukki &amp; Bharachukki Falls</li>
+                      <li>Talakadu Panchalinga temples</li>
+                    </ul>
+                  </div>
+                  <div class="space-y-3">
+                    <h3>Day 3 Highlights</h3>
+                    <ul class="space-y-2">
+                      <li>Mysore Palace and Railway Museum</li>
+                      <li>St. Philomena Church and Ranganathittu Bird Sanctuary</li>
+                      <li>Srirangapatna fort trail and souvenir shopping</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="callout-card space-y-1.5">
+                  <strong>Pricing Snapshot</strong>
+                  <ul class="space-y-1.5">
+                    <li>Economy: 11,500/- (2 pax) | 17,000/- (4 pax) | 21,000/- (6 pax)</li>
+                    <li>Standard: 14,500/- (2 pax) | 23,000/- (4 pax) | 29,000/- (6 pax)</li>
+                    <li>Deluxe: 15,500/- (2 pax) | 25,000/- (4 pax) | 32,000/- (6 pax)</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="tour-item">
+            <div class="fixed-header">
+              <span class="badge-soft">Tour 3</span>
+              <h3>2 Nights Madikeri Retreat</h3>
+            </div>
+            <div class="tour-content">
+              <div class="space-y-4">
+                <div class="callout-card">
+                  <strong>Arrival &amp; Departure:</strong> Mysore
+                </div>
+                <div class="grid gap-6 md:grid-cols-3">
+                  <div class="space-y-3">
+                    <h3>Day 1 Highlights</h3>
+                    <ul class="space-y-2">
+                      <li>Transit to Coorg via Kushalnagar Golden Temple</li>
+                      <li>Kaveri Nisargadhama bamboo groves</li>
+                      <li>Dubare Forest river rafting</li>
+                      <li>Evening at leisure in Madikeri</li>
+                    </ul>
+                  </div>
+                  <div class="space-y-3">
+                    <h3>Day 2 Highlights</h3>
+                    <ul class="space-y-2">
+                      <li>Talakaveri temple and view deck</li>
+                      <li>Bhagamandala Triveni Sangam</li>
+                      <li>Sunset at Raja's Seat</li>
+                    </ul>
+                  </div>
+                  <div class="space-y-3">
+                    <h3>Day 3 Highlights</h3>
+                    <ul class="space-y-2">
+                      <li>Omkareshwara Temple and Abbey Falls</li>
+                      <li>Harangi Dam photo stop</li>
+                      <li>Return drive to Mysore for onward journey</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="callout-card space-y-1.5">
+                  <strong>Pricing Snapshot</strong>
+                  <ul class="space-y-1.5">
+                    <li>Economy: 13,500/- (2 pax) | 21,000/- (4 pax) | 27,000/- (6 pax)</li>
+                    <li>Standard: 15,500/- (2 pax) | 25,000/- (4 pax) | 32,000/- (6 pax)</li>
+                    <li>Deluxe: 16,500/- (2 pax) | 27,000/- (4 pax) | 35,000/- (6 pax)</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="tour-item">
+            <div class="fixed-header">
+              <span class="badge-soft">Tour 4</span>
+              <h3>Bangalore &amp; Mysore Discovery</h3>
+            </div>
+            <div class="tour-content">
+              <div class="space-y-4">
+                <div class="callout-card">
+                  <strong>Arrival &amp; Departure:</strong> Bangalore
+                </div>
+                <div class="grid gap-6 md:grid-cols-3">
+                  <div class="space-y-3">
+                    <h3>Day 1 Highlights</h3>
+                    <ul class="space-y-2">
+                      <li>Arrive Bangalore and city orientation</li>
+                      <li>Cubbon Park, Vidhana Soudha, and Lalbagh</li>
+                      <li>Visvesvaraya Museum &amp; ISKCON Temple</li>
+                      <li>Drive to Mysore for overnight stay</li>
+                    </ul>
+                  </div>
+                  <div class="space-y-3">
+                    <h3>Day 2 Highlights</h3>
+                    <ul class="space-y-2">
+                      <li>Srirangapatna heritage trail</li>
+                      <li>Tippu Gumbaz and Summer Palace</li>
+                      <li>Evening at Brindavan Gardens</li>
+                    </ul>
+                  </div>
+                  <div class="space-y-3">
+                    <h3>Day 3 Highlights</h3>
+                    <ul class="space-y-2">
+                      <li>Chamundeshwari Temple &amp; Nandi Bull</li>
+                      <li>Mysore Wax Museum, Zoo, and Palace</li>
+                      <li>Return transfer to Bangalore</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="callout-card space-y-1.5">
+                  <strong>Pricing Snapshot</strong>
+                  <ul class="space-y-1.5">
+                    <li>Economy: 15,000/- (2 pax) | 21,000/- (4 pax) | 25,000/- (6 pax)</li>
+                    <li>Standard: 18,000/- (2 pax) | 27,000/- (4 pax) | 33,000/- (6 pax)</li>
+                    <li>Deluxe: 19,500/- (2 pax) | 29,000/- (4 pax) | 36,000/- (6 pax)</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="tour-item">
+            <div class="fixed-header">
+              <span class="badge-soft">Tour 5</span>
+              <h3>Mysore &amp; Madikeri Explorer</h3>
+            </div>
+            <div class="tour-content">
+              <div class="space-y-4">
+                <div class="callout-card">
+                  <strong>Arrival &amp; Departure:</strong> Mysore
+                </div>
+                <div class="grid gap-6 md:grid-cols-3">
+                  <div class="space-y-3">
+                    <h3>Day 1 Highlights</h3>
+                    <ul class="space-y-2">
+                      <li>Somnathpur Chennakeshava Temple</li>
+                      <li>Mudukuthore Mallikarjuna Temple</li>
+                      <li>Shivanasamudra waterfalls</li>
+                      <li>Talakadu temple circuit</li>
+                    </ul>
+                  </div>
+                  <div class="space-y-3">
+                    <h3>Day 2 Highlights</h3>
+                    <ul class="space-y-2">
+                      <li>Chamundi Hill darshan &amp; Nandi statue</li>
+                      <li>Mysore Palace and city viewpoints</li>
+                      <li>Brindavan Gardens evening show</li>
+                      <li>Drive to Madikeri for overnight stay</li>
+                    </ul>
+                  </div>
+                  <div class="space-y-3">
+                    <h3>Day 3 Highlights</h3>
+                    <ul class="space-y-2">
+                      <li>Talakaveri and Bhagamandala</li>
+                      <li>Omkareshwara Temple and Raja's Seat</li>
+                      <li>Abbey Falls, Dubare, and Kaveri Nisargadhama</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="callout-card space-y-1.5">
+                  <strong>Pricing Snapshot</strong>
+                  <ul class="space-y-1.5">
+                    <li>Economy: 12,500/- (2 pax) | 19,500/- (4 pax) | 24,500/- (6 pax)</li>
+                    <li>Standard: 15,000/- (2 pax) | 24,000/- (4 pax) | 30,500/- (6 pax)</li>
+                    <li>Deluxe: 16,000/- (2 pax) | 26,000/- (4 pax) | 33,500/- (6 pax)</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="tour-item">
+            <div class="fixed-header">
+              <span class="badge-soft">Tour 6</span>
+              <h3>Mysore &amp; Wayanad Escape</h3>
+            </div>
+            <div class="tour-content">
+              <div class="space-y-4">
+                <div class="callout-card">
+                  <strong>Arrival &amp; Departure:</strong> Mysore
+                </div>
+                <div class="grid gap-6 md:grid-cols-3">
+                  <div class="space-y-3">
+                    <h3>Day 1 Highlights</h3>
+                    <ul class="space-y-2">
+                      <li>Mysore Palace, Chamundeshwari Temple, and Nandi Bull</li>
+                      <li>Evening at Brindavan Gardens</li>
+                      <li>Overnight stay in Mysore</li>
+                    </ul>
+                  </div>
+                  <div class="space-y-3">
+                    <h3>Day 2 Highlights</h3>
+                    <ul class="space-y-2">
+                      <li>Scenic drive to Wayanad</li>
+                      <li>Edakkal Caves exploration</li>
+                      <li>Soochipara (Sentinel Rock) Waterfalls</li>
+                      <li>Night stay amid Wayanad hills</li>
+                    </ul>
+                  </div>
+                  <div class="space-y-3">
+                    <h3>Day 3 Highlights</h3>
+                    <ul class="space-y-2">
+                      <li>Banasura Sagar Dam viewpoints</li>
+                      <li>Makkiyad (Meenmutty) Falls trek</li>
+                      <li>Kalpetta backwaters and return to Mysore</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="callout-card space-y-1.5">
+                  <strong>Pricing Snapshot</strong>
+                  <ul class="space-y-1.5">
+                    <li>Economy: 12,500/- (2 pax) | 20,500/- (4 pax) | 25,000/- (6 pax)</li>
+                    <li>Standard: 16,000/- (2 pax) | 27,500/- (4 pax) | 34,500/- (6 pax)</li>
+                    <li>Deluxe: 17,000/- (2 pax) | 29,500/- (4 pax) | 37,500/- (6 pax)</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="tour-item">
+            <div class="fixed-header">
+              <span class="badge-soft">Tour 7</span>
+              <h3>2 Nights Wayanad Wilderness</h3>
+            </div>
+            <div class="tour-content">
+              <div class="space-y-4">
+                <div class="callout-card">
+                  <strong>Arrival &amp; Departure:</strong> Mysore
+                </div>
+                <div class="grid gap-6 md:grid-cols-3">
+                  <div class="space-y-3">
+                    <h3>Day 1 Highlights</h3>
+                    <ul class="space-y-2">
+                      <li>Drive to Wayanad via forested ghats</li>
+                      <li>Banasura Sagar Dam and Lakkidi viewpoint</li>
+                      <li>Chembra Peak photo stop</li>
+                    </ul>
+                  </div>
+                  <div class="space-y-3">
+                    <h3>Day 2 Highlights</h3>
+                    <ul class="space-y-2">
+                      <li>Edakkal Caves adventure</li>
+                      <li>Kuruva Island bamboo rafting</li>
+                      <li>Pakshipathalam and Muthanga wildlife belt</li>
+                    </ul>
+                  </div>
+                  <div class="space-y-3">
+                    <h3>Day 3 Highlights</h3>
+                    <ul class="space-y-2">
+                      <li>Soochipara Falls and Pookode Lake</li>
+                      <li>Meenmutty Falls exploration</li>
+                      <li>Return journey to Mysore</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="callout-card space-y-1.5">
+                  <strong>Pricing Snapshot</strong>
+                  <ul class="space-y-1.5">
+                    <li>Economy: 12,000/- (2 pax) | 19,500/- (4 pax) | 23,500/- (6 pax)</li>
+                    <li>Standard: 17,000/- (2 pax) | 29,500/- (4 pax) | 37,500/- (6 pax)</li>
+                    <li>Deluxe: 19,000/- (2 pax) | 33,500/- (4 pax) | 43,500/- (6 pax)</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="tour-item">
+            <div class="fixed-header">
+              <span class="badge-soft">Tour 8</span>
+              <h3>Mysore &amp; Ooty Highlights</h3>
+            </div>
+            <div class="tour-content">
+              <div class="space-y-4">
+                <div class="callout-card">
+                  <strong>Arrival &amp; Departure:</strong> Mysore
+                </div>
+                <div class="grid gap-6 md:grid-cols-3">
+                  <div class="space-y-3">
+                    <h3>Day 1 Highlights</h3>
+                    <ul class="space-y-2">
+                      <li>Mysore heritage circuit (Chamundi Hill, Palace, Zoo)</li>
+                      <li>Evening at Brindavan Gardens</li>
+                      <li>Drive towards Ooty for overnight stay</li>
+                    </ul>
+                  </div>
+                  <div class="space-y-3">
+                    <h3>Day 2 Highlights</h3>
+                    <ul class="space-y-2">
+                      <li>Bandipur and Mudumalai wildlife corridors</li>
+                      <li>Needle Rock viewpoint and Pykara Lake</li>
+                      <li>Ooty town exploration</li>
+                    </ul>
+                  </div>
+                  <div class="space-y-3">
+                    <h3>Day 3 Highlights</h3>
+                    <ul class="space-y-2">
+                      <li>Botanical Garden and Rose Garden</li>
+                      <li>Tea Factory tour and Wax Museum</li>
+                      <li>Ooty Lake boating before return transfer</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="callout-card space-y-1.5">
+                  <strong>Pricing Snapshot</strong>
+                  <ul class="space-y-1.5">
+                    <li>Economy: 12,500/- (2 pax) | 19,500/- (4 pax) | 24,000/- (6 pax)</li>
+                    <li>Standard: 15,500/- (2 pax) | 25,500/- (4 pax) | 32,000/- (6 pax)</li>
+                    <li>Deluxe: 17,000/- (2 pax) | 28,500/- (4 pax) | 36,500/- (6 pax)</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="tour-item">
+            <div class="fixed-header">
+              <span class="badge-soft">Tour 9</span>
+              <h3>2 Nights Scenic Ooty</h3>
+            </div>
+            <div class="tour-content">
+              <div class="space-y-4">
+                <div class="callout-card">
+                  <strong>Arrival &amp; Departure:</strong> Mysore
+                </div>
+                <div class="grid gap-6 md:grid-cols-3">
+                  <div class="space-y-3">
+                    <h3>Day 1 Highlights</h3>
+                    <ul class="space-y-2">
+                      <li>Drive through Bandipur and Mudumalai</li>
+                      <li>Needle Rock viewpoint stop</li>
+                      <li>Evening leisure in Ooty</li>
+                    </ul>
+                  </div>
+                  <div class="space-y-3">
+                    <h3>Day 2 Highlights</h3>
+                    <ul class="space-y-2">
+                      <li>Nilgiri Mountain Railway ride to Coonoor (8:45 AM)</li>
+                      <li>Sims Park and Lamb's Rock</li>
+                      <li>Tea Factory tour and Ooty Lake sunset</li>
+                    </ul>
+                  </div>
+                  <div class="space-y-3">
+                    <h3>Day 3 Highlights</h3>
+                    <ul class="space-y-2">
+                      <li>Botanical Garden and Rose Garden</li>
+                      <li>Wax Museum and optional Bandipur safari</li>
+                      <li>Return transfer for onward journey</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="callout-card space-y-1.5">
+                  <strong>Pricing Snapshot</strong>
+                  <ul class="space-y-1.5">
+                    <li>Economy: 13,000/- (2 pax) | 20,500/- (4 pax) | 25,500/- (6 pax)</li>
+                    <li>Standard: 16,000/- (2 pax) | 26,500/- (4 pax) | 33,500/- (6 pax)</li>
+                    <li>Deluxe: 18,000/- (2 pax) | 30,500/- (4 pax) | 39,500/- (6 pax)</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="section-header">
+          <h2 class="section-title">Booking Information</h2>
+          <p class="section-subtitle">Transparent inclusions and exclusions help you plan the perfect long-weekend getaway.</p>
+        </div>
+
+        <div class="info-section">
+          <div class="info-card">
+            <h3>Package Includes</h3>
+            <ul>
+              <li class="flex items-start gap-3">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5 text-emerald-500"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                <span>Accommodation for two adults with complimentary breakfast</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5 text-emerald-500"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                <span>Arrival, departure, and all local transfers in private AC cabs</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5 text-emerald-500"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                <span>Pickup from Mysore railway station, bus station, or airport</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5 text-emerald-500"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                <span>Driver bata, night charges, tolls, parking, fuel, and permit fees</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5 text-emerald-500"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                <span>Standard hotel check-in at noon and check-out at noon</span>
+              </li>
+            </ul>
+          </div>
+          <div class="info-card info-card--warning">
+            <h3>Package Excludes</h3>
+            <ul>
+              <li class="flex items-start gap-3">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5 text-amber-600"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+                <span>Airfare, train fare, and entry tickets to attractions</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5 text-amber-600"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+                <span>Lunch, dinner, and meals beyond complimentary breakfast</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5 text-amber-600"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+                <span>Personal expenses such as tips, laundry, and telephone calls</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5 text-amber-600"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+                <span>Optional adventure activities mentioned in itineraries</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
-  <footer class="bg-secondary-900 text-white py-12 mt-12">
-    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+  <footer class="text-slate-200" aria-labelledby="footer-heading">
+    <h2 id="footer-heading" class="sr-only">Footer</h2>
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         <div>
-          <h3 class="text-xl font-bold">Heritage Taxi Service Mysore</h3>
-          <p class="mt-4 text-gray-300">Your trusted partner for exploring Mysore and beyond.</p>
+          <h3 class="text-xl font-bold text-white">Heritage Taxi Service Mysore</h3>
+          <p class="mt-4 text-base text-gray-300">Your trusted partner for exploring Mysore and beyond.</p>
+          <div class="mt-6 space-y-4">
+            <p class="flex items-center text-base text-gray-300"><a href="tel:+919611288339" class="hover:text-white">+91 96112 88339</a></p>
+            <p class="flex items-center text-base text-gray-300"><a href="mailto:info@heritagetaximysore.com" class="hover:text-white">info@heritagetaximysore.com</a></p>
+          </div>
         </div>
         <div>
-          <h4 class="font-semibold text-gray-400 uppercase">Quick Links</h4>
-          <ul class="mt-4 space-y-2 text-gray-300">
-            <li><a href="index.html#services">Our Services</a></li>
-            <li><a href="index.html#tours">Tour Packages</a></li>
-            <li><a href="index.html#fleet">Our Fleet</a></li>
-            <li><a href="index.html#blog">Travel Guide</a></li>
+          <h3 class="text-sm font-semibold text-slate-400 tracking-wider uppercase">Quick Links</h3>
+          <ul role="list" class="mt-4 space-y-4">
+            <li><a href="index.html#services" class="text-base text-slate-300 hover:text-white">Our Services</a></li>
+            <li><a href="index.html#tours" class="text-base text-slate-300 hover:text-white">Tour Packages</a></li>
+            <li><a href="index.html#fleet" class="text-base text-slate-300 hover:text-white">Our Fleet</a></li>
+            <li><a href="index.html#blog" class="text-base text-slate-300 hover:text-white">Mysore Travel Guide</a></li>
           </ul>
         </div>
         <div>
-          <h4 class="font-semibold text-gray-400 uppercase">Contact</h4>
-          <p class="mt-4 text-gray-300">Phone: <a href="tel:+919611288339" class="underline">+91 96112 88339</a></p>
-          <p class="text-gray-300">Email: <a href="mailto:info@heritagetaximysore.com" class="underline">info@heritagetaximysore.com</a></p>
+          <h3 class="text-sm font-semibold text-slate-400 tracking-wider uppercase">Services</h3>
+          <ul role="list" class="mt-4 space-y-4">
+            <li><a href="index.html#services" class="text-base text-gray-300 hover:text-white">Mysore Local Sightseeing</a></li>
+            <li><a href="index.html#services" class="text-base text-slate-300 hover:text-white">Outstation Taxi</a></li>
+            <li><a href="index.html#services" class="text-base text-slate-300 hover:text-white">Airport Transfers</a></li>
+            <li><a href="index.html#tours" class="text-base text-slate-300 hover:text-white">Coorg &amp; Ooty Packages</a></li>
+          </ul>
         </div>
       </div>
-      <div class="mt-8 border-t border-secondary-700 pt-8 text-center text-gray-400">&copy; 2025 Heritage Taxi Service Mysore. All rights reserved.</div>
+      <div class="mt-8 border-t border-white/10 pt-8 text-center">
+        <p class="text-base text-slate-400">&copy; 2025 Heritage Taxi Service Mysore. All rights reserved.</p>
+      </div>
     </div>
   </footer>
 
+  <a href="https://wa.me/919611288339?text=Hi%20Heritage%20Taxi" target="_blank" class="floating-whatsapp" aria-label="Chat on WhatsApp">
+    <svg class="h-8 w-8" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16"><path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/></svg>
+  </a>
+
   <script>
-    // Mobile menu toggle with auto-close on selection
     const menuButton = document.getElementById('mobile-menu-button');
     const mobileMenu = document.getElementById('mobile-menu');
+
     if (menuButton && mobileMenu) {
-      const mobileLinks = mobileMenu.querySelectorAll('a');
-      menuButton.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
-      mobileLinks.forEach(link => link.addEventListener('click', () => mobileMenu.classList.add('hidden')));
+      menuButton.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+
+      mobileMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          mobileMenu.classList.add('hidden');
+        });
+      });
     }
   </script>
 </body>
