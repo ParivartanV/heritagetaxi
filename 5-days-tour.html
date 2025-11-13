@@ -1,703 +1,1443 @@
-<!DOCTYPE html>
-<html lang="en">
+﻿<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width,initial-scale=1">
-	<title>5 Days Tour Packages - Heritage Taxi Mysore</title>
-	<script src="https://cdn.tailwindcss.com"></script>
-	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-	<style>
-		body { font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif; background: #f8fafc; }
-		.dropdown:hover .dropdown-content { display: block; }
-		.dropdown-content { display: none; position: absolute; top: 100%; left: 0; background: #fff; min-width: 160px; box-shadow: 0 8px 16px rgba(0, 0, 0, .2); z-index: 50; }
-	</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mysore 5-Day Tour Packages | Heritage Taxi Mysore</title>
+  <meta name="description" content="Plan immersive 5-day tour packages from Mysore covering Coorg coffee country, Wayanad wildlife, Ooty hill stations, and Kodaikanal escapes with chauffeur-driven comfort.">
+  <link rel="canonical" href="https://www.heritagetaximysore.com/5-days-tour.html">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --color-primary-300: #93c5fd;
+      --color-primary-500: #2563eb;
+      --color-primary-600: #1d4ed8;
+      --color-primary-700: #1e3a8a;
+      --color-emerald-500: #059669;
+      --color-emerald-600: #047857;
+      --color-amber-400: #fbbf24;
+      --color-amber-500: #f59e0b;
+      --color-midnight: #0f172a;
+      --color-slate-100: #f1f5f9;
+      --color-slate-200: #e2e8f0;
+      --glass-border: rgba(148, 163, 184, 0.28);
+      --glass-border-strong: rgba(148, 163, 184, 0.45);
+      --glass-shadow: 0 28px 60px -30px rgba(15, 23, 42, 0.6);
+      --glass-shadow-strong: 0 40px 80px -35px rgba(15, 23, 42, 0.75);
+      --radius-xl: 1.5rem;
+      --radius-lg: 1rem;
+      --transition-base: all 0.35s ease;
+    }
+    body {
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+      background-image: url('pictures/mehal2.jpeg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      color: var(--color-midnight);
+      min-height: 100vh;
+      position: relative;
+      line-height: 1.6;
+    }
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(15, 23, 42, 0.85), rgba(30, 64, 175, 0.55), rgba(6, 95, 70, 0.5));
+      opacity: 0.9;
+      backdrop-filter: blur(8px);
+      z-index: 0;
+    }
+    body > * {
+      position: relative;
+      z-index: 1;
+    }
+    main {
+      display: flex;
+      flex-direction: column;
+    }
+    .dropdown:hover .dropdown-content { display: block; }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      top: calc(100% + 0.5rem);
+      left: 0;
+      background: rgba(10, 12, 17, 0.85);
+      padding: 0.6rem 0;
+      min-width: 220px;
+      border-radius: 1rem;
+      border: 1px solid rgba(148, 163, 184, 0.35);
+      box-shadow: 0 30px 60px -25px rgba(15, 23, 42, 0.7);
+      backdrop-filter: blur(14px);
+      z-index: 50;
+    }
+    .dropdown-content a {
+      display: block;
+      padding: 0.55rem 1rem;
+      font-size: 0.9rem;
+      color: rgba(226, 232, 240, 0.92);
+      transition: var(--transition-base);
+    }
+    .dropdown-content a:hover {
+      background: rgba(37, 99, 235, 0.2);
+      color: #fff;
+      padding-left: 1.2rem;
+    }
+    .site-header {
+      background: rgba(15, 23, 42, 0.82);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(148, 163, 184, 0.25);
+      box-shadow: 0 22px 48px -28px rgba(15, 23, 42, 0.65);
+    }
+    .logo-text {
+      color: #fff;
+      letter-spacing: 0.02em;
+    }
+    .nav-link {
+      font-weight: 600;
+      color: rgba(226, 232, 240, 0.92);
+      padding: 0.35rem 0.65rem;
+      border-radius: 999px;
+      transition: var(--transition-base);
+    }
+    .nav-link svg { opacity: 0.85; }
+    .nav-link:hover {
+      color: #fff;
+      background: rgba(37, 99, 235, 0.18);
+      box-shadow: 0 12px 26px -18px rgba(37, 99, 235, 0.65);
+    }
+    #mobile-menu {
+      background: rgba(15, 23, 42, 0.92);
+      border-bottom: 1px solid rgba(148, 163, 184, 0.25);
+      box-shadow: 0 20px 45px -30px rgba(15, 23, 42, 0.7);
+    }
+    #mobile-menu a {
+      color: rgba(226, 232, 240, 0.9);
+      border-radius: 0.75rem;
+    }
+    #mobile-menu a:hover {
+      background: rgba(37, 99, 235, 0.18);
+      color: #fff;
+    }
+    .primary-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.35rem;
+      padding: 0.6rem 1.4rem;
+      border-radius: 999px;
+      font-weight: 600;
+      color: var(--color-midnight);
+      background: linear-gradient(135deg, var(--color-amber-400), var(--color-amber-500));
+      box-shadow: 0 18px 32px -20px rgba(245, 158, 11, 0.6);
+      transition: var(--transition-base);
+    }
+    .primary-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 26px 44px -18px rgba(245, 158, 11, 0.7);
+      color: var(--color-midnight);
+    }
+    .inner-hero {
+      position: relative;
+      padding: clamp(4rem, 8vw, 6rem) 0;
+      margin: clamp(1.5rem, 5vw, 3rem) clamp(1rem, 4vw, 3rem) 0;
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      background: linear-gradient(135deg, rgba(15, 23, 42, 0.92), rgba(30, 64, 175, 0.75));
+      box-shadow: 0 40px 80px -50px rgba(15, 23, 42, 0.8);
+      color: #fff;
+    }
+    .inner-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 10% 15%, rgba(59, 130, 246, 0.45), transparent 55%), radial-gradient(circle at 80% 80%, rgba(6, 95, 70, 0.55), transparent 65%);
+      opacity: 0.9;
+      pointer-events: none;
+    }
+    .inner-hero > * { position: relative; z-index: 1; }
+    .inner-hero h1 {
+      font-size: clamp(2.5rem, 5vw, 3.75rem);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      background: linear-gradient(120deg, #fff, var(--color-primary-300));
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+    .inner-hero p {
+      max-width: 48rem;
+      margin-top: 1rem;
+      color: rgba(226, 232, 240, 0.86);
+      font-size: clamp(1.05rem, 2vw, 1.25rem);
+    }
+    .accent-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.4rem 0.9rem;
+      border-radius: 999px;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      background: rgba(236, 254, 255, 0.2);
+      color: rgba(191, 219, 254, 0.95);
+      font-weight: 700;
+    }
+    .breadcrumb {
+      margin-top: 1.75rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      font-size: 0.95rem;
+      color: rgba(226, 232, 240, 0.78);
+    }
+    .breadcrumb a {
+      color: rgba(224, 231, 255, 0.95);
+      transition: var(--transition-base);
+    }
+    .breadcrumb a:hover { color: #fff; }
+    .page-section {
+      margin: clamp(2.25rem, 5vw, 3.5rem) clamp(1rem, 4vw, 3rem);
+      border-radius: var(--radius-xl);
+      background: linear-gradient(150deg, rgba(255, 255, 255, 0.88), rgba(226, 232, 240, 0.72));
+      border: 1px solid var(--glass-border);
+      box-shadow: var(--glass-shadow);
+      backdrop-filter: blur(16px);
+      position: relative;
+      overflow: hidden;
+      isolation: isolate;
+    }
+    .page-section::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at top left, rgba(148, 197, 255, 0.28), transparent 55%), radial-gradient(circle at bottom right, rgba(16, 185, 129, 0.18), transparent 60%);
+      opacity: 0.85;
+      pointer-events: none;
+      z-index: 0;
+    }
+    .page-section > * { position: relative; z-index: 1; }
+    .section-header {
+      text-align: center;
+      max-width: 50rem;
+      margin: 0 auto clamp(2rem, 4vw, 3rem);
+    }
+    .section-title {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-size: clamp(2rem, 3.5vw, 2.75rem);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      background: linear-gradient(120deg, var(--color-midnight), var(--color-primary-600));
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+    .section-subtitle {
+      margin-top: 1rem;
+      color: rgba(71, 85, 105, 0.85);
+      font-size: clamp(1rem, 2vw, 1.15rem);
+    }
+    .tour-item {
+      position: relative;
+      border-radius: var(--radius-lg);
+      background: linear-gradient(160deg, rgba(255, 255, 255, 0.92), rgba(241, 245, 249, 0.78));
+      border: 1px solid var(--glass-border);
+      box-shadow: 0 22px 48px -30px rgba(15, 23, 42, 0.55);
+      backdrop-filter: blur(14px);
+      overflow: hidden;
+      transition: var(--transition-base);
+    }
+    .tour-item::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at top right, rgba(59, 130, 246, 0.18), transparent 60%);
+      opacity: 0.9;
+      pointer-events: none;
+    }
+    .tour-item:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--glass-shadow-strong);
+    }
+    .tour-item > * { position: relative; z-index: 1; }
+    .tour-item .fixed-header {
+      background: linear-gradient(120deg, rgba(59, 130, 246, 0.12), rgba(14, 116, 144, 0.1));
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+      padding: 1.75rem;
+    }
+    .tour-item .badge-soft {
+      align-self: flex-start;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.3rem 0.75rem;
+      border-radius: 999px;
+      font-size: 0.75rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      background: rgba(37, 99, 235, 0.15);
+      color: var(--color-primary-700);
+      font-weight: 600;
+    }
+    .tour-item .fixed-header h3 {
+      font-size: clamp(1.3rem, 2.5vw, 1.6rem);
+      font-weight: 700;
+      color: var(--color-midnight);
+      letter-spacing: -0.01em;
+    }
+    .tour-content {
+      padding: clamp(1.75rem, 3vw, 2.25rem);
+      display: grid;
+      gap: 1.75rem;
+    }
+    .tour-content h3 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--color-midnight);
+      letter-spacing: 0.01em;
+    }
+    .tour-content ul {
+      color: rgba(51, 65, 85, 0.88);
+      line-height: 1.7;
+    }
+    .tour-content ul li {
+      position: relative;
+      padding-left: 1.25rem;
+    }
+    .tour-content ul li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      color: var(--color-primary-600);
+      font-weight: 700;
+    }
+    .callout-card {
+      border-radius: var(--radius-lg);
+      padding: 1.25rem 1.5rem;
+      background: linear-gradient(135deg, rgba(250, 204, 21, 0.18), rgba(253, 230, 138, 0.3));
+      border: 1px solid rgba(250, 204, 21, 0.38);
+      color: rgba(120, 53, 15, 0.9);
+      font-weight: 600;
+    }
+    .info-section {
+      display: grid;
+      gap: 1.5rem;
+    }
+    @media (min-width: 768px) {
+      .info-section { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+    @media (min-width: 1024px) {
+      .info-section { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    }
+    .info-card {
+      border-radius: var(--radius-lg);
+      padding: 2rem;
+      background: linear-gradient(160deg, rgba(236, 254, 255, 0.92), rgba(255, 255, 255, 0.88));
+      border: 1px solid rgba(59, 130, 246, 0.25);
+      box-shadow: 0 20px 42px -28px rgba(14, 116, 144, 0.45);
+    }
+    .info-card--warning {
+      background: linear-gradient(160deg, rgba(254, 243, 199, 0.92), rgba(255, 255, 255, 0.88));
+      border-color: rgba(245, 158, 11, 0.32);
+      box-shadow: 0 20px 42px -28px rgba(217, 119, 6, 0.45);
+    }
+    .info-card h3 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 1.25rem;
+      color: var(--color-midnight);
+    }
+    .info-card ul {
+      color: rgba(30, 41, 59, 0.85);
+      display: grid;
+      gap: 0.75rem;
+    }
+    .info-card li {
+      display: flex;
+      gap: 0.65rem;
+      align-items: flex-start;
+    }
+    .info-card svg {
+      flex-shrink: 0;
+      width: 1.2rem;
+      height: 1.2rem;
+      margin-top: 0.2rem;
+    }
+    footer {
+      background: rgba(10, 14, 23, 0.88);
+      border-top: 1px solid rgba(148, 163, 184, 0.25);
+      backdrop-filter: blur(12px);
+      color: rgba(226, 232, 240, 0.85);
+    }
+    footer a {
+      transition: var(--transition-base);
+      color: rgba(226, 232, 240, 0.75);
+    }
+    footer a:hover { color: #fff; }
+    .floating-whatsapp {
+      position: fixed;
+      bottom: 1.5rem;
+      right: 1.5rem;
+      z-index: 60;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.1rem;
+      border-radius: 999px;
+      background: linear-gradient(135deg, #22c55e, #16a34a);
+      color: #fff;
+      box-shadow: 0 20px 40px -18px rgba(22, 163, 74, 0.55);
+      transition: var(--transition-base);
+    }
+    .floating-whatsapp:hover {
+      transform: translateY(-4px) scale(1.05);
+      box-shadow: 0 28px 55px -20px rgba(22, 163, 74, 0.65);
+    }
+    @media (max-width: 768px) {
+      .site-header { background: rgba(15, 23, 42, 0.92); }
+      .page-section {
+        margin: clamp(1.5rem, 6vw, 2.5rem) 1rem;
+        border-radius: 1.25rem;
+      }
+      .inner-hero {
+        margin: clamp(1.5rem, 6vw, 2.5rem) 1rem 0;
+        border-radius: 1.5rem;
+        padding: clamp(3rem, 12vw, 4.5rem) 1.25rem;
+      }
+      .tour-content { padding: 1.75rem 1.5rem; }
+      .dropdown-content {
+        position: static;
+        width: 100%;
+        margin-top: 0.75rem;
+        border: none;
+        box-shadow: none;
+        background: rgba(15, 23, 42, 0.92);
+      }
+    }
+  </style>
+
+  <meta property="og:title" content="5-Day Tour Packages - Heritage Taxi Mysore">
+  <meta property="og:description" content="Choose curated 5-day holiday circuits from Mysore to Coorg, Wayanad, Ooty, and Kodaikanal with private cabs and handpicked stays.">
+  <meta property="og:url" content="https://www.heritagetaximysore.com/5-days-tour.html">
+  <meta property="og:image" content="https://www.heritagetaximysore.com/pictures/mysore-palace.jpg">
 </head>
 <body>
-	<header class="bg-white sticky top-0 z-40 shadow">
-		<div class="container mx-auto px-4 py-4 flex items-center justify-between">
-			<a href="index.html" class="text-2xl font-bold text-indigo-600">Heritage Taxi Mysore</a>
-			<nav class="hidden md:flex items-center space-x-6">
-				<a href="index.html#home" class="text-gray-700 hover:text-indigo-600">Home</a>
-				<a href="index.html#services" class="text-gray-700 hover:text-indigo-600">Services</a>
-				<div class="relative dropdown">
-					<a href="#" class="text-gray-700 hover:text-indigo-600">Tour Packages</a>
-					  <div class="dropdown-content rounded">
-						<div class="py-1">
-							<a class="block px-4 py-2" href="1-day-tour.html">1 Day Tour</a>
-							<a class="block px-4 py-2" href="2-days-tour.html">2 Days Tour</a>
-							<a class="block px-4 py-2" href="3-days-tour.html">3 Days Tour</a>
-							<a class="block px-4 py-2" href="4-days-tour.html">4 Days Tour</a>
-							<a class="block px-4 py-2" href="5-days-tour.html">5 Days Tour</a>
-							<a class="block px-4 py-2" href="6-days-tour.html">6 Days Tour</a>
-							<a class="block px-4 py-2" href="7-days-tour.html">7 Days Tour</a>
-							<a class="block px-4 py-2" href="8-days-tour.html">8 Days Tour</a>
-						</div>
-					</div>
-				</div>
-				<a href="index.html#fleet" class="text-gray-700 hover:text-indigo-600">Our Fleet</a>
-				<a href="tel:+919611288339" class="text-gray-700 hover:text-indigo-600">Call: +91 96112 88339</a>
-			</nav>
-			<div class="md:hidden">
-				<button id="mobile-menu-button" class="p-2">Menu</button>
-			</div>
-		</div>
-		<div id="mobile-menu" class="hidden px-4 pb-4 md:hidden">
-			<a class="block py-2" href="index.html#home">Home</a>
-			<a class="block py-2" href="index.html#services">Services</a>
-			<a class="block py-2" href="index.html#tours">Tour Packages</a>
-		</div>
-	</header>
-
-	<main class="container mx-auto px-6 py-10">
-		<h1 class="text-4xl font-bold text-center text-indigo-600 mb-6">5-Days Tour Packages</h1>
-		<p class="text-center text-gray-600 mb-8">Explore our comprehensive 5-day / 4-night packages with day-by-day itineraries across Mysore, Coorg, Wayanad, Ooty and Kodaikanal.</p>
-
-		<div class="space-y-6">
-
-			<!-- Tour 1 -->
-			<div class="bg-white rounded shadow border">
-				<div class="px-6 py-4 border-b">
-					<h2 class="text-xl font-semibold text-blue-700">Tour No 1 — 5 Days / 4 Nights — 2 Night Mysore / 1 Night Madikeri / 1 Night Wayanad (Arrival &amp; Dropping - Mysore)</h2>
-				</div>
-				<div class="p-6">
-					<p class="text-sm text-gray-600 mb-3">A comprehensive circuit blending Mysore heritage, Coorg coffee country and Wayanad wilderness.</p>
-
-					<h4 class="font-semibold mt-3">Day 1 — Mysore Royal Trail</h4>
-					<p class="text-gray-700">Arrive in Mysore and begin with Chamundeshwari Temple atop Chamundi Hill for sweeping vistas. Visit the monolithic Nandi Bull, descend to Mysore Palace to admire its Indo-Saracenic grandeur, stroll Karanji Lake aviary or the famed Mysore Zoo, and close with the musical fountain spectacle at Brindavan Gardens. Overnight in Mysore.</p>
-
-					<h4 class="font-semibold mt-3">Day 2 — Temples &amp; Waterfalls</h4>
-					<p class="text-gray-700">Drive to Somnathpur to marvel at the star-shaped Chennakeshava Temple. Stop at Mudukuthore Mallikarjuna Temple, then head to Shivanasamudra for Gaganachukki and Barachukki Falls. Explore the buried temples of Talakadu before returning to Mysore for the night.</p>
-
-					<h4 class="font-semibold mt-3">Day 3 — Mysore to Coorg</h4>
-					<p class="text-gray-700">Check out and continue to Coorg via Kushalnagar's Tibetan Golden Temple and the bamboo groves of Kaveri Nisargadhama. Optional rafting or elephant interactions at Dubare Elephant Camp. In Madikeri, visit Omkareshwara Temple and browse spice markets. Overnight in Coorg.</p>
-
-					<h4 class="font-semibold mt-3">Day 4 — Sacred Coorg to Wayanad</h4>
-					<p class="text-gray-700">Visit Talakaveri, the revered origin of River Kaveri, then Bhagamandala's Triveni Sangam. Traverse lush forests into Wayanad and settle into your resort amid misty hills. Overnight in Wayanad.</p>
-
-					<h4 class="font-semibold mt-3">Day 5 — Wayanad Highlights &amp; Departure</h4>
-					<p class="text-gray-700">Explore ancient petroglyphs at Edakkal Caves, trek to Meenmutty Falls, continue to Soochipara Falls and the scenic Banasura Sagar Dam. Shop for spices and coffee before departing to Mysore.</p>
-
-					<div class="mt-4">
-						<h4 class="font-semibold">Hotel Details</h4>
-						<p class="text-sm text-gray-700">Mysore: Sahara Residency / Krishna Kuteera / Sunflower Hotel. Madikeri: Hotel Hill View / Madikeri Heritage / Abbydhama Estate Stay. Wayanad: The Woodlands / Hotel Kallat / Green Gates.</p>
-					</div>
-
-					<div class="mt-4 overflow-x-auto">
-						<h4 class="font-semibold">Pricing</h4>
-						<table class="w-full text-sm border-collapse border border-gray-300 min-w-[32rem]">
-							<thead>
-								<tr class="bg-gray-100">
-									<th class="p-2 border border-gray-300 text-left">Category</th>
-									<th class="p-2 border border-gray-300">Min. 2 Pax</th>
-									<th class="p-2 border border-gray-300">Min. 4 Pax</th>
-									<th class="p-2 border border-gray-300">Min. 6 Pax</th>
-									<th class="p-2 border border-gray-300">Extra Bed</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td class="p-2 border border-gray-300">Economy</td>
-									<td class="p-2 border border-gray-300">22,000/-</td>
-									<td class="p-2 border border-gray-300">36,500/-</td>
-									<td class="p-2 border border-gray-300">45,500/-</td>
-									<td class="p-2 border border-gray-300">1,000/-</td>
-								</tr>
-								<tr>
-									<td class="p-2 border border-gray-300">Standard</td>
-									<td class="p-2 border border-gray-300">28,000/-</td>
-									<td class="p-2 border border-gray-300">48,000/-</td>
-									<td class="p-2 border border-gray-300">61,500/-</td>
-									<td class="p-2 border border-gray-300">1,000/-</td>
-								</tr>
-								<tr>
-									<td class="p-2 border border-gray-300">Deluxe</td>
-									<td class="p-2 border border-gray-300">30,500/-</td>
-									<td class="p-2 border border-gray-300">53,000/-</td>
-									<td class="p-2 border border-gray-300">69,000/-</td>
-									<td class="p-2 border border-gray-300">1,000/-</td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
-				</div>
-			</div>
-
-			<!-- Tour 2 -->
-			<div class="bg-white rounded shadow border">
-				<div class="px-6 py-4 border-b">
-					<h2 class="text-xl font-semibold text-blue-700">Tour No 2 — 5 Days / 4 Nights — 1 Night Mysore / 1 Night Madikeri / 2 Night Wayanad (Arrival &amp; Dropping - Mysore)</h2>
-				</div>
-				<div class="p-6">
-					<p class="text-sm text-gray-600 mb-3">An itinerary for travelers wanting Mysore highlights and an immersive Wayanad stay.</p>
-
-					<h4 class="font-semibold mt-3">Day 1 — Royal Mysore Welcome</h4>
-					<p class="text-gray-700">Arrive Mysore and tour Chamundeshwari Temple, Nandi Bull, Mysore Palace, Karanji Lake and the Mysore Zoo. Evening fountains at Brindavan Gardens precede your overnight stay.</p>
-
-					<h4 class="font-semibold mt-3">Day 2 — Mysore to Coorg</h4>
-					<p class="text-gray-700">Depart for Coorg with stops at the Tibetan Golden Temple, Kaveri Nisargadhama and Dubare Forest for optional river experiences. Visit Abbey Falls and Raja's Seat for sunset. Overnight in Madikeri.</p>
-
-					<h4 class="font-semibold mt-3">Day 3 — Sacred Sites &amp; Wayanad</h4>
-					<p class="text-gray-700">Visit Omkareshwara Temple, Talakaveri and Bhagamandala before crossing into Wayanad to check in for a two-night stay amid evergreen forests.</p>
-
-					<h4 class="font-semibold mt-3">Day 4 — Wayanad Wilderness</h4>
-					<p class="text-gray-700">Discover Edakkal Caves' rock art, enjoy boating at Pookot Lake, trek to Soochipara Falls and unwind in Wayanad's cool climate.</p>
-
-					<h4 class="font-semibold mt-3">Day 5 — Dam &amp; Departure</h4>
-					<p class="text-gray-700">Visit Banasura Sagar Dam, explore Meenmutty Falls and the Kalpetta backwaters. Shop for spices before returning to Mysore.</p>
-
-					<div class="mt-4 overflow-x-auto">
-						<h4 class="font-semibold">Pricing</h4>
-						<table class="w-full text-sm border-collapse border border-gray-300 min-w-[28rem]">
-							<tbody>
-								<tr>
-									<td class="p-2 border border-gray-300">Economy</td>
-									<td class="p-2 border border-gray-300">22,000/-</td>
-									<td class="p-2 border border-gray-300">36,500/-</td>
-									<td class="p-2 border border-gray-300">45,500/-</td>
-								</tr>
-								<tr>
-									<td class="p-2 border border-gray-300">Standard</td>
-									<td class="p-2 border border-gray-300">29,000/-</td>
-									<td class="p-2 border border-gray-300">50,000/-</td>
-									<td class="p-2 border border-gray-300">64,500/-</td>
-								</tr>
-								<tr>
-									<td class="p-2 border border-gray-300">Deluxe</td>
-									<td class="p-2 border border-gray-300">32,000/-</td>
-									<td class="p-2 border border-gray-300">56,000/-</td>
-									<td class="p-2 border border-gray-300">73,500/-</td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
-				</div>
-			</div>
-
-			<!-- Tour 3 -->
-			<div class="bg-white rounded shadow border">
-				<div class="px-6 py-4 border-b">
-					<h2 class="text-xl font-semibold text-blue-700">Tour No 3 — 5 Days / 4 Nights — 2 Night Madikeri / 2 Night Wayanad (Arrival &amp; Dropping - Mysore)</h2>
-				</div>
-				<div class="p-6">
-					<p class="text-sm text-gray-600 mb-3">Designed for nature enthusiasts focusing on extended Coorg and Wayanad stays.</p>
-
-					<h4 class="font-semibold mt-3">Day 1 — Mysore to Coorg</h4>
-					<p class="text-gray-700">Proceed to Coorg after arrival. Visit Kushalnagar monastery, Kaveri Nisargadhama and Dubare Forest. Explore Omkareshwara Temple and Madikeri town. Overnight in Coorg.</p>
-
-					<h4 class="font-semibold mt-3">Day 2 — Coorg Highlands</h4>
-					<p class="text-gray-700">Discover Talakaveri's sacred springs, Bhagamandala's confluence, Raja's Seat sunset views and Abbey Falls amid coffee estates. Evening for spice shopping. Overnight in Coorg.</p>
-
-					<h4 class="font-semibold mt-3">Day 3 — Scenic Transfer to Wayanad</h4>
-					<p class="text-gray-700">Journey towards Wayanad with stops at Banasura Sagar Dam and Lakkidi viewpoint. Optional Chembra Peak viewpoint visit before checking in. Overnight in Wayanad.</p>
-
-					<h4 class="font-semibold mt-3">Day 4 — Wayanad Adventure Day</h4>
-					<p class="text-gray-700">Tour Edakkal Caves, Kuruva Island, Pakshipathalam bird haven and enjoy an evening safari at Muthanga Wildlife Sanctuary. Overnight in Wayanad.</p>
-
-					<h4 class="font-semibold mt-3">Day 5 — Waterfalls &amp; Departure</h4>
-					<p class="text-gray-700">Visit Soochipara Falls, Pookot Lake and Meenmutty Falls before returning to Mysore.</p>
-
-					<div class="mt-4 overflow-x-auto">
-						<h4 class="font-semibold">Pricing</h4>
-						<table class="w-full text-sm border-collapse border border-gray-300 min-w-[28rem]">
-							<tbody>
-								<tr>
-									<td class="p-2 border border-gray-300">Economy</td>
-									<td class="p-2 border border-gray-300">23,000/-</td>
-									<td class="p-2 border border-gray-300">38,500/-</td>
-									<td class="p-2 border border-gray-300">48,500/-</td>
-								</tr>
-								<tr>
-									<td class="p-2 border border-gray-300">Standard</td>
-									<td class="p-2 border border-gray-300">29,500/-</td>
-									<td class="p-2 border border-gray-300">51,000/-</td>
-									<td class="p-2 border border-gray-300">66,000/-</td>
-								</tr>
-								<tr>
-									<td class="p-2 border border-gray-300">Deluxe</td>
-									<td class="p-2 border border-gray-300">32,500/-</td>
-									<td class="p-2 border border-gray-300">57,000/-</td>
-									<td class="p-2 border border-gray-300">75,000/-</td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
-				</div>
-			</div>
-
-			<!-- Tour 4 -->
-			<div class="bg-white rounded shadow border">
-				<div class="px-6 py-4 border-b">
-					<h2 class="text-xl font-semibold text-blue-700">Tour No 4 — 5 Days / 4 Nights — 2 Night Mysore / 2 Night Madikeri (Arrival &amp; Dropping - Bangalore)</h2>
-				</div>
-				<div class="p-6">
-					<p class="text-sm text-gray-600 mb-3">Perfect for Bangalore arrivals wanting extended Mysore heritage with ample time in Coorg.</p>
-
-					<h4 class="font-semibold mt-3">Day 1 — Bangalore Highlights</h4>
-					<p class="text-gray-700">Tour Cubbon Park, Vidhana Soudha, Vishvesvaraya Museum, Lalbagh Botanical Garden and ISKCON Temple before driving to Mysore. Overnight in Mysore.</p>
-
-					<h4 class="font-semibold mt-3">Day 2 — Mysore Heritage</h4>
-					<p class="text-gray-700">Visit Chamundeshwari Temple, Nandi Bull, city viewpoints, Karanji Lake, Mysore Zoo and illuminated Brindavan Gardens. Overnight in Mysore.</p>
-
-					<h4 class="font-semibold mt-3">Day 3 — Mysore to Coorg</h4>
-					<p class="text-gray-700">Transfer to Coorg with stops at Kushalnagar monastery, Kaveri Nisargadhama and Dubare Forest. Explore local coffee estates. Overnight in Madikeri.</p>
-
-					<h4 class="font-semibold mt-3">Day 4 — Coorg Sacred Sites</h4>
-					<p class="text-gray-700">Tour Talakaveri, Bhagamandala and Raja's Seat. Evening for spice and coffee shopping in Madikeri. Overnight in Coorg.</p>
-
-					<h4 class="font-semibold mt-3">Day 5 — Waterfalls &amp; Return</h4>
-					<p class="text-gray-700">Visit Omkareshwara Temple, Abbey Falls and Harangi Dam before returning to Bangalore or Mysore.</p>
-
-					<div class="mt-4 overflow-x-auto">
-						<h4 class="font-semibold">Pricing</h4>
-						<table class="w-full text-sm border-collapse border border-gray-300 min-w-[28rem]">
-							<tbody>
-								<tr>
-									<td class="p-2 border border-gray-300">Economy</td>
-									<td class="p-2 border border-gray-300">26,000/-</td>
-									<td class="p-2 border border-gray-300">40,500/-</td>
-									<td class="p-2 border border-gray-300">50,500/-</td>
-								</tr>
-								<tr>
-									<td class="p-2 border border-gray-300">Standard</td>
-									<td class="p-2 border border-gray-300">32,000/-</td>
-									<td class="p-2 border border-gray-300">48,000/-</td>
-									<td class="p-2 border border-gray-300">61,000/-</td>
-								</tr>
-								<tr>
-									<td class="p-2 border border-gray-300">Deluxe</td>
-									<td class="p-2 border border-gray-300">34,000/-</td>
-									<td class="p-2 border border-gray-300">52,000/-</td>
-									<td class="p-2 border border-gray-300">67,000/-</td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
-				</div>
-			</div>
-
-			<!-- Tour 5 -->
-			<div class="bg-white rounded shadow border">
-				<div class="px-6 py-4 border-b">
-					<h2 class="text-xl font-semibold text-blue-700">Tour No 5 — 5 Days / 4 Nights — 1 Night Mysore / 1 Night Wayanad / 2 Night Ooty (Arrival &amp; Dropping - Mysore)</h2>
-				</div>
-				<div class="p-6">
-					<p class="text-sm text-gray-600 mb-3">Balanced blend of Mysore culture, Wayanad wilderness and Nilgiri hill station charm.</p>
-
-					<h4 class="font-semibold mt-3">Day 1 — Mysore Highlights</h4>
-					<p class="text-gray-700">Tour Chamundeshwari Temple, Nandi Bull, Mysore Palace, Karanji Lake and Mysore Zoo before the Brindavan Gardens evening show. Overnight in Mysore.</p>
-
-					<h4 class="font-semibold mt-3">Day 2 — Into Wayanad</h4>
-					<p class="text-gray-700">Drive to Wayanad to explore Edakkal Caves, Soochipara Falls and Lakkidi viewpoint. Overnight in Wayanad.</p>
-
-					<h4 class="font-semibold mt-3">Day 3 — Wayanad to Ooty</h4>
-					<p class="text-gray-700">Visit Pookot Lake, Meenmutty Falls and Karapuzha Dam before ascending to Ooty for a two-night stay. Evening leisurely walk in the hill station. Overnight in Ooty.</p>
-
-					<h4 class="font-semibold mt-3">Day 4 — Ooty Exploration</h4>
-					<p class="text-gray-700">Cover Ooty Lake, Rose Garden, Doddabetta Peak, Tea Factory, Wax Museum and Boat House attractions. Overnight in Ooty.</p>
-
-					<h4 class="font-semibold mt-3">Day 5 — Return via Nilgiris</h4>
-					<p class="text-gray-700">Visit Botanical Garden, Pykara boat house, 6th Mile shooting point and Needle Rock viewpoint. Pass through Mudumalai and Bandipur National Parks before returning to Mysore.</p>
-
-					<div class="mt-4 overflow-x-auto">
-						<h4 class="font-semibold">Pricing</h4>
-						<table class="w-full text-sm border-collapse border border-gray-300 min-w-[28rem]">
-							<tbody>
-								<tr>
-									<td class="p-2 border border-gray-300">Economy</td>
-									<td class="p-2 border border-gray-300">21,000/-</td>
-									<td class="p-2 border border-gray-300">36,000/-</td>
-									<td class="p-2 border border-gray-300">44,000/-</td>
-								</tr>
-								<tr>
-									<td class="p-2 border border-gray-300">Standard</td>
-									<td class="p-2 border border-gray-300">28,000/-</td>
-									<td class="p-2 border border-gray-300">48,500/-</td>
-									<td class="p-2 border border-gray-300">61,500/-</td>
-								</tr>
-								<tr>
-									<td class="p-2 border border-gray-300">Deluxe</td>
-									<td class="p-2 border border-gray-300">31,500/-</td>
-									<td class="p-2 border border-gray-300">55,500/-</td>
-									<td class="p-2 border border-gray-300">72,000/-</td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
-				</div>
-			</div>
-
-			<!-- Tour 6 -->
-			<div class="bg-white rounded shadow border">
-				<div class="px-6 py-4 border-b">
-					<h2 class="text-xl font-semibold text-blue-700">Tour No 6 — 5 Days / 4 Nights — 2 Night Wayanad / 2 Night Ooty (Arrival &amp; Dropping - Mysore)</h2>
-				</div>
-				<div class="p-6">
-					<p class="text-sm text-gray-600 mb-3">Dedicated to the Western Ghats' natural wonders with extended stays in both Wayanad and Ooty.</p>
-
-					<h4 class="font-semibold mt-3">Day 1 — Mysore to Wayanad</h4>
-					<p class="text-gray-700">Arrive and drive to Wayanad visiting Banasura Sagar Dam, Chembra Peak view point, Edakkal Caves and Kuruva Island. Overnight in Wayanad.</p>
-
-					<h4 class="font-semibold mt-3">Day 2 — Wayanad Immersion</h4>
-					<p class="text-gray-700">Tour Lakkidi viewpoint, Soochipara Falls, Karapuzha Dam and Meenmutty Falls. Evening at leisure for cultural experiences. Overnight in Wayanad.</p>
-
-					<h4 class="font-semibold mt-3">Day 3 — Wayanad to Ooty</h4>
-					<p class="text-gray-700">Morning safari at Muthanga, visit Pookot Lake and then continue to Ooty for sightseeing covering Ooty Lake, Rose Garden, Doddabetta Peak, Tea Factory, Wax Museum and Boat House. Overnight in Ooty.</p>
-
-					<h4 class="font-semibold mt-3">Day 4 — Coonoor Day Trip</h4>
-					<p class="text-gray-700">Ride the Nilgiri Mountain Railway to Coonoor, visit Sims Park, Lamb's Rock, Tea Factory and Dolphin's Nose before returning to Ooty. Overnight in Ooty.</p>
-
-					<h4 class="font-semibold mt-3">Day 5 — Return to Mysore</h4>
-					<p class="text-gray-700">Stop at Botanical Garden, Pykara boat house, 6th Mile and Needle Rock viewpoints before traversing Mudumalai and Bandipur on the return drive to Mysore.</p>
-
-					<div class="mt-4 overflow-x-auto">
-						<h4 class="font-semibold">Pricing</h4>
-						<table class="w-full text-sm border-collapse border border-gray-300 min-w-[28rem]">
-							<tbody>
-								<tr>
-									<td class="p-2 border border-gray-300">Economy</td>
-									<td class="p-2 border border-gray-300">21,000/-</td>
-									<td class="p-2 border border-gray-300">36,000/-</td>
-									<td class="p-2 border border-gray-300">44,000/-</td>
-								</tr>
-								<tr>
-									<td class="p-2 border border-gray-300">Standard</td>
-									<td class="p-2 border border-gray-300">29,000/-</td>
-									<td class="p-2 border border-gray-300">50,500/-</td>
-									<td class="p-2 border border-gray-300">64,500/-</td>
-								</tr>
-								<tr>
-									<td class="p-2 border border-gray-300">Deluxe</td>
-									<td class="p-2 border border-gray-300">33,000/-</td>
-									<td class="p-2 border border-gray-300">58,500/-</td>
-									<td class="p-2 border border-gray-300">76,500/-</td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
-				</div>
-			</div>
-
-			<!-- Tour 7 -->
-			<div class="bg-white rounded shadow border">
-				<div class="px-6 py-4 border-b">
-					<h2 class="text-xl font-semibold text-blue-700">Tour No 7 — 5 Days / 4 Nights — 2 Night Mysore / 2 Night Wayanad (Arrival &amp; Dropping - Bangalore)</h2>
-				</div>
-				<div class="p-6">
-					<p class="text-sm text-gray-600 mb-3">Bangalore arrivals enjoy Mysore's royal trail followed by Wayanad's biodiverse landscapes.</p>
-
-					<h4 class="font-semibold mt-3">Day 1 — Bangalore to Mysore</h4>
-					<p class="text-gray-700">Explore Cubbon Park, Vidhana Soudha, Vishvesvaraya Museum, Lalbagh Garden and ISKCON Temple before evening transfer to Mysore. Overnight in Mysore.</p>
-
-					<h4 class="font-semibold mt-3">Day 2 — Mysore Highlights</h4>
-					<p class="text-gray-700">Visit Chamundeshwari Temple, Nandi Bull, city viewpoints, Karanji Lake, Mysore Zoo and Brindavan Gardens. Overnight in Mysore.</p>
-
-					<h4 class="font-semibold mt-3">Day 3 — Mysore to Wayanad</h4>
-					<p class="text-gray-700">Travel to Wayanad visiting Banasura Sagar Dam, Lakkidi viewpoint and Chembra Peak view. Check in for two nights. Overnight in Wayanad.</p>
-
-					<h4 class="font-semibold mt-3">Day 4 — Wayanad Safari</h4>
-					<p class="text-gray-700">Tour Edakkal Caves, Kuruva Island, Pakshipathalam trek and Muthanga Wildlife Sanctuary safari. Overnight in Wayanad.</p>
-
-					<h4 class="font-semibold mt-3">Day 5 — Waterfalls &amp; Return</h4>
-					<p class="text-gray-700">Visit Soochipara Falls, Pookot Lake and Meenmutty Falls before departing to Bangalore or Mysore.</p>
-
-					<div class="mt-4 overflow-x-auto">
-						<h4 class="font-semibold">Pricing</h4>
-						<table class="w-full text-sm border-collapse border border-gray-300 min-w-[28rem]">
-							<tbody>
-								<tr>
-									<td class="p-2 border border-gray-300">Economy</td>
-									<td class="p-2 border border-gray-300">24,500/-</td>
-									<td class="p-2 border border-gray-300">39,000/-</td>
-									<td class="p-2 border border-gray-300">47,000/-</td>
-								</tr>
-								<tr>
-									<td class="p-2 border border-gray-300">Standard</td>
-									<td class="p-2 border border-gray-300">33,500/-</td>
-									<td class="p-2 border border-gray-300">52,500/-</td>
-									<td class="p-2 border border-gray-300">66,500/-</td>
-								</tr>
-								<tr>
-									<td class="p-2 border border-gray-300">Deluxe</td>
-									<td class="p-2 border border-gray-300">36,500/-</td>
-									<td class="p-2 border border-gray-300">58,500/-</td>
-									<td class="p-2 border border-gray-300">75,500/-</td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
-				</div>
-			</div>
-
-			<!-- Tour 8 -->
-			<div class="bg-white rounded shadow border">
-				<div class="px-6 py-4 border-b">
-					<h2 class="text-xl font-semibold text-blue-700">Tour No 8 — 5 Days / 4 Nights — 2 Night Coorg / 2 Night Ooty (Arrival &amp; Dropping - Mysore)</h2>
-				</div>
-				<div class="p-6">
-					<p class="text-sm text-gray-600 mb-3">A favorite pairing of coffee estates and colonial hill station experiences.</p>
-
-					<h4 class="font-semibold mt-3">Day 1 — Into Coorg</h4>
-					<p class="text-gray-700">Drive to Coorg via Kushalnagar monastery, Kaveri Nisargadhama and Dubare Forest. Visit Omkareshwara Temple before checking in. Overnight in Coorg.</p>
-
-					<h4 class="font-semibold mt-3">Day 2 — Coorg Highlights</h4>
-					<p class="text-gray-700">Visit Talakaveri, Bhagamandala, Raja's Seat and Abbey Falls. Explore spice markets in the evening. Overnight in Coorg.</p>
-
-					<h4 class="font-semibold mt-3">Day 3 — Coorg to Ooty</h4>
-					<p class="text-gray-700">Travel through Bandipur and Mudumalai, stop at Needle Rock and 6th Mile, visit Pykara Lake before arriving in Ooty. Overnight in Ooty.</p>
-
-					<h4 class="font-semibold mt-3">Day 4 — Coonoor Toy Train</h4>
-					<p class="text-gray-700">Ride the Nilgiri Mountain Railway to Coonoor, visit Sims Park, Lamb's Rock, Tea Factory and Dolphin's Nose. Return to Ooty Lake. Overnight in Ooty.</p>
-
-					<h4 class="font-semibold mt-3">Day 5 — Final Hill Station Stroll</h4>
-					<p class="text-gray-700">Cover Botanical Garden, Rose Garden, Tea Factory and Wax Museum. Optional Bandipur safari before returning to Mysore.</p>
-
-					<div class="mt-4 overflow-x-auto">
-						<h4 class="font-semibold">Pricing</h4>
-						<table class="w-full text-sm border-collapse border border-gray-300 min-w-[28rem]">
-							<tbody>
-								<tr>
-									<td class="p-2 border border-gray-300">Economy</td>
-									<td class="p-2 border border-gray-300">23,000/-</td>
-									<td class="p-2 border border-gray-300">37,500/-</td>
-									<td class="p-2 border border-gray-300">47,500/-</td>
-								</tr>
-								<tr>
-									<td class="p-2 border border-gray-300">Standard</td>
-									<td class="p-2 border border-gray-300">27,500/-</td>
-									<td class="p-2 border border-gray-300">46,000/-</td>
-									<td class="p-2 border border-gray-300">59,000/-</td>
-								</tr>
-								<tr>
-									<td class="p-2 border border-gray-300">Deluxe</td>
-									<td class="p-2 border border-gray-300">30,500/-</td>
-									<td class="p-2 border border-gray-300">52,000/-</td>
-									<td class="p-2 border border-gray-300">68,000/-</td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
-				</div>
-			</div>
-
-			<!-- Tour 9 -->
-			<div class="bg-white rounded shadow border">
-				<div class="px-6 py-4 border-b">
-					<h2 class="text-xl font-semibold text-blue-700">Tour No 9 — 5 Days / 4 Nights — 2 Night Mysore / 2 Night Ooty (Arrival &amp; Dropping - Bangalore)</h2>
-				</div>
-				<div class="p-6">
-					<p class="text-sm text-gray-600 mb-3">Urban gateways enjoy Bangalore highlights, Mysore royalty and Nilgiri mountains.</p>
-
-					<h4 class="font-semibold mt-3">Day 1 — Bangalore Explorer</h4>
-					<p class="text-gray-700">See Cubbon Park, Vidhana Soudha, Vishvesvaraya Museum, Lalbagh Garden and ISKCON Temple before heading to Mysore. Overnight in Mysore.</p>
-
-					<h4 class="font-semibold mt-3">Day 2 — Mysore Heritage Trail</h4>
-					<p class="text-gray-700">Tour Chamundeshwari Temple, Nandi Bull, Mysore Palace, Karanji Lake, Mysore Zoo and Brindavan Gardens. Overnight in Mysore.</p>
-
-					<h4 class="font-semibold mt-3">Day 3 — To the Queen of Hills</h4>
-					<p class="text-gray-700">Drive via Bandipur and Mudumalai, stop at Needle Rock and 6th Mile, visit Pykara Lake before arriving in Ooty. Overnight in Ooty.</p>
-
-					<h4 class="font-semibold mt-3">Day 4 — Coonoor Heritage Train</h4>
-					<p class="text-gray-700">Enjoy the Nilgiri Mountain Railway ride to Coonoor with visits to Sims Park, Lamb's Rock, Tea Factory and Dolphin's Nose. Return to Ooty. Overnight in Ooty.</p>
-
-					<h4 class="font-semibold mt-3">Day 5 — Hill Station Finale</h4>
-					<p class="text-gray-700">Visit Botanical Garden, Rose Garden, Tea Factory and Wax Museum. Optional Bandipur safari before returning to Bangalore or Mysore.</p>
-
-					<div class="mt-4 overflow-x-auto">
-						<h4 class="font-semibold">Pricing</h4>
-						<table class="w-full text-sm border-collapse border border-gray-300 min-w-[28rem]">
-							<tbody>
-								<tr>
-									<td class="p-2 border border-gray-300">Economy</td>
-									<td class="p-2 border border-gray-300">24,500/-</td>
-									<td class="p-2 border border-gray-300">38,000/-</td>
-									<td class="p-2 border border-gray-300">46,000/-</td>
-								</tr>
-								<tr>
-									<td class="p-2 border border-gray-300">Standard</td>
-									<td class="p-2 border border-gray-300">31,500/-</td>
-									<td class="p-2 border border-gray-300">47,500/-</td>
-									<td class="p-2 border border-gray-300">59,500/-</td>
-								</tr>
-								<tr>
-									<td class="p-2 border border-gray-300">Deluxe</td>
-									<td class="p-2 border border-gray-300">34,500/-</td>
-									<td class="p-2 border border-gray-300">53,500/-</td>
-									<td class="p-2 border border-gray-300">68,500/-</td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
-				</div>
-			</div>
-
-			<!-- Tour 10 -->
-			<div class="bg-white rounded shadow border">
-				<div class="px-6 py-4 border-b">
-					<h2 class="text-xl font-semibold text-blue-700">Tour No 10 — 5 Days / 4 Nights — 1 Night Mysore / 1 Night Ooty / 2 Night Kodaikanal (Arrival &amp; Dropping - Mysore)</h2>
-				</div>
-				<div class="p-6">
-					<p class="text-sm text-gray-600 mb-3">Unique pairing of Nilgiri and Palani hill stations with a Mysore prologue.</p>
-
-					<h4 class="font-semibold mt-3">Day 1 — Mysore Royal Start</h4>
-					<p class="text-gray-700">Tour Chamundeshwari Temple, Nandi Bull, Mysore Palace, Karanji Lake, Mysore Zoo and Brindavan Gardens. Overnight in Mysore.</p>
-
-					<h4 class="font-semibold mt-3">Day 2 — Mysore to Ooty</h4>
-					<p class="text-gray-700">Travel via Bandipur and Mudumalai, stop at Needle Rock and 6th Mile, visit Pykara Lake, Botanical Garden and Rose Garden before checking in to Ooty. Overnight in Ooty.</p>
-
-					<h4 class="font-semibold mt-3">Day 3 — Coonoor &amp; Transfer to Kodaikanal</h4>
-					<p class="text-gray-700">Ride the Nilgiri Mountain Railway to Coonoor, tour Sims Park, Lamb's Rock, Tea Factory and Dolphin's Nose, then proceed to Kodaikanal. Overnight in Kodaikanal.</p>
-
-					<h4 class="font-semibold mt-3">Day 4 — Kodaikanal Discovery</h4>
-					<p class="text-gray-700">Visit Berijam Lake, Silent Valley, Silver Cascade, Bear Shola Falls, Kodai Lake boating, Pillar Rocks, Green Valley View and Bryant Park. Overnight in Kodaikanal.</p>
-
-					<h4 class="font-semibold mt-3">Day 5 — Shopping &amp; Departure</h4>
-					<p class="text-gray-700">Leisure for shopping chocolates, eucalyptus oil and handmade crafts before departing to Mysore.</p>
-
-					<div class="mt-4 overflow-x-auto">
-						<h4 class="font-semibold">Pricing</h4>
-						<table class="w-full text-sm border-collapse border border-gray-300 min-w-[28rem]">
-							<tbody>
-								<tr>
-									<td class="p-2 border border-gray-300">Economy</td>
-									<td class="p-2 border border-gray-300">22,000/-</td>
-									<td class="p-2 border border-gray-300">35,500/-</td>
-									<td class="p-2 border border-gray-300">44,500/-</td>
-								</tr>
-								<tr>
-									<td class="p-2 border border-gray-300">Standard</td>
-									<td class="p-2 border border-gray-300">31,500/-</td>
-									<td class="p-2 border border-gray-300">44,000/-</td>
-									<td class="p-2 border border-gray-300">56,000/-</td>
-								</tr>
-								<tr>
-									<td class="p-2 border border-gray-300">Deluxe</td>
-									<td class="p-2 border border-gray-300">41,500/-</td>
-									<td class="p-2 border border-gray-300">53,000/-</td>
-									<td class="p-2 border border-gray-300">69,500/-</td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
-				</div>
-			</div>
-
-			<!-- Tour 11 -->
-			<div class="bg-white rounded shadow border">
-				<div class="px-6 py-4 border-b">
-					<h2 class="text-xl font-semibold text-blue-700">Tour No 11 — 5 Days / 4 Nights — 2 Night Ooty / 2 Night Kodaikanal (Arrival &amp; Dropping - Mysore)</h2>
-				</div>
-				<div class="p-6">
-					<p class="text-sm text-gray-600 mb-3">Extended hill station escape featuring both Nilgiris and Palani ranges.</p>
-
-					<h4 class="font-semibold mt-3">Day 1 — Mysore to Ooty</h4>
-					<p class="text-gray-700">Drive via Bandipur and Mudumalai with stops at Needle Rock, 6th Mile and Pykara Lake before checking in to Ooty. Overnight in Ooty.</p>
-
-					<h4 class="font-semibold mt-3">Day 2 — Ooty Sightseeing</h4>
-					<p class="text-gray-700">Cover Botanical Garden, Rose Garden, Tea Factory and Wax Museum while enjoying the hill station ambience. Overnight in Ooty.</p>
-
-					<h4 class="font-semibold mt-3">Day 3 — Coonoor Trip &amp; Transfer</h4>
-					<p class="text-gray-700">Ride the Nilgiri Mountain Railway to Coonoor, visit Sims Park, Lamb's Rock, Tea Factory and Dolphin's Nose, then continue to Kodaikanal. Overnight in Kodaikanal.</p>
-
-					<h4 class="font-semibold mt-3">Day 4 — Kodaikanal Highlights</h4>
-					<p class="text-gray-700">Explore Berijam Lake, Silent Valley, Silver Cascade, Bear Shola Falls, Kodai Lake, Pillar Rocks, Green Valley View and Bryant Park. Overnight in Kodaikanal.</p>
-
-					<h4 class="font-semibold mt-3">Day 5 — Departure</h4>
-					<p class="text-gray-700">Morning for shopping Kodaikanal chocolates, eucalyptus oil and crafts before returning to Mysore.</p>
-
-					<div class="mt-4 overflow-x-auto">
-						<h4 class="font-semibold">Pricing</h4>
-						<table class="w-full text-sm border-collapse border border-gray-300 min-w-[28rem]">
-							<tbody>
-								<tr>
-									<td class="p-2 border border-gray-300">Economy</td>
-									<td class="p-2 border border-gray-300">22,000/-</td>
-									<td class="p-2 border border-gray-300">35,500/-</td>
-									<td class="p-2 border border-gray-300">44,500/-</td>
-								</tr>
-								<tr>
-									<td class="p-2 border border-gray-300">Standard</td>
-									<td class="p-2 border border-gray-300">27,000/-</td>
-									<td class="p-2 border border-gray-300">44,000/-</td>
-									<td class="p-2 border border-gray-300">56,000/-</td>
-								</tr>
-								<tr>
-									<td class="p-2 border border-gray-300">Deluxe</td>
-									<td class="p-2 border border-gray-300">32,000/-</td>
-									<td class="p-2 border border-gray-300">54,000/-</td>
-									<td class="p-2 border border-gray-300">71,000/-</td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
-				</div>
-			</div>
-
-		</div>
-
-		<section class="mt-10 bg-white rounded shadow p-6">
-			<h3 class="text-lg font-semibold mb-3">Package Includes &amp; Excludes</h3>
-			<div class="grid md:grid-cols-2 gap-6">
-				<div class="p-4 bg-green-50 border border-green-200 rounded">
-					<h4 class="font-semibold text-green-700">Package Includes</h4>
-					<ul class="list-disc list-inside mt-2 text-gray-700">
-						<li>Accommodation for 2 adults with complimentary breakfast</li>
-						<li>Arrival/departure and all land transfers by AC vehicles</li>
-						<li>Pick-up from airport, railway or bus station</li>
-						<li>All sightseeing transfers as per itinerary</li>
-						<li>Driver allowance, night charges, toll, parking, fuel and permits</li>
-						<li>Hotel check-in and check-out at 12:00 noon</li>
-					</ul>
-				</div>
-				<div class="p-4 bg-red-50 border border-red-200 rounded">
-					<h4 class="font-semibold text-red-700">Package Excludes</h4>
-					<ul class="list-disc list-inside mt-2 text-gray-700">
-						<li>Airfare, train fare and entry tickets</li>
-						<li>Meals other than the complimentary breakfast</li>
-						<li>Personal expenses like tips, laundry and phone calls</li>
-						<li>Optional activities mentioned in the itinerary</li>
-						<li>Any services not listed in the inclusions</li>
-					</ul>
-				</div>
-			</div>
-
-			<div class="mt-6 p-4 bg-blue-50 border border-blue-200 rounded">
-				<h4 class="font-semibold text-blue-700 mb-2">Vehicle Information</h4>
-				<p class="text-sm text-gray-700"><strong>Economy:</strong> 2-3 Pax AC Indica | 4-6 Pax AC Tavera</p>
-				<p class="text-sm text-gray-700"><strong>Standard &amp; Deluxe:</strong> 2-3 Pax AC Indigo | 4-6 Pax AC Innova</p>
-			</div>
-		</section>
-	</main>
-
-	<footer class="bg-gray-900 text-white py-10 mt-12">
-		<div class="container mx-auto px-4 grid md:grid-cols-3 gap-6">
-			<div>
-				<h4 class="font-bold">Heritage Taxi Mysore</h4>
-				<p class="text-gray-300 mt-2">Trusted taxi and tour operator for Mysore, Coorg, Ooty, Wayanad &amp; Kodaikanal.</p>
-			</div>
-			<div>
-				<h4 class="font-semibold text-gray-400">Quick Links</h4>
-				<ul class="mt-2 text-gray-300">
-					<li><a href="index.html#services">Our Services</a></li>
-					<li><a href="index.html#tours">Tour Packages</a></li>
-					<li><a href="index.html#fleet">Our Fleet</a></li>
-				</ul>
-			</div>
-			<div>
-				<h4 class="font-semibold text-gray-400">Contact</h4>
-				<p class="mt-2 text-gray-300">Phone: <a href="tel:+919611288339">+91 96112 88339</a></p>
-				<p class="text-gray-300">Email: <a href="mailto:info@heritagetaximysore.com">info@heritagetaximysore.com</a></p>
-			</div>
-		</div>
-	</footer>
-
-	<script>
-		const btn = document.getElementById('mobile-menu-button');
-		const menu = document.getElementById('mobile-menu');
-		if (btn && menu) {
-			btn.addEventListener('click', () => {
-				menu.classList.toggle('hidden');
-			});
-		}
-	</script>
+  <header class="site-header sticky top-0 z-40">
+    <nav class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <div class="flex-shrink-0 flex items-center">
+          <a href="index.html" class="logo-text text-2xl font-bold">
+            Heritage Taxi Mysore
+          </a>
+        </div>
+
+        <div class="hidden md:flex md:items-center md:space-x-4 lg:space-x-6">
+          <a href="index.html#home" class="nav-link inline-flex items-center gap-1.5">
+            <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"/></svg>
+            <span>Home</span>
+          </a>
+          <a href="index.html#services" class="nav-link inline-flex items-center gap-1.5">
+            <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"/></svg>
+            <span>Services</span>
+          </a>
+          <div class="relative dropdown">
+            <a href="index.html#tours" class="nav-link inline-flex items-center gap-1.5 dropbtn">
+              <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 6.75V15m6-6v8.25m.5 3.375c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125h1.5c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125h-1.5Zm-6 0c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125h1.5c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125h-1.5ZM6.375 6.375a1.125 1.125 0 1 1-2.25 0 1.125 1.125 0 0 1 2.25 0ZM17.625 6.375a1.125 1.125 0 1 1-2.25 0 1.125 1.125 0 0 1 2.25 0Z"/></svg>
+              <span>Tour Packages</span>
+            </a>
+            <div class="dropdown-content">
+              <a href="Mysore 1 day tour.html" class="text-sm">Mysore 1 Day Tour</a>
+              <a href="1-day-tour.html" class="text-sm">1 Day Tour</a>
+              <a href="2-days-tour.html" class="text-sm">2 Days Tour</a>
+              <a href="3-days-tour.html" class="text-sm">3 Days Tour</a>
+              <a href="4-days-tour.html" class="text-sm">4 Days Tour</a>
+              <a href="5-days-tour.html" class="text-sm">5 Days Tour</a>
+              <a href="6-days-tour.html" class="text-sm">6 Days Tour</a>
+              <a href="7-days-tour.html" class="text-sm">7 Days Tour</a>
+              <a href="8-days-tour.html" class="text-sm">8 Days Tour</a>
+            </div>
+          </div>
+          <a href="index.html#fleet" class="nav-link inline-flex items-center gap-1.5">
+            <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 16.5v-2.25a2.25 2.25 0 0 1 2.25-2.25H6c.56 0 1.064-.316 1.312-.816l1.134-2.268A1.5 1.5 0 0 1 9.83 7.5h4.34a1.5 1.5 0 0 1 1.383.916l1.134 2.268c.248.5.752.816 1.312.816h1.5a2.25 2.25 0 0 1 2.25 2.25V16.5"/><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 16.5h19.5"/><circle cx="7.5" cy="18" r="1.5"/><circle cx="18" cy="18" r="1.5"/></svg>
+            <span>Our Fleet</span>
+          </a>
+          <a href="index.html#blog" class="nav-link inline-flex items-center gap-1.5">
+            <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 0 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 1 18 18c-2.305 0-4.408.867-6 2.292m0-14.25v14.25"/></svg>
+            <span>Travel Guide</span>
+          </a>
+          <a href="tel:+919611288339" class="nav-link inline-flex items-center gap-1.5">
+            <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-2.836-.184-5.233-2.58-5.417-5.417l1.293-.97c.362-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z"/></svg>
+            <span>Call: +91 96112 88339</span>
+          </a>
+        </div>
+
+        <div class="hidden md:block">
+          <a href="index.html#booking-widget" class="primary-button text-sm md:text-base">
+            Book Now
+          </a>
+        </div>
+
+        <div class="md:hidden flex items-center">
+          <button id="mobile-menu-button" class="inline-flex items-center justify-center p-2 rounded-md text-slate-200/80 hover:text-slate-100 hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-400">
+            <span class="sr-only">Open main menu</span>
+            <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <div id="mobile-menu" class="md:hidden hidden">
+      <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+        <a href="index.html#home" class="flex items-center gap-3 px-3 py-2 rounded-lg text-base font-medium">
+          <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"/></svg>
+          <span>Home</span>
+        </a>
+        <a href="index.html#services" class="flex items-center gap-3 px-3 py-2 rounded-lg text-base font-medium">
+          <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"/></svg>
+          <span>Services</span>
+        </a>
+        <a href="index.html#tours" class="flex items-center gap-3 px-3 py-2 rounded-lg text-base font-medium">
+          <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 6.75V15m6-6v8.25m.5 3.375c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125h1.5c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125h-1.5Zm-6 0c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125h1.5c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125h-1.5ZM6.375 6.375a1.125 1.125 0 1 1-2.25 0 1.125 1.125 0 0 1 2.25 0ZM17.625 6.375a1.125 1.125 0 1 1-2.25 0 1.125 1.125 0 0 1 2.25 0Z"/></svg>
+          <span>Tour Packages</span>
+        </a>
+        <a href="index.html#fleet" class="flex items-center gap-3 px-3 py-2 rounded-lg text-base font-medium">
+          <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 16.5v-2.25a2.25 2.25 0 0 1 2.25-2.25H6c.56 0 1.064-.316 1.312-.816l1.134-2.268A1.5 1.5 0 0 1 9.83 7.5h4.34a1.5 1.5 0 0 1 1.383.916l1.134 2.268c.248.5.752.816 1.312.816h1.5a2.25 2.25 0 0 1 2.25 2.25V16.5"/><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 16.5h19.5"/><circle cx="7.5" cy="18" r="1.5"/><circle cx="18" cy="18" r="1.5"/></svg>
+          <span>Our Fleet</span>
+        </a>
+        <a href="index.html#blog" class="flex items-center gap-3 px-3 py-2 rounded-lg text-base font-medium">
+          <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 0 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 1 18 18c-2.305 0-4.408.867-6 2.292m0-14.25v14.25"/></svg>
+          <span>Travel Guide</span>
+        </a>
+        <a href="tel:+919611288339" class="flex items-center gap-3 px-3 py-2 rounded-lg text-base font-medium">
+          <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-2.836-.184-5.233-2.58-5.417-5.417l1.293-.97c.362-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z"/></svg>
+          <span>Call: +91 96112 88339</span>
+        </a>
+      </div>
+      <div class="pt-4 pb-3 border-t border-white/10">
+        <a href="index.html#booking-widget" class="primary-button w-full justify-center text-base">
+          Book Now
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="inner-hero">
+      <div class="container mx-auto px-6 lg:px-10">
+        <span class="accent-badge">Signature Circuits</span>
+        <h1>Immersive 5-Day Journeys</h1>
+        <p>Lavish long-weekend escapes that combine Mysore's royal heritage with coffee plantations, wildlife sanctuaries, and hill-station breezes. Every itinerary is chauffeur-driven, thoughtfully paced, and customisable to your travel tribe.</p>
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="index.html">Home</a>
+          <span>/</span>
+          <a href="index.html#tours">Tour Packages</a>
+          <span>/</span>
+          <span>5 Days Tour</span>
+        </nav>
+      </div>
+    </section>
+
+    <section class="page-section">
+      <div class="container mx-auto px-6 lg:px-10 py-12 space-y-12">
+        <div class="section-header">
+          <h2 class="section-title">Extended Holiday Circuits</h2>
+          <p class="section-subtitle">Eleven curated five-day itineraries balance temples, waterfalls, coffee estates, wildlife corridors, and misty peaks. Pick the circuit that mirrors your vibe and we'll handle the rest.</p>
+        </div>
+
+        <div class="space-y-8">
+          <article class="tour-item">
+            <div class="fixed-header">
+              <span class="badge-soft">Tour 1</span>
+              <h3>2 Nights Mysore  1 Night Madikeri  1 Night Wayanad</h3>
+            </div>
+            <div class="tour-content">
+              <div class="space-y-4">
+                <div class="callout-card">
+                  <strong>Arrival &amp; Departure:</strong> Mysore
+                </div>
+                <div class="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+                  <div class="space-y-3">
+                    <h3>Day 1 Highlights</h3>
+                    <ul class="space-y-2">
+                      <li>Welcome pickup from Mysore railway station, bus stand, or hotel</li>
+                      <li>Chamundeshwari Temple darshan and the iconic monolithic Nandi Bull</li>
+                      <li>City viewpoint halt with time for Karanji Lake aviary</li>
+                      <li>Mysore Zoo walkthrough among heritage enclosures</li>
+                      <li>Musical fountain spectacle at Brindavan Gardens; overnight in Mysore</li>
+                    </ul>
+                  </div>
+                  <div class="space-y-3">
+                    <h3>Day 2 Highlights</h3>
+                    <ul class="space-y-2">
+                      <li>Somnathpur's intricately carved Chennakeshava Temple</li>
+                      <li>Mudukuthore Mallikarjuna Temple along the Cauvery</li>
+                      <li>Shivanasamudra's twin cascades: Gaganachukki and Bharachukki</li>
+                      <li>Talakadu Panchalinga temple trail amid shifting sands</li>
+                      <li>Return to Mysore for relaxed evening</li>
+                    </ul>
+                  </div>
+                  <div class="space-y-3">
+                    <h3>Day 3 Highlights</h3>
+                    <ul class="space-y-2">
+                      <li>Checkout for Coorg via Kushalnagar Namdroling Golden Temple</li>
+                      <li>Canopy walks through Kaveri Nisargadhama nature island</li>
+                      <li>Optional rafting and elephant interactions at Dubare Forest camp</li>
+                      <li>Omkareshwara Temple and Madikeri town sunset</li>
+                      <li>Overnight stay amid coffee estates</li>
+                    </ul>
+                  </div>
+                  <div class="space-y-3">
+                    <h3>Day 4 Highlights</h3>
+                    <ul class="space-y-2">
+                      <li>Talakaveri origin point and Bhagamandala confluence rituals</li>
+                      <li>Scenic ghat drive into Wayanad's evergreen forests</li>
+                      <li>Check-in to hillside resort with leisure evening</li>
+                    </ul>
+                  </div>
+                  <div class="space-y-3">
+                    <h3>Day 5 Highlights</h3>
+                    <ul class="space-y-2">
+                      <li>Edakkal Caves' ancient petroglyphs and viewpoints</li>
+                      <li>Meenmutty and Soochipara waterfalls for soft treks</li>
+                      <li>Banasura Sagar Dam photo stops and spice shopping</li>
+                      <li>Return transfer to Mysore for onward travel</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="grid gap-4 md:grid-cols-2">
+                  <div class="callout-card space-y-1.5">
+                    <strong>Stay Suggestions</strong>
+                    <ul class="space-y-1.5">
+                      <li>Mysore: Sahara Residency, Krishna Kuteera, Sunflower Hotel</li>
+                      <li>Madikeri: Hotel Hill View, Madikeri Heritage, Abbydhama Estate Stay</li>
+                      <li>Wayanad: The Woodlands, Hotel Kallat, Green Gates</li>
+                    </ul>
+                  </div>
+                  <div class="callout-card space-y-1.5">
+                    <strong>Pricing Snapshot</strong>
+                    <ul class="space-y-1.5">
+                      <li>Economy: 22,000/- (2 pax) | 36,500/- (4 pax) | 45,500/- (6 pax) | Extra bed 1,000/-</li>
+                      <li>Standard: 28,000/- (2 pax) | 48,000/- (4 pax) | 61,500/- (6 pax) | Extra bed 1,000/-</li>
+                      <li>Deluxe: 30,500/- (2 pax) | 53,000/- (4 pax) | 69,000/- (6 pax) | Extra bed 1,000/-</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="tour-item">
+            <div class="fixed-header">
+              <span class="badge-soft">Tour 2</span>
+              <h3>1 Night Mysore  1 Night Madikeri  2 Nights Wayanad</h3>
+            </div>
+            <div class="tour-content">
+              <div class="space-y-4">
+                <div class="callout-card">
+                  <strong>Arrival &amp; Departure:</strong> Mysore
+                </div>
+                <div class="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+                  <div class="space-y-3">
+                    <h3>Day 1 Highlights</h3>
+                    <ul class="space-y-2">
+                      <li>Chamundeshwari Temple and panoramic city views</li>
+                      <li>Monolithic Nandi Bull and Mysore Palace interiors</li>
+                      <li>Karanji Lake aviary and Mysore Zoo habitats</li>
+                      <li>Musical fountains at Brindavan Gardens</li>
+                      <li>Overnight stay in Mysore</li>
+                    </ul>
+                  </div>
+                  <div class="space-y-3">
+                    <h3>Day 2 Highlights</h3>
+                    <ul class="space-y-2">
+                      <li>Golden Temple at Bylakuppe's Namdroling Monastery</li>
+                      <li>Canopy walks through Kaveri Nisargadhama</li>
+                      <li>Dubare Elephant camp and river activities</li>
+                      <li>Abbey Falls spray and Raja's Seat sunset</li>
+                      <li>Overnight in Madikeri</li>
+                    </ul>
+                  </div>
+                  <div class="space-y-3">
+                    <h3>Day 3 Highlights</h3>
+                    <ul class="space-y-2">
+                      <li>Omkareshwara Temple and Madikeri heritage corners</li>
+                      <li>Talakaveri hill shrine and Bhagamandala sangam</li>
+                      <li>Cross the state border to Wayanad evergreen hills</li>
+                      <li>Check-in for a two-night stay amid plantations</li>
+                    </ul>
+                  </div>
+                  <div class="space-y-3">
+                    <h3>Day 4 Highlights</h3>
+                    <ul class="space-y-2">
+                      <li>Edakkal Caves' Stone Age rock engravings</li>
+                      <li>Boating at Pookode Lake encircled by shola forests</li>
+                      <li>Soochipara Falls trek and coffee estate viewpoints</li>
+                      <li>Evening leisure in cool Wayanad climate</li>
+                    </ul>
+                  </div>
+                  <div class="space-y-3">
+                    <h3>Day 5 Highlights</h3>
+                    <ul class="space-y-2">
+                      <li>Banasura Sagar Dam island viewpoints</li>
+                      <li>Meenmutty Falls and Kalpetta backwater stretches</li>
+                      <li>Souvenir hunt for spices, coffee, and homemade chocolates</li>
+                      <li>Return drive to Mysore for departure</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="callout-card space-y-1.5">
+                  <strong>Pricing Snapshot</strong>
+                  <ul class="space-y-1.5">
+                    <li>Economy: 22,000/- (2 pax) | 36,500/- (4 pax) | 45,500/- (6 pax)</li>
+                    <li>Standard: 29,000/- (2 pax) | 50,000/- (4 pax) | 64,500/- (6 pax)</li>
+                    <li>Deluxe: 32,000/- (2 pax) | 56,000/- (4 pax) | 73,500/- (6 pax)</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="tour-item">
+            <div class="fixed-header">
+              <span class="badge-soft">Tour 3</span>
+              <h3>2 Nights Madikeri  2 Nights Wayanad</h3>
+            </div>
+            <div class="tour-content">
+              <div class="space-y-4">
+                <div class="callout-card">
+                  <strong>Arrival &amp; Departure:</strong> Mysore
+                </div>
+                <div class="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+                  <div class="space-y-3">
+                    <h3>Day 1 Highlights</h3>
+                    <ul class="space-y-2">
+                      <li>Proceed to Coorg via Namdroling Golden Temple</li>
+                      <li>Kaveri Nisargadhama bamboo groves and hanging bridge</li>
+                      <li>Dubare Forest river rafting or elephant interactions</li>
+                      <li>Evening visit to Omkareshwara Temple and Madikeri viewpoints</li>
+                    </ul>
+                  </div>
+                  <div class="space-y-3">
+                    <h3>Day 2 Highlights</h3>
+                    <ul class="space-y-2">
+                      <li>Talakaveri hilltop shrine and Bhagamandala rituals</li>
+                      <li>Raja's Seat garden for sunset panoramas</li>
+                      <li>Abbey Falls walk amidst coffee plantations</li>
+                      <li>Spice and coffee shopping along Madikeri bazaar</li>
+                    </ul>
+                  </div>
+                  <div class="space-y-3">
+                    <h3>Day 3 Highlights</h3>
+                    <ul class="space-y-2">
+                      <li>Scenic transfer to Wayanad via Banasura Sagar Dam</li>
+                      <li>Lakkidi viewpoint hairpin bends and misty valleys</li>
+                      <li>Optional Chembra Peak photo stop en route</li>
+                      <li>Check-in to Wayanad resort with leisure time</li>
+                    </ul>
+                  </div>
+                  <div class="space-y-3">
+                    <h3>Day 4 Highlights</h3>
+                    <ul class="space-y-2">
+                      <li>Edakkal Caves guided exploration</li>
+                      <li>Kuruva Island bamboo rafting across the Kabini tributary</li>
+                      <li>Treks through Pakshipathalam bird sanctuary</li>
+                      <li>Evening jeep safari at Muthanga Wildlife Sanctuary</li>
+                    </ul>
+                  </div>
+                  <div class="space-y-3">
+                    <h3>Day 5 Highlights</h3>
+                    <ul class="space-y-2">
+                      <li>Soochipara Falls plunge pools</li>
+                      <li>Pookode Lake nature walk</li>
+                      <li>Meenmutty Falls cascade viewpoints</li>
+                      <li>Return journey to Mysore</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="callout-card space-y-1.5">
+                  <strong>Pricing Snapshot</strong>
+                  <ul class="space-y-1.5">
+                    <li>Economy: 23,000/- (2 pax) | 38,500/- (4 pax) | 48,500/- (6 pax)</li>
+                    <li>Standard: 29,500/- (2 pax) | 51,000/- (4 pax) | 66,000/- (6 pax)</li>
+                    <li>Deluxe: 32,500/- (2 pax) | 57,000/- (4 pax) | 75,000/- (6 pax)</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="tour-item">
+            <div class="fixed-header">
+              <span class="badge-soft">Tour 4</span>
+              <h3>2 Nights Mysore  2 Nights Madikeri (Ex-Bangalore)</h3>
+            </div>
+            <div class="tour-content">
+              <div class="space-y-4">
+                <div class="callout-card">
+                  <strong>Arrival &amp; Departure:</strong> Bangalore</div>
+                <div class="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+                  <div class="space-y-3">
+                    <h3>Day 1 Highlights</h3>
+                    <ul class="space-y-2">
+                      <li>City orientation through Cubbon Park and Vidhana Soudha</li>
+                      <li>Interactive exhibits at Visvesvaraya Industrial Museum</li>
+                      <li>Stroll through Lalbagh Botanical Garden</li>
+                      <li>Evening darshan at ISKCON Temple</li>
+                      <li>Drive to Mysore for overnight stay</li>
+                    </ul>
+                  </div>
+                  <div class="space-y-3">
+                    <h3>Day 2 Highlights</h3>
+                    <ul class="space-y-2">
+                      <li>Chamundeshwari Temple and Nandi Bull statue</li>
+                      <li>City viewpoints and Karanji Lake aviary</li>
+                      <li>Mysore Zoo heritage walkthrough</li>
+                      <li>Illuminated Brindavan Gardens show</li>
+                    </ul>
+                  </div>
+                  <div class="space-y-3">
+                    <h3>Day 3 Highlights</h3>
+                    <ul class="space-y-2">
+                      <li>Transfer to Coorg via Namdroling Monastery</li>
+                      <li>Kaveri Nisargadhama nature island</li>
+                      <li>Dubare Forest experiences with rafting add-ons</li>
+                      <li>Evening across coffee estates in Madikeri</li>
+                    </ul>
+                  </div>
+                  <div class="space-y-3">
+                    <h3>Day 4 Highlights</h3>
+                    <ul class="space-y-2">
+                      <li>Talakaveri sacred springs and Bhagamandala rituals</li>
+                      <li>Raja's Seat gardens for golden-hour views</li>
+                      <li>Spice, honey, and coffee shopping in Madikeri</li>
+                    </ul>
+                  </div>
+                  <div class="space-y-3">
+                    <h3>Day 5 Highlights</h3>
+                    <ul class="space-y-2">
+                      <li>Omkareshwara Temple heritage stop</li>
+                      <li>Abbey Falls and Harangi Dam viewpoints</li>
+                      <li>Return transfer to Bangalore or drop-off in Mysore</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="callout-card space-y-1.5">
+                  <strong>Pricing Snapshot</strong>
+                  <ul class="space-y-1.5">
+                    <li>Economy: 26,000/- (2 pax) | 40,500/- (4 pax) | 50,500/- (6 pax)</li>
+                    <li>Standard: 32,000/- (2 pax) | 48,000/- (4 pax) | 61,000/- (6 pax)</li>
+                    <li>Deluxe: 34,000/- (2 pax) | 52,000/- (4 pax) | 67,000/- (6 pax)</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="tour-item">
+            <div class="fixed-header">
+              <span class="badge-soft">Tour 5</span>
+              <h3>1 Night Mysore  1 Night Wayanad  2 Nights Ooty</h3>
+            </div>
+            <div class="tour-content">
+              <div class="space-y-4">
+                <div class="callout-card">
+                  <strong>Arrival &amp; Departure:</strong> Mysore
+                </div>
+                <div class="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+                  <div class="space-y-3">
+                    <h3>Day 1 Highlights</h3>
+                    <ul class="space-y-2">
+                      <li>Chamundeshwari Temple and Nandi Bull photo stop</li>
+                      <li>Mysore Palace tour and Karanji Lake aviary</li>
+                      <li>Mysore Zoo habitats and evening Brindavan Gardens</li>
+                      <li>Overnight stay in Mysore</li>
+                    </ul>
+                  </div>
+                  <div class="space-y-3">
+                    <h3>Day 2 Highlights</h3>
+                    <ul class="space-y-2">
+                      <li>Drive towards Wayanad through forested ghats</li>
+                      <li>Edakkal Caves archaeology trail</li>
+                      <li>Soochipara Falls trek and Lakkidi viewpoint</li>
+                      <li>Night stay amid Wayanad's cool hills</li>
+                    </ul>
+                  </div>
+                  <div class="space-y-3">
+                    <h3>Day 3 Highlights</h3>
+                    <ul class="space-y-2">
+                      <li>Pookode Lake boating and nature walk</li>
+                      <li>Meenmutty Falls multi-tiered cascade</li>
+                      <li>Karapuzha Dam viewpoints before ascending to Ooty</li>
+                      <li>Evening leisure stroll in Ooty town</li>
+                    </ul>
+                  </div>
+                  <div class="space-y-3">
+                    <h3>Day 4 Highlights</h3>
+                    <ul class="space-y-2">
+                      <li>Ooty Lake boating and Rose Garden blooms</li>
+                      <li>Doddabetta Peak panorama</li>
+                      <li>Tea Factory tasting session and Wax Museum visit</li>
+                      <li>Boat House attractions and Nilgiri ambience</li>
+                    </ul>
+                  </div>
+                  <div class="space-y-3">
+                    <h3>Day 5 Highlights</h3>
+                    <ul class="space-y-2">
+                      <li>Botanical Garden morning walk</li>
+                      <li>Pykara Boathouse, 6th Mile, and Needle Rock viewpoints</li>
+                      <li>Traverse Mudumalai and Bandipur wildlife corridors</li>
+                      <li>Return to Mysore for departure</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="callout-card space-y-1.5">
+                  <strong>Pricing Snapshot</strong>
+                  <ul class="space-y-1.5">
+                    <li>Economy: 21,000/- (2 pax) | 36,000/- (4 pax) | 44,000/- (6 pax)</li>
+                    <li>Standard: 28,000/- (2 pax) | 48,500/- (4 pax) | 61,500/- (6 pax)</li>
+                    <li>Deluxe: 31,500/- (2 pax) | 55,500/- (4 pax) | 72,000/- (6 pax)</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="tour-item">
+            <div class="fixed-header">
+              <span class="badge-soft">Tour 6</span>
+              <h3>2 Nights Wayanad · 2 Nights Ooty</h3>
+            </div>
+            <div class="tour-content">
+              <div class="space-y-4">
+                <div class="callout-card">
+                  <strong>Arrival &amp; Departure:</strong> Mysore
+                </div>
+                <div class="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+                  <div class="space-y-3">
+                    <h3>Day 1 Highlights</h3>
+                    <ul class="space-y-2">
+                      <li>Drive straight to Wayanad via Banasura Sagar Dam</li>
+                      <li>Chembra Peak viewpoint photo stop</li>
+                      <li>Edakkal Caves exploration</li>
+                      <li>Kuruva Island bamboo rafting experience</li>
+                      <li>Overnight in Wayanad</li>
+                    </ul>
+                  </div>
+                  <div class="space-y-3">
+                    <h3>Day 2 Highlights</h3>
+                    <ul class="space-y-2">
+                      <li>Lakkidi viewpoint mist-laden vistas</li>
+                      <li>Soochipara Falls trek</li>
+                      <li>Karapuzha Dam and Meenmutty Falls outing</li>
+                      <li>Cultural evening or campfire at resort</li>
+                    </ul>
+                  </div>
+                  <div class="space-y-3">
+                    <h3>Day 3 Highlights</h3>
+                    <ul class="space-y-2">
+                      <li>Morning safari at Muthanga Wildlife Sanctuary</li>
+                      <li>Pookode Lake boat ride</li>
+                      <li>Continue to Ooty for sightseeing: Ooty Lake, Rose Garden</li>
+                      <li>Doddabetta Peak, Tea Factory, Wax Museum, and Boat House</li>
+                      <li>Night stay in Ooty</li>
+                    </ul>
+                  </div>
+                  <div class="space-y-3">
+                    <h3>Day 4 Highlights</h3>
+                    <ul class="space-y-2">
+                      <li>Nilgiri Mountain Railway heritage ride to Coonoor</li>
+                      <li>Sims Park, Lamb's Rock, and Tea Factory tasting</li>
+                      <li>Dolphin's Nose valley outlook</li>
+                      <li>Return to Ooty for relaxed evening</li>
+                    </ul>
+                  </div>
+                  <div class="space-y-3">
+                    <h3>Day 5 Highlights</h3>
+                    <ul class="space-y-2">
+                      <li>Botanical Garden morning flora trail</li>
+                      <li>Pykara Boat House, 6th Mile, and Needle Rock viewpoints</li>
+                      <li>Wildlife spotting through Mudumalai and Bandipur</li>
+                      <li>Drive back to Mysore</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="callout-card space-y-1.5">
+                  <strong>Pricing Snapshot</strong>
+                  <ul class="space-y-1.5">
+                    <li>Economy: 21,000/- (2 pax) | 36,000/- (4 pax) | 44,000/- (6 pax)</li>
+                    <li>Standard: 29,000/- (2 pax) | 50,500/- (4 pax) | 64,500/- (6 pax)</li>
+                    <li>Deluxe: 33,000/- (2 pax) | 58,500/- (4 pax) | 76,500/- (6 pax)</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="tour-item">
+            <div class="fixed-header">
+              <span class="badge-soft">Tour 7</span>
+              <h3>2 Nights Mysore · 2 Nights Wayanad (Ex-Bangalore)</h3>
+            </div>
+            <div class="tour-content">
+              <div class="space-y-4">
+                <div class="callout-card">
+                  <strong>Arrival &amp; Departure:</strong> Bangalore
+                </div>
+                <div class="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+                  <div class="space-y-3">
+                    <h3>Day 1 Highlights</h3>
+                    <ul class="space-y-2">
+                      <li>Discover Bangalore icons: Cubbon Park, Vidhana Soudha</li>
+                      <li>Visvesvaraya Museum innovations</li>
+                      <li>Lalbagh Botanical Garden and ISKCON Temple</li>
+                      <li>Evening drive to Mysore and check-in</li>
+                    </ul>
+                  </div>
+                  <div class="space-y-3">
+                    <h3>Day 2 Highlights</h3>
+                    <ul class="space-y-2">
+                      <li>Chamundi Hill, Nandi Bull, and city viewpoints</li>
+                      <li>Karanji Lake, Mysore Zoo, and Palace interiors</li>
+                      <li>Brindavan Gardens illumination</li>
+                      <li>Night stay in Mysore</li>
+                    </ul>
+                  </div>
+                  <div class="space-y-3">
+                    <h3>Day 3 Highlights</h3>
+                    <ul class="space-y-2">
+                      <li>Travel to Wayanad via Banasura Sagar Dam</li>
+                      <li>Lakkidi viewpoint hairpin experience</li>
+                      <li>Chembra Peak valley views</li>
+                      <li>Check-in for two nights amid Wayanad greenery</li>
+                    </ul>
+                  </div>
+                  <div class="space-y-3">
+                    <h3>Day 4 Highlights</h3>
+                    <ul class="space-y-2">
+                      <li>Edakkal Caves heritage walk</li>
+                      <li>Kuruva Island bamboo rafting and nature trails</li>
+                      <li>Pakshipathalam trek and Muthanga wildlife safari</li>
+                    </ul>
+                  </div>
+                  <div class="space-y-3">
+                    <h3>Day 5 Highlights</h3>
+                    <ul class="space-y-2">
+                      <li>Soochipara Falls trek</li>
+                      <li>Pookode Lake loop and Meenmutty Falls</li>
+                      <li>Return voyage to Bangalore or Mysore</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="callout-card space-y-1.5">
+                  <strong>Pricing Snapshot</strong>
+                  <ul class="space-y-1.5">
+                    <li>Economy: 24,500/- (2 pax) | 39,000/- (4 pax) | 47,000/- (6 pax)</li>
+                    <li>Standard: 33,500/- (2 pax) | 52,500/- (4 pax) | 66,500/- (6 pax)</li>
+                    <li>Deluxe: 36,500/- (2 pax) | 58,500/- (4 pax) | 75,500/- (6 pax)</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="tour-item">
+            <div class="fixed-header">
+              <span class="badge-soft">Tour 8</span>
+              <h3>2 Nights Coorg · 2 Nights Ooty</h3>
+            </div>
+            <div class="tour-content">
+              <div class="space-y-4">
+                <div class="callout-card">
+                  <strong>Arrival &amp; Departure:</strong> Mysore
+                </div>
+                <div class="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+                  <div class="space-y-3">
+                    <h3>Day 1 Highlights</h3>
+                    <ul class="space-y-2">
+                      <li>Drive to Coorg via Kushalnagar Golden Temple</li>
+                      <li>Kaveri Nisargadhama canopy walk</li>
+                      <li>Dubare Forest elephant and rafting experiences</li>
+                      <li>Omkareshwara Temple visit in Madikeri</li>
+                    </ul>
+                  </div>
+                  <div class="space-y-3">
+                    <h3>Day 2 Highlights</h3>
+                    <ul class="space-y-2">
+                      <li>Talakaveri pilgrimage and Bhagamandala confluence</li>
+                      <li>Raja's Seat sunrise or sunset vistas</li>
+                      <li>Abbey Falls cascade and spice market hopping</li>
+                    </ul>
+                  </div>
+                  <div class="space-y-3">
+                    <h3>Day 3 Highlights</h3>
+                    <ul class="space-y-2">
+                      <li>Travel through Bandipur and Mudumalai wildlife reserves</li>
+                      <li>Needle Rock and 6th Mile shooting point stops</li>
+                      <li>Pykara Lake boating en route to Ooty</li>
+                      <li>Check-in and evening leisure in Ooty</li>
+                    </ul>
+                  </div>
+                  <div class="space-y-3">
+                    <h3>Day 4 Highlights</h3>
+                    <ul class="space-y-2">
+                      <li>Nilgiri Mountain Railway ride to Coonoor</li>
+                      <li>Sims Park botanical stroll and Lamb's Rock outlook</li>
+                      <li>Tea Factory tastings and Dolphin's Nose valley views</li>
+                      <li>Return to Ooty Lake promenade</li>
+                    </ul>
+                  </div>
+                  <div class="space-y-3">
+                    <h3>Day 5 Highlights</h3>
+                    <ul class="space-y-2">
+                      <li>Botanical Garden and Rose Garden walkabouts</li>
+                      <li>Tea Factory and Wax Museum visits</li>
+                      <li>Optional Bandipur safari while returning to Mysore</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="callout-card space-y-1.5">
+                  <strong>Pricing Snapshot</strong>
+                  <ul class="space-y-1.5">
+                    <li>Economy: 23,000/- (2 pax) | 37,500/- (4 pax) | 47,500/- (6 pax)</li>
+                    <li>Standard: 27,500/- (2 pax) | 46,000/- (4 pax) | 59,000/- (6 pax)</li>
+                    <li>Deluxe: 30,500/- (2 pax) | 52,000/- (4 pax) | 68,000/- (6 pax)</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="tour-item">
+            <div class="fixed-header">
+              <span class="badge-soft">Tour 9</span>
+              <h3>2 Nights Mysore · 2 Nights Ooty (Ex-Bangalore)</h3>
+            </div>
+            <div class="tour-content">
+              <div class="space-y-4">
+                <div class="callout-card">
+                  <strong>Arrival &amp; Departure:</strong> Bangalore
+                </div>
+                <div class="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+                  <div class="space-y-3">
+                    <h3>Day 1 Highlights</h3>
+                    <ul class="space-y-2">
+                      <li>Discover Bangalore landmarks including Cubbon Park and Vidhana Soudha</li>
+                      <li>Visvesvaraya Museum science exhibits</li>
+                      <li>Lalbagh Garden glasshouse and ISKCON Temple</li>
+                      <li>Evening transfer to Mysore</li>
+                    </ul>
+                  </div>
+                  <div class="space-y-3">
+                    <h3>Day 2 Highlights</h3>
+                    <ul class="space-y-2">
+                      <li>Chamundi Hill and monolithic Nandi Bull</li>
+                      <li>Mysore Palace, Karanji Lake, and Mysore Zoo</li>
+                      <li>Brindavan Gardens illumination experience</li>
+                    </ul>
+                  </div>
+                  <div class="space-y-3">
+                    <h3>Day 3 Highlights</h3>
+                    <ul class="space-y-2">
+                      <li>Drive via Bandipur and Mudumalai corridors</li>
+                      <li>Needle Rock and 6th Mile photo stops</li>
+                      <li>Pykara Lake boating before reaching Ooty</li>
+                      <li>Evening leisure in Ooty</li>
+                    </ul>
+                  </div>
+                  <div class="space-y-3">
+                    <h3>Day 4 Highlights</h3>
+                    <ul class="space-y-2">
+                      <li>Nilgiri Mountain Railway ride to Coonoor</li>
+                      <li>Sims Park, Lamb's Rock, Tea Factory, and Dolphin's Nose</li>
+                      <li>Return to Ooty for relaxed evening</li>
+                    </ul>
+                  </div>
+                  <div class="space-y-3">
+                    <h3>Day 5 Highlights</h3>
+                    <ul class="space-y-2">
+                      <li>Botanical Garden and Rose Garden morning walk</li>
+                      <li>Tea Factory and Wax Museum visits</li>
+                      <li>Optional Bandipur safari before drop-off at Bangalore or Mysore</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="callout-card space-y-1.5">
+                  <strong>Pricing Snapshot</strong>
+                  <ul class="space-y-1.5">
+                    <li>Economy: 24,500/- (2 pax) | 38,000/- (4 pax) | 46,000/- (6 pax)</li>
+                    <li>Standard: 31,500/- (2 pax) | 47,500/- (4 pax) | 59,500/- (6 pax)</li>
+                    <li>Deluxe: 34,500/- (2 pax) | 53,500/- (4 pax) | 68,500/- (6 pax)</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="tour-item">
+            <div class="fixed-header">
+              <span class="badge-soft">Tour 10</span>
+              <h3>1 Night Mysore · 1 Night Ooty · 2 Nights Kodaikanal</h3>
+            </div>
+            <div class="tour-content">
+              <div class="space-y-4">
+                <div class="callout-card">
+                  <strong>Arrival &amp; Departure:</strong> Mysore
+                </div>
+                <div class="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+                  <div class="space-y-3">
+                    <h3>Day 1 Highlights</h3>
+                    <ul class="space-y-2">
+                      <li>Chamundeshwari Temple, Nandi Bull, and Mysore Palace</li>
+                      <li>Karanji Lake, Mysore Zoo, and evening Brindavan Gardens</li>
+                      <li>Overnight stay in Mysore</li>
+                    </ul>
+                  </div>
+                  <div class="space-y-3">
+                    <h3>Day 2 Highlights</h3>
+                    <ul class="space-y-2">
+                      <li>Drive via Bandipur and Mudumalai wildlife corridors</li>
+                      <li>Needle Rock, 6th Mile, and Pykara Lake stops</li>
+                      <li>Botanical Garden and Rose Garden visits</li>
+                      <li>Check-in to Ooty for the night</li>
+                    </ul>
+                  </div>
+                  <div class="space-y-3">
+                    <h3>Day 3 Highlights</h3>
+                    <ul class="space-y-2">
+                      <li>Nilgiri Mountain Railway ride to Coonoor</li>
+                      <li>Sims Park, Lamb's Rock, Tea Factory, and Dolphin's Nose</li>
+                      <li>Scenic transfer to Kodaikanal</li>
+                      <li>Evening leisure by Kodai Lake</li>
+                    </ul>
+                  </div>
+                  <div class="space-y-3">
+                    <h3>Day 4 Highlights</h3>
+                    <ul class="space-y-2">
+                      <li>Berijam Lake, Silent Valley, and Silver Cascade Falls</li>
+                      <li>Bear Shola Falls and Kodai Lake boating</li>
+                      <li>Pillar Rocks, Green Valley View, and Bryant Park</li>
+                    </ul>
+                  </div>
+                  <div class="space-y-3">
+                    <h3>Day 5 Highlights</h3>
+                    <ul class="space-y-2">
+                      <li>Leisure morning for chocolates, eucalyptus oil, and handicrafts</li>
+                      <li>Return drive to Mysore for onward journey</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="callout-card space-y-1.5">
+                  <strong>Pricing Snapshot</strong>
+                  <ul class="space-y-1.5">
+                    <li>Economy: 22,000/- (2 pax) | 35,500/- (4 pax) | 44,500/- (6 pax)</li>
+                    <li>Standard: 31,500/- (2 pax) | 44,000/- (4 pax) | 56,000/- (6 pax)</li>
+                    <li>Deluxe: 41,500/- (2 pax) | 53,000/- (4 pax) | 69,500/- (6 pax)</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="tour-item">
+            <div class="fixed-header">
+              <span class="badge-soft">Tour 11</span>
+              <h3>2 Nights Ooty · 2 Nights Kodaikanal</h3>
+            </div>
+            <div class="tour-content">
+              <div class="space-y-4">
+                <div class="callout-card">
+                  <strong>Arrival &amp; Departure:</strong> Mysore
+                </div>
+                <div class="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+                  <div class="space-y-3">
+                    <h3>Day 1 Highlights</h3>
+                    <ul class="space-y-2">
+                      <li>Drive via Bandipur and Mudumalai wildlife belts</li>
+                      <li>Needle Rock and 6th Mile photo opportunities</li>
+                      <li>Pykara Lake boating before reaching Ooty</li>
+                      <li>Check-in and evening at leisure</li>
+                    </ul>
+                  </div>
+                  <div class="space-y-3">
+                    <h3>Day 2 Highlights</h3>
+                    <ul class="space-y-2">
+                      <li>Botanical Garden and Rose Garden morning walk</li>
+                      <li>Tea Factory, Wax Museum, and local shopping</li>
+                      <li>Sunset at Ooty Lake promenade</li>
+                    </ul>
+                  </div>
+                  <div class="space-y-3">
+                    <h3>Day 3 Highlights</h3>
+                    <ul class="space-y-2">
+                      <li>Nilgiri Mountain Railway ride to Coonoor</li>
+                      <li>Sims Park, Lamb's Rock, Tea Factory, and Dolphin's Nose</li>
+                      <li>Continue to Kodaikanal hill station</li>
+                      <li>Evening leisure by Kodai Lake</li>
+                    </ul>
+                  </div>
+                  <div class="space-y-3">
+                    <h3>Day 4 Highlights</h3>
+                    <ul class="space-y-2">
+                      <li>Berijam Lake permit drive and Silent Valley viewpoints</li>
+                      <li>Silver Cascade, Bear Shola Falls, and Kodai Lake boating</li>
+                      <li>Pillar Rocks, Green Valley View, and Bryant Park blooms</li>
+                    </ul>
+                  </div>
+                  <div class="space-y-3">
+                    <h3>Day 5 Highlights</h3>
+                    <ul class="space-y-2">
+                      <li>Shopping time for Kodaikanal chocolates and eucalyptus oil</li>
+                      <li>Return transfer to Mysore</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="callout-card space-y-1.5">
+                  <strong>Pricing Snapshot</strong>
+                  <ul class="space-y-1.5">
+                    <li>Economy: 22,000/- (2 pax) | 35,500/- (4 pax) | 44,500/- (6 pax)</li>
+                    <li>Standard: 27,000/- (2 pax) | 44,000/- (4 pax) | 56,000/- (6 pax)</li>
+                    <li>Deluxe: 32,000/- (2 pax) | 54,000/- (4 pax) | 71,000/- (6 pax)</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="section-header">
+          <h2 class="section-title">Booking Information</h2>
+          <p class="section-subtitle">Transparent inclusions, exclusions, and fleet guidance make planning effortless.</p>
+        </div>
+
+        <div class="info-section">
+          <div class="info-card">
+            <h3>Package Includes</h3>
+            <ul>
+              <li class="flex items-start gap-3">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5 text-emerald-500"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                <span>Accommodation for two adults with complimentary breakfast</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5 text-emerald-500"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                <span>Arrival, departure, and all sightseeing transfers in private AC cabs</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5 text-emerald-500"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                <span>Pickup from Mysore airport, railway station, or bus station</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5 text-emerald-500"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                <span>Driver bata, night charges, tolls, parking, fuel, and permit fees</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5 text-emerald-500"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                <span>Standard hotel check-in at noon and check-out at noon</span>
+              </li>
+            </ul>
+          </div>
+          <div class="info-card info-card--warning">
+            <h3>Package Excludes</h3>
+            <ul>
+              <li class="flex items-start gap-3">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5 text-amber-600"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+                <span>Airfare, train fare, monument entry fees, and activity tickets</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5 text-amber-600"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+                <span>Lunches, dinners, and meals beyond the complimentary breakfast</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5 text-amber-600"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+                <span>Personal expenses such as tips, laundry, beverages, and phone calls</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5 text-amber-600"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+                <span>Optional adventures or add-ons mentioned in the itineraries</span>
+              </li>
+            </ul>
+          </div>
+          <div class="info-card">
+            <h3>Fleet Guidance</h3>
+            <ul>
+              <li class="flex items-start gap-3">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5 text-emerald-500"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                <span>Economy packages: 2–3 guests in AC Indica, 4–6 guests in AC Tavera</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5 text-emerald-500"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                <span>Standard &amp; Deluxe: 2–3 guests in AC Indigo, 4–6 guests in AC Innova</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="text-slate-200" aria-labelledby="footer-heading">
+    <h2 id="footer-heading" class="sr-only">Footer</h2>
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div>
+          <h3 class="text-xl font-bold text-white">Heritage Taxi Service Mysore</h3>
+          <p class="mt-4 text-base text-gray-300">Your trusted partner for exploring Mysore and beyond.</p>
+          <div class="mt-6 space-y-4">
+            <p class="flex items-center text-base text-gray-300"><a href="tel:+919611288339" class="hover:text-white">+91 96112 88339</a></p>
+            <p class="flex items-center text-base text-gray-300"><a href="mailto:info@heritagetaximysore.com" class="hover:text-white">info@heritagetaximysore.com</a></p>
+          </div>
+        </div>
+        <div>
+          <h3 class="text-sm font-semibold text-slate-400 tracking-wider uppercase">Quick Links</h3>
+          <ul role="list" class="mt-4 space-y-4">
+            <li><a href="index.html#services" class="text-base text-slate-300 hover:text-white">Our Services</a></li>
+            <li><a href="index.html#tours" class="text-base text-slate-300 hover:text-white">Tour Packages</a></li>
+            <li><a href="index.html#fleet" class="text-base text-slate-300 hover:text-white">Our Fleet</a></li>
+            <li><a href="index.html#blog" class="text-base text-slate-300 hover:text-white">Mysore Travel Guide</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-sm font-semibold text-slate-400 tracking-wider uppercase">Services</h3>
+          <ul role="list" class="mt-4 space-y-4">
+            <li><a href="index.html#services" class="text-base text-gray-300 hover:text-white">Mysore Local Sightseeing</a></li>
+            <li><a href="index.html#services" class="text-base text-slate-300 hover:text-white">Outstation Taxi</a></li>
+            <li><a href="index.html#services" class="text-base text-slate-300 hover:text-white">Airport Transfers</a></li>
+            <li><a href="index.html#tours" class="text-base text-slate-300 hover:text-white">Coorg &amp; Ooty Packages</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="mt-8 border-t border-white/10 pt-8 text-center">
+        <p class="text-base text-slate-400">&copy; 2025 Heritage Taxi Service Mysore. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/919611288339?text=Hi%20Heritage%20Taxi" target="_blank" class="floating-whatsapp" aria-label="Chat on WhatsApp">
+    <svg class="h-8 w-8" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16"><path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/></svg>
+  </a>
+
+  <script>
+    const menuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    if (menuButton && mobileMenu) {
+      menuButton.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+
+      mobileMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          mobileMenu.classList.add('hidden');
+        });
+      });
+    }
+  </script>
 </body>
 </html>
