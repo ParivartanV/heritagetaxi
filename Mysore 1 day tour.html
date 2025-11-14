@@ -3,136 +3,577 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mysore 1 Day Tour Package - Heritage Taxi Mysore</title>
-    
-    <!-- Tailwind CSS CDN -->
+    <title>Mysore 1-Day Tour Packages | Heritage Taxi Mysore</title>
+    <meta name="description" content="Bespoke Mysore one-day sightseeing with private chauffeur, curated palace visits, Chamundi Hills darshan, local cuisine breaks, and illuminated garden finale.">
+    <link rel="canonical" href="https://www.heritagetaximysore.com/Mysore%201%20day%20tour.html">
+
     <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Inter Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    
-    <!-- Custom Styles -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
     <style>
+        :root {
+            --color-primary-200: #bfdbfe;
+            --color-primary-300: #93c5fd;
+            --color-primary-500: #2563eb;
+            --color-primary-600: #1d4ed8;
+            --color-primary-700: #1e3a8a;
+            --color-emerald-500: #059669;
+            --color-emerald-600: #047857;
+            --color-amber-400: #fbbf24;
+            --color-amber-500: #f59e0b;
+            --color-midnight: #0f172a;
+            --glass-border: rgba(148, 163, 184, 0.28);
+            --glass-border-strong: rgba(148, 163, 184, 0.45);
+            --glass-shadow: 0 28px 60px -30px rgba(15, 23, 42, 0.58);
+            --glass-shadow-strong: 0 40px 80px -32px rgba(15, 23, 42, 0.75);
+            --radius-xl: 1.5rem;
+            --radius-lg: 1rem;
+            --transition-base: all 0.35s ease;
+        }
         body {
-            font-family: 'Inter', sans-serif;
-        }
-        .desktop-nav-item {
-            float: left;
+            font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+            background-image: url('pictures/mehal2.jpeg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: var(--color-midnight);
+            min-height: 100vh;
             position: relative;
+            line-height: 1.6;
         }
-        .dropbtn {
-          display: inline-block;
-          color: white;
-          text-align: center;
-          padding: 14px 16px;
-          text-decoration: none;
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(15, 23, 42, 0.9), rgba(30, 64, 175, 0.7), rgba(6, 95, 70, 0.6));
+            opacity: 0.92;
+            backdrop-filter: blur(8px);
+            z-index: 0;
         }
-        .desktop-nav-item:hover .dropbtn {
-          background-color: #111;
+        body > * {
+            position: relative;
+            z-index: 1;
         }
+        main {
+            display: flex;
+            flex-direction: column;
+            gap: clamp(2.5rem, 6vw, 3.75rem);
+            padding-bottom: 5rem;
+        }
+        .site-header {
+            background: rgba(15, 23, 42, 0.82);
+            backdrop-filter: blur(14px);
+            border-bottom: 1px solid rgba(148, 163, 184, 0.28);
+            box-shadow: 0 22px 48px -28px rgba(15, 23, 42, 0.65);
+        }
+        .logo-text {
+            color: #fff;
+            letter-spacing: 0.02em;
+        }
+        .nav-link {
+            font-weight: 600;
+            color: rgba(226, 232, 240, 0.92);
+            padding: 0.35rem 0.65rem;
+            border-radius: 999px;
+            transition: var(--transition-base);
+        }
+        .nav-link svg { opacity: 0.85; }
+        .nav-link:hover {
+            color: #fff;
+            background: rgba(37, 99, 235, 0.18);
+            box-shadow: 0 12px 26px -18px rgba(37, 99, 235, 0.65);
+        }
+        .dropdown:hover .dropdown-content { display: block; }
         .dropdown-content {
-          display: none;
-          position: absolute;
-          background-color: #f9f9f9;
-          min-width: 180px;
-          box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-          z-index: 1;
-          left: 0;
+            display: none;
+            position: absolute;
+            top: calc(100% + 0.5rem);
+            left: 0;
+            background: rgba(10, 14, 23, 0.85);
+            padding: 0.6rem 0;
+            min-width: 220px;
+            border-radius: 1rem;
+            border: 1px solid rgba(148, 163, 184, 0.35);
+            box-shadow: 0 30px 60px -25px rgba(15, 23, 42, 0.7);
+            backdrop-filter: blur(14px);
+            z-index: 50;
         }
         .dropdown-content a {
-          color: black;
-          padding: 12px 16px;
-          text-decoration: none;
-          display: block;
-          text-align: left;
+            display: block;
+            padding: 0.55rem 1rem;
+            font-size: 0.9rem;
+            color: rgba(226, 232, 240, 0.92);
+            transition: var(--transition-base);
         }
         .dropdown-content a:hover {
-          background-color: #f1f1f1;
+            background: rgba(37, 99, 235, 0.22);
+            color: #fff;
+            padding-left: 1.2rem;
         }
-        .desktop-nav-item:hover .dropdown-content {
-          display: block;
+        #mobile-menu {
+            background: rgba(15, 23, 42, 0.94);
+            border-bottom: 1px solid rgba(148, 163, 184, 0.25);
+            box-shadow: 0 20px 45px -30px rgba(15, 23, 42, 0.7);
+        }
+        #mobile-menu a {
+            color: rgba(226, 232, 240, 0.9);
+            border-radius: 0.75rem;
+        }
+        #mobile-menu a:hover {
+            background: rgba(37, 99, 235, 0.18);
+            color: #fff;
+        }
+        .primary-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.35rem;
+            padding: 0.6rem 1.4rem;
+            border-radius: 999px;
+            font-weight: 600;
+            color: var(--color-midnight);
+            background: linear-gradient(135deg, var(--color-amber-400), var(--color-amber-500));
+            box-shadow: 0 18px 32px -20px rgba(245, 158, 11, 0.6);
+            transition: var(--transition-base);
+        }
+        .primary-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 26px 44px -18px rgba(245, 158, 11, 0.7);
+            color: var(--color-midnight);
+        }
+        .inner-hero {
+            position: relative;
+            padding: clamp(4rem, 8vw, 6rem) 0;
+            margin: clamp(1.5rem, 5vw, 3rem) clamp(1rem, 4vw, 3rem) 0;
+            border-radius: var(--radius-xl);
+            overflow: hidden;
+            background: linear-gradient(135deg, rgba(15, 23, 42, 0.9), rgba(30, 64, 175, 0.75));
+            box-shadow: 0 40px 80px -50px rgba(15, 23, 42, 0.8);
+            color: #fff;
+        }
+        .inner-hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at 10% 15%, rgba(59, 130, 246, 0.45), transparent 55%), radial-gradient(circle at 80% 80%, rgba(6, 95, 70, 0.55), transparent 65%);
+            opacity: 0.9;
+            pointer-events: none;
+        }
+        .inner-hero > * { position: relative; z-index: 1; }
+        .accent-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.4rem 0.9rem;
+            border-radius: 999px;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.18em;
+            background: rgba(236, 254, 255, 0.2);
+            color: rgba(191, 219, 254, 0.95);
+            font-weight: 700;
+        }
+        .inner-hero h1 {
+            margin-top: 1.25rem;
+            font-size: clamp(2.5rem, 5vw, 3.8rem);
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            background: linear-gradient(120deg, #fff, var(--color-primary-300));
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+        .inner-hero p {
+            max-width: 50rem;
+            margin-top: 1rem;
+            color: rgba(226, 232, 240, 0.86);
+            font-size: clamp(1.05rem, 2vw, 1.25rem);
+        }
+        .hero-pills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.65rem;
+            margin-top: 1.75rem;
+        }
+        .hero-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.4rem 0.95rem;
+            border-radius: 999px;
+            background: rgba(148, 163, 184, 0.2);
+            border: 1px solid rgba(191, 219, 254, 0.35);
+            backdrop-filter: blur(10px);
+            font-size: 0.85rem;
+            color: rgba(226, 232, 240, 0.9);
+        }
+        .breadcrumb {
+            margin-top: 1.75rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            font-size: 0.95rem;
+            color: rgba(226, 232, 240, 0.78);
+        }
+        .breadcrumb a {
+            color: rgba(224, 231, 255, 0.95);
+            transition: var(--transition-base);
+        }
+        .breadcrumb a:hover { color: #fff; }
+        .page-section {
+            margin: 0 clamp(1rem, 4vw, 3rem);
+            padding: clamp(2.5rem, 6vw, 3.6rem);
+            border-radius: var(--radius-xl);
+            background: rgba(241, 245, 249, 0.08);
+            border: 1px solid var(--glass-border);
+            box-shadow: var(--glass-shadow);
+            backdrop-filter: blur(18px);
+        }
+        .section-heading {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+            margin-bottom: 2.25rem;
+        }
+        .section-heading h2 {
+            font-size: clamp(1.9rem, 3.8vw, 2.5rem);
+            font-weight: 700;
+            color: #f8fafc;
+        }
+        .section-heading p {
+            color: rgba(226, 232, 240, 0.78);
+            max-width: 48rem;
+            font-size: 1rem;
+        }
+        .stats-grid {
+            display: grid;
+            gap: 1.4rem;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        }
+        .stat-card {
+            padding: 1.6rem;
+            border-radius: var(--radius-lg);
+            background: linear-gradient(155deg, rgba(15, 23, 42, 0.78), rgba(30, 64, 175, 0.55));
+            border: 1px solid var(--glass-border-strong);
+            box-shadow: var(--glass-shadow);
+            color: rgba(226, 232, 240, 0.92);
+        }
+        .stat-label {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.18em;
+            color: rgba(191, 219, 254, 0.75);
+        }
+        .stat-value {
+            margin-top: 0.6rem;
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: #fff;
+        }
+        .stat-caption {
+            margin-top: 0.75rem;
+            font-size: 0.95rem;
+            line-height: 1.55;
+            color: rgba(226, 232, 240, 0.75);
+        }
+        .highlight-grid {
+            display: grid;
+            gap: 1.4rem;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        }
+        .highlight-card {
+            padding: 1.85rem;
+            border-radius: var(--radius-lg);
+            background: linear-gradient(160deg, rgba(255, 255, 255, 0.14), rgba(148, 163, 184, 0.12));
+            border: 1px solid rgba(226, 232, 240, 0.28);
+            box-shadow: var(--glass-shadow);
+            color: rgba(226, 232, 240, 0.92);
+        }
+        .highlight-card h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #fff;
+            margin-bottom: 0.75rem;
+        }
+        .highlight-card p {
+            font-size: 0.95rem;
+            color: rgba(226, 232, 240, 0.78);
+        }
+        .itinerary-grid {
+            display: grid;
+            gap: 1.5rem;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        }
+        .itinerary-card {
+            display: flex;
+            flex-direction: column;
+            gap: 1.1rem;
+            padding: 2rem 1.75rem;
+            border-radius: var(--radius-lg);
+            background: linear-gradient(175deg, rgba(15, 23, 42, 0.78), rgba(59, 130, 246, 0.28));
+            border: 1px solid var(--glass-border-strong);
+            box-shadow: var(--glass-shadow-strong);
+            color: rgba(226, 232, 240, 0.9);
+            position: relative;
+            overflow: hidden;
+        }
+        .itinerary-card::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at 15% 15%, rgba(59, 130, 246, 0.32), transparent 55%), radial-gradient(circle at 85% 85%, rgba(6, 95, 70, 0.32), transparent 65%);
+            opacity: 0.9;
+            pointer-events: none;
+        }
+        .itinerary-card > * { position: relative; z-index: 1; }
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            font-size: 0.75rem;
+            padding: 0.35rem 0.85rem;
+            border-radius: 999px;
+            background: rgba(15, 118, 110, 0.32);
+            border: 1px solid rgba(45, 212, 191, 0.45);
+            color: rgba(209, 250, 229, 0.9);
+            text-transform: uppercase;
+            letter-spacing: 0.16em;
+            font-weight: 600;
+        }
+        .itinerary-card h3 {
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: #fff;
+        }
+        .itinerary-card p {
+            color: rgba(226, 232, 240, 0.8);
+            font-size: 0.98rem;
+        }
+        .itinerary-card ul {
+            display: grid;
+            gap: 0.75rem;
+            padding-left: 0;
+            list-style: none;
+        }
+        .itinerary-card li {
+            font-size: 0.95rem;
+            color: rgba(226, 232, 240, 0.82);
+            line-height: 1.55;
+        }
+        .itinerary-card li span { font-weight: 600; color: #fff; }
+        .card-footer {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.65rem;
+            font-size: 0.85rem;
+            color: rgba(191, 219, 254, 0.85);
+        }
+        .info-grid {
+            display: grid;
+            gap: 1.4rem;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        }
+        .info-card {
+            padding: 1.9rem;
+            border-radius: var(--radius-lg);
+            border: 1px solid rgba(148, 163, 184, 0.35);
+            box-shadow: var(--glass-shadow);
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        .info-card--emerald {
+            background: linear-gradient(165deg, rgba(16, 185, 129, 0.22), rgba(15, 118, 110, 0.18));
+            color: rgba(236, 253, 245, 0.95);
+        }
+        .info-card--slate {
+            background: linear-gradient(165deg, rgba(15, 23, 42, 0.75), rgba(30, 41, 59, 0.58));
+            color: rgba(226, 232, 240, 0.9);
+        }
+        .info-card--amber {
+            background: linear-gradient(165deg, rgba(251, 191, 36, 0.22), rgba(245, 158, 11, 0.18));
+            color: rgba(30, 26, 13, 0.85);
+        }
+        .info-card h3 {
+            font-size: 1.3rem;
+            font-weight: 700;
+        }
+        .info-card ul {
+            display: grid;
+            gap: 0.8rem;
+            font-size: 0.95rem;
+        }
+        .info-card li {
+            display: flex;
+            gap: 0.6rem;
+            align-items: flex-start;
+        }
+        .info-card li svg {
+            width: 1.1rem;
+            height: 1.1rem;
+            flex-shrink: 0;
+            margin-top: 0.15rem;
+        }
+        .pricing-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            overflow: hidden;
+            border-radius: var(--radius-lg);
+            border: 1px solid rgba(148, 163, 184, 0.25);
+            box-shadow: var(--glass-shadow);
+            background: rgba(15, 23, 42, 0.78);
+        }
+        .pricing-table thead {
+            background: rgba(37, 99, 235, 0.25);
+            color: #fff;
+        }
+        .pricing-table th,
+        .pricing-table td {
+            padding: 1rem 1.25rem;
+            text-align: left;
+        }
+        .pricing-table tbody tr {
+            color: rgba(226, 232, 240, 0.9);
+        }
+        .pricing-table tbody tr:nth-child(even) {
+            background: rgba(15, 23, 42, 0.6);
+        }
+        .cta-panel {
+            margin: 0 clamp(1rem, 4vw, 3rem);
+            padding: clamp(2rem, 5vw, 3rem);
+            border-radius: var(--radius-xl);
+            background: linear-gradient(140deg, rgba(245, 158, 11, 0.92), rgba(251, 191, 36, 0.82));
+            box-shadow: 0 36px 70px -45px rgba(245, 158, 11, 0.75);
+            border: 1px solid rgba(253, 224, 71, 0.55);
+            color: var(--color-midnight);
+            display: grid;
+            gap: 1.5rem;
+        }
+        .cta-panel h2 {
+            font-size: clamp(1.9rem, 3.6vw, 2.4rem);
+            font-weight: 700;
+        }
+        footer {
+            background: rgba(10, 14, 23, 0.88);
+            border-top: 1px solid rgba(148, 163, 184, 0.25);
+            backdrop-filter: blur(12px);
+            color: rgba(226, 232, 240, 0.85);
+        }
+        footer a {
+            transition: var(--transition-base);
+            color: rgba(226, 232, 240, 0.75);
+        }
+        footer a:hover { color: #fff; }
+        .floating-whatsapp {
+            position: fixed;
+            bottom: 1.5rem;
+            right: 1.5rem;
+            z-index: 60;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1.1rem;
+            border-radius: 999px;
+            background: linear-gradient(135deg, #22c55e, #16a34a);
+            color: #fff;
+            box-shadow: 0 20px 40px -18px rgba(22, 163, 74, 0.55);
+            transition: var(--transition-base);
+        }
+        .floating-whatsapp:hover {
+            transform: translateY(-4px) scale(1.05);
+            box-shadow: 0 28px 55px -20px rgba(22, 163, 74, 0.65);
+        }
+        @media (max-width: 768px) {
+            .site-header { background: rgba(15, 23, 42, 0.93); }
+            .page-section {
+                margin: clamp(1.25rem, 6vw, 2rem) 1rem;
+                padding: clamp(2rem, 8vw, 3rem);
+                border-radius: 1.35rem;
+            }
+            .inner-hero {
+                margin: clamp(1.5rem, 6vw, 2.5rem) 1rem 0;
+                border-radius: 1.5rem;
+                padding: clamp(3rem, 12vw, 4.5rem) 1.25rem;
+            }
+            .itinerary-grid { grid-template-columns: 1fr; }
+            .dropdown-content {
+                position: static;
+                width: 100%;
+                margin-top: 0.75rem;
+                border: none;
+                box-shadow: none;
+                background: rgba(15, 23, 42, 0.92);
+            }
+            .cta-panel {
+                margin: 1.5rem 1rem 0;
+                border-radius: 1.5rem;
+            }
         }
     </style>
 
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'primary': tailwind.colors.amber, // A warm, heritage color
-                        'secondary': tailwind.colors.gray,
-                    }
-                }
-            }
-        }
-    </script>
+    <meta property="og:title" content="Mysore 1-Day Tour - Heritage Taxi Mysore">
+    <meta property="og:description" content="Cover Mysore Palace, Chamundi Hills, heritage markets, Mysore Zoo, and Brindavan Gardens in one seamless private day tour.">
+    <meta property="og:url" content="https://www.heritagetaximysore.com/Mysore%201%20day%20tour.html">
+    <meta property="og:image" content="https://www.heritagetaximysore.com/pictures/mysore-palace.jpg">
 </head>
-<body class="bg-secondary-100">
-
-    <!-- Header -->
-    <header class="bg-white/95 backdrop-blur-sm shadow-lg sticky top-0 z-40">
+<body>
+    <header class="site-header sticky top-0 z-40">
         <nav class="container mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
-                <!-- Logo / Website Name -->
                 <div class="flex-shrink-0 flex items-center">
-                    <a href="index.html" class="text-2xl font-bold text-primary-600">
+                    <a href="index.html" class="logo-text text-2xl font-bold">
                         Heritage Taxi Mysore
                     </a>
                 </div>
-                
-                <!-- Desktop Navigation Links -->
+
                 <div class="hidden md:flex md:items-center md:space-x-4 lg:space-x-6">
-                    <a href="index.html#home" class="font-semibold text-secondary-700 hover:text-primary-600 inline-flex items-center gap-1.5">
-                        <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" /></svg>
+                    <a href="index.html#home" class="nav-link inline-flex items-center gap-1.5">
+                        <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"/></svg>
                         <span>Home</span>
                     </a>
-                    <a href="index.html#services" class="font-semibold text-secondary-700 hover:text-primary-600 inline-flex items-center gap-1.5">
-                        <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" /></svg>
+                    <a href="index.html#services" class="nav-link inline-flex items-center gap-1.5">
+                        <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"/></svg>
                         <span>Services</span>
                     </a>
-                    <div class="desktop-nav-item">
-                        <a href="index.html#tours" class="font-semibold text-secondary-700 hover:text-primary-600 inline-flex items-center gap-1.5 dropbtn">
-                            <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 6.75V15m6-6v8.25m.5 3.375c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125h1.5c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125h-1.5Zm-6 0c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125h1.5c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125h-1.5ZM6.375 6.375a1.125 1.125 0 1 1-2.25 0 1.125 1.125 0 0 1 2.25 0ZM17.625 6.375a1.125 1.125 0 1 1-2.25 0 1.125 1.125 0 0 1 2.25 0Z" /></svg>
+                    <div class="relative dropdown">
+                        <a href="index.html#tours" class="nav-link inline-flex items-center gap-1.5 dropbtn">
+                            <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 6.75V15m6-6v8.25m.5 3.375c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125h1.5c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125h-1.5Zm-6 0c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125h1.5c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125h-1.5ZM6.375 6.375a1.125 1.125 0 1 1-2.25 0 1.125 1.125 0 0 1 2.25 0ZM17.625 6.375a1.125 1.125 0 1 1-2.25 0 1.125 1.125 0 0 1 2.25 0Z"/></svg>
                             <span>Tour Packages</span>
                         </a>
                         <div class="dropdown-content">
-                            <a href="Mysore 1 day tour.html" class="text-sm text-secondary-700 hover:bg-secondary-100 block px-4 py-2">Mysore 1 Day Tour</a>
-                            <a href="1-day-tour.html" class="text-sm text-secondary-700 hover:bg-secondary-100 block px-4 py-2">1 Day Tour</a>
-                            <a href="2-days-tour.html" class="text-sm text-secondary-700 hover:bg-secondary-100 block px-4 py-2">2 Days Tour</a>
-                            <a href="3-days-tour.html" class="text-sm text-secondary-700 hover:bg-secondary-100 block px-4 py-2">3 Days Tour</a>
-                            <a href="4-days-tour.html" class="text-sm text-secondary-700 hover:bg-secondary-100 block px-4 py-2">4 Days Tour</a>
-                            <a href="5-days-tour.html" class="text-sm text-secondary-700 hover:bg-secondary-100 block px-4 py-2">5 Days Tour</a>
-                            <a href="6-days-tour.html" class="text-sm text-secondary-700 hover:bg-secondary-100 block px-4 py-2">6 Days Tour</a>
-                            <a href="7-days-tour.html" class="text-sm text-secondary-700 hover:bg-secondary-100 block px-4 py-2">7 Days Tour</a>
-                            <a href="8-days-tour.html" class="text-sm text-secondary-700 hover:bg-secondary-100 block px-4 py-2">8 Days Tour</a>
+                            <a href="Mysore 1 day tour.html" class="text-sm">Mysore 1 Day Tour</a>
+                            <a href="1-day-tour.html" class="text-sm">1 Day Tour</a>
+                            <a href="2-days-tour.html" class="text-sm">2 Days Tour</a>
+                            <a href="3-days-tour.html" class="text-sm">3 Days Tour</a>
+                            <a href="4-days-tour.html" class="text-sm">4 Days Tour</a>
+                            <a href="5-days-tour.html" class="text-sm">5 Days Tour</a>
+                            <a href="6-days-tour.html" class="text-sm">6 Days Tour</a>
+                            <a href="7-days-tour.html" class="text-sm">7 Days Tour</a>
+                            <a href="8-days-tour.html" class="text-sm">8 Days Tour</a>
                         </div>
                     </div>
-                    <a href="index.html#fleet" class="font-semibold text-secondary-700 hover:text-primary-600 inline-flex items-center gap-1.5">
-                        <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 18.75a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 0 1-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m3 0h1.125c.621 0 1.125-.504 1.125-1.125V14.25m-17.25 4.5v-1.875a.375.375 0 0 0-.375-.375h-1.5a.375.375 0 0 0-.375.375V18.75m17.25 0v-1.875a.375.375 0 0 1 .375-.375h1.5a.375.375 0 0 1 .375.375V18.75m-17.25 0h17.25m-17.25 0H3.375m0 0V9.375c0-1.036.84-1.875 1.875-1.875h.375c.621 0 1.125.504 1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125h3.375c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621.504-1.125 1.125-1.125h.375c1.035 0 1.875.84 1.875 1.875v9.375m-17.25 0h17.25" /></svg>
+                    <a href="index.html#fleet" class="nav-link inline-flex items-center gap-1.5">
+                        <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 16.5v-2.25a2.25 2.25 0 0 1 2.25-2.25H6c.56 0 1.064-.316 1.312-.816l1.134-2.268A1.5 1.5 0 0 1 9.83 7.5h4.34a1.5 1.5 0 0 1 1.383.916l1.134 2.268c.248.5.752.816 1.312.816h1.5a2.25 2.25 0 0 1 2.25 2.25V16.5"/><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 16.5h19.5"/><circle cx="7.5" cy="18" r="1.5"/><circle cx="18" cy="18" r="1.5"/></svg>
                         <span>Our Fleet</span>
                     </a>
-                    <a href="index.html#blog" class="font-semibold text-secondary-700 hover:text-primary-600 inline-flex items-center gap-1.5">
-                        <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18c-2.305 0-4.408.867-6 2.292m0-14.25v14.25" /></svg>
+                    <a href="index.html#blog" class="nav-link inline-flex items-center gap-1.5">
+                        <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18c-2.305 0-4.408.867-6 2.292m0-14.25v14.25"/></svg>
                         <span>Travel Guide</span>
                     </a>
-                    <a href="tel:+919611288339" class="font-semibold text-secondary-700 hover:text-primary-600 inline-flex items-center gap-1.5">
-                        <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-2.836-.184-5.233-2.58-5.417-5.417l1.293-.97c.362-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" /></svg>
+                    <a href="tel:+919611288339" class="nav-link inline-flex items-center gap-1.5">
+                        <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-2.836-.184-5.233-2.58-5.417-5.417l1.293-.97c.362-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z"/></svg>
                         <span>Call: +91 96112 88339</span>
                     </a>
                 </div>
-                
-                <!-- Desktop Book Now Button -->
+
                 <div class="hidden md:block">
-                    <a href="index.html#booking-widget" class="inline-flex items-center px-4 py-2 border border-transparent rounded-lg shadow-sm text-sm font-medium text-white bg-primary-600 hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500">
+                    <a href="#booking" class="primary-button text-sm md:text-base">
                         Book Now
                     </a>
                 </div>
 
-                <!-- Mobile Menu Button (Icon) -->
                 <div class="md:hidden flex items-center">
-                    <button id="mobile-menu-button" class="inline-flex items-center justify-center p-2 rounded-md text-secondary-400 hover:text-secondary-500 hover:bg-secondary-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary-500">
+                    <button id="mobile-menu-button" class="inline-flex items-center justify-center p-2 rounded-md text-slate-200/80 hover:text-slate-100 hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-400">
                         <span class="sr-only">Open main menu</span>
                         <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
@@ -142,283 +583,394 @@
             </div>
         </nav>
 
-        <!-- Mobile Menu (Dropdown) -->
         <div id="mobile-menu" class="md:hidden hidden">
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <a href="index.html#home" class="flex items-center gap-3 px-3 py-2 rounded-md text-base font-medium text-secondary-700 hover:bg-secondary-50 hover:text-primary-600">
-                    <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" /></svg>
+                <a href="index.html#home" class="flex items-center gap-3 px-3 py-2 rounded-lg text-base font-medium">
+                    <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"/></svg>
                     <span>Home</span>
                 </a>
-                <a href="index.html#services" class="flex items-center gap-3 px-3 py-2 rounded-md text-base font-medium text-secondary-700 hover:bg-secondary-50 hover:text-primary-600">
-                    <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" /></svg>
+                <a href="index.html#services" class="flex items-center gap-3 px-3 py-2 rounded-lg text-base font-medium">
+                    <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"/></svg>
                     <span>Services</span>
                 </a>
-                <a href="index.html#tours" class="flex items-center gap-3 px-3 py-2 rounded-md text-base font-medium text-secondary-700 hover:bg-secondary-50 hover:text-primary-600">
-                    <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 6.75V15m6-6v8.25m.5 3.375c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125h1.5c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125h-1.5Zm-6 0c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125h1.5c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125h-1.5ZM6.375 6.375a1.125 1.125 0 1 1-2.25 0 1.125 1.125 0 0 1 2.25 0ZM17.625 6.375a1.125 1.125 0 1 1-2.25 0 1.125 1.125 0 0 1 2.25 0Z" /></svg>
+                <a href="index.html#tours" class="flex items-center gap-3 px-3 py-2 rounded-lg text-base font-medium">
+                    <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 6.75V15m6-6v8.25m.5 3.375c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125h1.5c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125h-1.5Zm-6 0c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125h1.5c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125h-1.5ZM6.375 6.375a1.125 1.125 0 1 1-2.25 0 1.125 1.125 0 0 1 2.25 0ZM17.625 6.375a1.125 1.125 0 1 1-2.25 0 1.125 1.125 0 0 1 2.25 0Z"/></svg>
                     <span>Tour Packages</span>
                 </a>
-                <a href="index.html#fleet" class="flex items-center gap-3 px-3 py-2 rounded-md text-base font-medium text-secondary-700 hover:bg-secondary-50 hover:text-primary-600">
-                    <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 18.75a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 0 1-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m3 0h1.125c.621 0 1.125-.504 1.125-1.125V14.25m-17.25 4.5v-1.875a.375.375 0 0 0-.375-.375h-1.5a.375.375 0 0 0-.375.375V18.75m17.25 0v-1.875a.375.375 0 0 1 .375-.375h1.5a.375.375 0 0 1 .375.375V18.75m-17.25 0h17.25m-17.25 0H3.375m0 0V9.375c0-1.036.84-1.875 1.875-1.875h.375c.621 0 1.125.504 1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125h3.375c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621.504-1.125 1.125-1.125h.375c1.035 0 1.875.84 1.875 1.875v9.375m-17.25 0h17.25" /></svg>
+                <a href="index.html#fleet" class="flex items-center gap-3 px-3 py-2 rounded-lg text-base font-medium">
+                    <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 16.5v-2.25a2.25 2.25 0 0 1 2.25-2.25H6c.56 0 1.064-.316 1.312-.816l1.134-2.268A1.5 1.5 0 0 1 9.83 7.5h4.34a1.5 1.5 0 0 1 1.383.916l1.134 2.268c.248.5.752.816 1.312.816h1.5a2.25 2.25 0 0 1 2.25 2.25V16.5"/><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 16.5h19.5"/><circle cx="7.5" cy="18" r="1.5"/><circle cx="18" cy="18" r="1.5"/></svg>
                     <span>Our Fleet</span>
                 </a>
-                <a href="index.html#blog" class="flex items-center gap-3 px-3 py-2 rounded-md text-base font-medium text-secondary-700 hover:bg-secondary-50 hover:text-primary-600">
-                    <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18c-2.305 0-4.408.867-6 2.292m0-14.25v14.25" /></svg>
+                <a href="index.html#blog" class="flex items-center gap-3 px-3 py-2 rounded-lg text-base font-medium">
+                    <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18c-2.305 0-4.408.867-6 2.292m0-14.25v14.25"/></svg>
                     <span>Travel Guide</span>
                 </a>
-                <a href="tel:+919611288339" class="flex items-center gap-3 px-3 py-2 rounded-md text-base font-medium text-secondary-700 hover:bg-secondary-50 hover:text-primary-600">
-                    <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-2.836-.184-5.233-2.58-5.417-5.417l1.293-.97c.362-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" /></svg>
+                <a href="tel:+919611288339" class="flex items-center gap-3 px-3 py-2 rounded-lg text-base font-medium">
+                    <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-2.836-.184-5.233-2.58-5.417-5.417l1.293-.97c.362-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z"/></svg>
                     <span>Call: +91 96112 88339</span>
                 </a>
-            </div>
-            <div class="pt-4 pb-3 border-t border-secondary-200">
-                <a href="index.html#booking-widget" class="block w-full text-left px-4 py-2 text-base font-medium text-white bg-primary-600 hover:bg-primary-700">
-                    Book Now
+                <a href="#booking" class="flex items-center gap-3 px-3 py-2 rounded-lg text-base font-medium">
+                    <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg>
+                    <span>Book Now</span>
                 </a>
             </div>
         </div>
     </header>
 
     <main>
-        <!-- Page Content -->
-        <section class="py-16 sm:py-24 bg-white">
-            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center">
-                    <h1 class="text-3xl font-extrabold text-secondary-900 sm:text-4xl">
-                        Mysore 1 Day Tour Package
-                    </h1>
-                    <p class="mt-4 max-w-2xl mx-auto text-xl text-secondary-500">
-                        Experience the essence of Mysore in a comprehensive single-day tour.
+        <section class="inner-hero">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-12">
+                <span class="accent-badge">
+                    One-Day Private Sightseeing
+                </span>
+                <h1>Mysore Royal Day Escape</h1>
+                <p>
+                    Trace Mysore's living heritage with a dedicated chauffeur, priority palace entry guidance, hilltop darshan, local market tastings, and illuminated garden finale—all tuned to your pace from sunrise pickup to late-night drop.
+                </p>
+                <div class="hero-pills">
+                    <span class="hero-pill">1 Day / 12 Hours</span>
+                    <span class="hero-pill">Flexible Start Times</span>
+                    <span class="hero-pill">Private AC Cab & Chauffeur</span>
+                    <span class="hero-pill">Family & Friends Friendly</span>
+                </div>
+                <div class="mt-8 flex flex-wrap gap-3">
+                    <a href="#booking" class="primary-button">
+                        Plan My One-Day Tour
+                    </a>
+                    <a href="https://wa.me/919611288339?text=Hi%20Heritage%20Taxi%20Mysore!%20I%27m%20interested%20in%20the%20Mysore%201-Day%20Tour%20plan.%20Please%20connect%20with%20me." class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/30 text-sm font-semibold text-slate-100 hover:bg-white/10 transition">
+                        WhatsApp Travel Expert
+                    </a>
+                </div>
+                <nav class="breadcrumb mt-8">
+                    <a href="index.html">Home</a>
+                    <span>/</span>
+                    <a href="index.html#tours">Tour Packages</a>
+                    <span>/</span>
+                    <span>Mysore 1-Day Tour</span>
+                </nav>
+            </div>
+        </section>
+
+        <section class="page-section" id="overview">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-10">
+                <div class="section-heading">
+                    <h2>Our Signature Day Trip Blueprint</h2>
+                    <p>
+                        We condense palace grandeur, sacred hills, curated museum stops, artisan markets, zoo encounters, and Brindavan Gardens magic into a comfortable single-day circuit supported by our seasoned driver-guides.
                     </p>
                 </div>
-                <div class="mt-12 prose lg:prose-xl mx-auto">
-                    <h2 class="text-2xl font-bold text-secondary-900">Itinerary Highlights:</h2>
-                    <ul class="list-disc list-inside">
-                        <li><strong>Mysore Palace:</strong> Witness the grandeur of the Wadiyar dynasty's official residence.</li>
-                        <li><strong>Chamundi Hills:</strong> Visit the Chamundeshwari Temple and enjoy panoramic views of Mysore.</li>
-                        <li><strong>Mysore Zoo (Sri Chamarajendra Zoological Gardens):</strong> Explore one of India's oldest and most well-maintained zoos.</li>
-                        <li><strong>Brindavan Gardens:</strong> Enjoy the musical fountain show (evening visit recommended).</li>
-                        <li><strong>St. Philomena's Church:</strong> Admire the neo-Gothic architecture of this historic church.</li>
-                        <li><strong>Srirangapatna:</strong> Discover the historical island town, including Ranganathaswamy Temple and Tipu Sultan's Summer Palace (optional, if time permits).</li>
-                    </ul>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-label">Trip Pace</div>
+                        <div class="stat-value">Balanced & Efficient</div>
+                        <div class="stat-caption">
+                            Smart routing keeps transfers short while ensuring enough time for palace walkthroughs, darshan, and sunset photos.
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-label">Coverage</div>
+                        <div class="stat-value">8 Must-See Stops</div>
+                        <div class="stat-caption">
+                            Mysore Palace, Chamundi Hills, Zoo, Sand Museum, St. Philomena’s, Srirangapatna, Brindavan Gardens light show, and local bazaar.
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-label">Ideal Season</div>
+                        <div class="stat-value">Year Round</div>
+                        <div class="stat-caption">
+                            Cooler mornings Nov-Feb, vibrant Dussehra lights in October, lush gardens during monsoon evenings.
+                        </div>
+                    </div>
+                </div>
 
-                    <h2 class="text-2xl font-bold text-secondary-900 mt-8">What's Included:</h2>
-                    <ul class="list-disc list-inside">
-                        <li>Private AC car for the entire day.</li>
-                        <li>Experienced and courteous driver.</li>
-                        <li>Fuel charges.</li>
-                        <li>Pickup and drop-off within Mysore city limits.</li>
-                    </ul>
+                <div class="highlight-grid mt-12">
+                    <div class="highlight-card">
+                        <h3>Mysore Palace Insights</h3>
+                        <p>
+                            Skip-the-line guidance, curated photo spots, and stories about the Wadiyar dynasty from our locally trained chauffeurs.
+                        </p>
+                    </div>
+                    <div class="highlight-card">
+                        <h3>Chamundi Darshan</h3>
+                        <p>
+                            Early ascent to beat queues, darshan assistance, and a stop at the Nandi monolith viewpoint overlooking Mysore city.
+                        </p>
+                    </div>
+                    <div class="highlight-card">
+                        <h3>Curated Food Stops</h3>
+                        <p>
+                            Recommend authentic breakfast cafes, midday Mysore Dosa joints, and sweet shops for warm Mysore Pak takeaways.
+                        </p>
+                    </div>
+                    <div class="highlight-card">
+                        <h3>Brindavan Finale</h3>
+                        <p>
+                            Timed entry for the musical fountain show with illuminated photo opportunities before relaxed drop back to your stay.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-                    <h2 class="text-2xl font-bold text-secondary-900 mt-8">What's Excluded:</h2>
-                    <ul class="list-disc list-inside">
-                        <li>Entry fees to monuments and attractions.</li>
-                        <li>Food and beverages.</li>
-                        <li>Personal expenses.</li>
-                        <li>Toll and parking charges (to be paid directly).</li>
-                    </ul>
+        <section class="page-section" id="itinerary">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-10">
+                <div class="section-heading">
+                    <h2>Hour-by-Hour Suggested Flow</h2>
+                    <p>
+                        Adjust start time, meal breaks, and add-on stops to suit your arrival, group interests, and energy levels.
+                    </p>
+                </div>
+                <div class="itinerary-grid">
+                    <article class="itinerary-card">
+                        <span class="badge">Morning</span>
+                        <h3>Sunrise Pickup & Spiritual Start</h3>
+                        <p>Begin with temple blessings and skyline views before the city wakes up.</p>
+                        <ul>
+                            <li><span>6:30 AM:</span> Pickup from hotel/railway station in Mysore or Bangalore (additional transfer time applies).</li>
+                            <li><span>Chamundi Hills:</span> Guided darshan at Chamundeshwari Temple, Nandi viewpoint photos.</li>
+                            <li><span>Breakfast:</span> Filter coffee and traditional tiffin at a vetted local eatery.</li>
+                        </ul>
+                        <div class="card-footer">
+                            <span>Driving: 25 km local</span>
+                            <span>Ideal for early risers</span>
+                        </div>
+                    </article>
 
-                    <h2 class="text-2xl font-bold text-secondary-900 mt-8">Pricing:</h2>
-                    <table class="min-w-full divide-y divide-secondary-200 mt-4">
-                        <thead class="bg-secondary-50">
+                    <article class="itinerary-card">
+                        <span class="badge">Midday</span>
+                        <h3>Heritage & Living Culture</h3>
+                        <p>Dive into Mysore’s royal, colonial, and artisanal quarters with curated guidance.</p>
+                        <ul>
+                            <li><span>Mysore Palace:</span> Audio guide or chauffeur-led highlights, secret photo angles, silk purchase suggestions.</li>
+                            <li><span>St. Philomena’s:</span> Neo-gothic church interiors and stained glass narratives.</li>
+                            <li><span>Mysore Zoo / Sand Museum:</span> Choose immersive wildlife walk or art stops based on group interest.</li>
+                        </ul>
+                        <div class="card-footer">
+                            <span>Lunch break: 1 hr curated restaurant</span>
+                            <span>Entry tickets extra</span>
+                        </div>
+                    </article>
+
+                    <article class="itinerary-card">
+                        <span class="badge">Evening</span>
+                        <h3>Srirangapatna Stories & Garden Lights</h3>
+                        <p>Blend history, river islands, handicrafts, and fountain shows before drop.</p>
+                        <ul>
+                            <li><span>Srirangapatna:</span> Tipu Sultan's Summer Palace, Dariya Daulat Bagh, Gumbaz mausoleum, and river confluence stop.</li>
+                            <li><span>Shopping:</span> Time for sandalwood, incense, and silk bazaars in Devaraja Market.</li>
+                            <li><span>Brindavan Gardens:</span> Musical fountain show seating, night photography, return around 9:30 PM.</li>
+                        </ul>
+                        <div class="card-footer">
+                            <span>Driving: 120 km roundtrip</span>
+                            <span>Drop by 10 PM (flexible)</span>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="page-section" id="travel-info">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-10">
+                <div class="section-heading">
+                    <h2>Tour Inclusions & Options</h2>
+                    <p>
+                        Share pickup location, traveler count, and special requests so we can personalize timings, seating comfort, and add-on experiences.
+                    </p>
+                </div>
+                <div class="info-grid">
+                    <div class="info-card info-card--emerald">
+                        <h3>Inclusions</h3>
+                        <ul>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12 6 6 9-13.5"/></svg>
+                                <span>Private AC cab (Sedan/SUV/Tempo Traveller) with experienced chauffeur-guide.</span>
+                            </li>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12 6 6 9-13.5"/></svg>
+                                <span>Hotel/railway pickup and drop within Mysore city limits.</span>
+                            </li>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12 6 6 9-13.5"/></svg>
+                                <span>Toll, parking, driver allowance, and interstate permits.</span>
+                            </li>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12 6 6 9-13.5"/></svg>
+                                <span>Curated sightseeing plan with time suggestions and dining recommendations.</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="info-card info-card--slate">
+                        <h3>Exclusions</h3>
+                        <ul>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12"/></svg>
+                                <span>Entry tickets, camera fees, and guide charges inside monuments.</span>
+                            </li>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12"/></svg>
+                                <span>Meals, snacks, beverages, and personal shopping expenses.</span>
+                            </li>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12"/></svg>
+                                <span>Accommodation and Mysore Palace official guide (available on request).</span>
+                            </li>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12"/></svg>
+                                <span>Outstation pickup/drop surcharges (Bangalore, Coorg, Ooty).</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="info-card info-card--amber">
+                        <h3>Popular Add-ons</h3>
+                        <ul>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12 6 6 9-13.5"/></svg>
+                                <span>Private palace guide or curated heritage storyteller.</span>
+                            </li>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12 6 6 9-13.5"/></svg>
+                                <span>Exclusive silk weaving workshop or incense making demo.</span>
+                            </li>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12 6 6 9-13.5"/></svg>
+                                <span>Evening dinner reservation at rooftop restaurants overlooking Mysore Palace.</span>
+                            </li>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12 6 6 9-13.5"/></svg>
+                                <span>Extension to Somanathapura or Ranganathittu Bird Sanctuary.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="page-section" id="pricing">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-10">
+                <div class="section-heading">
+                    <h2>Indicative One-Day Pricing (Roundtrip)</h2>
+                    <p>
+                        Pricing varies with vehicle type, pickup location, language guide requests, and special add-ons. Share your date and group size for an exact quotation.
+                    </p>
+                </div>
+                <div class="overflow-x-auto">
+                    <table class="pricing-table">
+                        <thead>
                             <tr>
-                                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-secondary-500 uppercase tracking-wider">Vehicle Type</th>
-                                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-secondary-500 uppercase tracking-wider">Price (Approx.)</th>
+                                <th>Vehicle</th>
+                                <th>Seats</th>
+                                <th>Inclusions</th>
+                                <th>Price Range</th>
                             </tr>
                         </thead>
-                        <tbody class="bg-white divide-y divide-secondary-200">
+                        <tbody>
                             <tr>
-                                <td class="px-6 py-4 whitespace-nowrap">Sedan (Etios, Dzire)</td>
-                                <td class="px-6 py-4 whitespace-nowrap">₹2,500 - ₹3,000</td>
+                                <td>Sedan (Dzire / Etios)</td>
+                                <td>Up to 4 guests</td>
+                                <td>City sightseeing + Brindavan Gardens drop</td>
+                                <td>₹2,750 - ₹3,200</td>
                             </tr>
                             <tr>
-                                <td class="px-6 py-4 whitespace-nowrap">SUV (Innova, Ertiga)</td>
-                                <td class="px-6 py-4 whitespace-nowrap">₹3,500 - ₹4,000</td>
+                                <td>SUV (Innova / Ertiga)</td>
+                                <td>Up to 6 guests</td>
+                                <td>Flexible seating, chilled water, Mysore Palace parking</td>
+                                <td>₹3,850 - ₹4,500</td>
+                            </tr>
+                            <tr>
+                                <td>Tempo Traveller</td>
+                                <td>Up to 12 guests</td>
+                                <td>Tour coordinator support, mic system on request</td>
+                                <td>₹6,800 onwards</td>
                             </tr>
                         </tbody>
                     </table>
-                    <p class="mt-4 text-sm text-secondary-600">
-                        *Prices are indicative and may vary based on season, specific itinerary, and vehicle availability. Please contact us for a precise quote.
-                    </p>
+                </div>
+                <p class="text-sm text-slate-200/80 mt-4">
+                    Prices valid for Mysore city pickups. Bangalore pickup adds highway tolls and additional driver hours. GST applicable as per government guidelines.
+                </p>
+            </div>
+        </section>
 
-                    <div class="mt-10 text-center">
-                        <a href="index.html#booking-widget" class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-lg text-white bg-primary-600 hover:bg-primary-700">
-                            Book Your Mysore 1 Day Tour
+        <section class="cta-panel" id="booking">
+            <div class="max-w-5xl mx-auto">
+                <h2>Ready To Customise Your Mysore Day?</h2>
+                <p>
+                    Our team responds within 20 minutes between 6 AM and 11 PM IST with available slots, tailored itineraries, and transparent cost sheets.
+                </p>
+                <div class="grid gap-6 md:grid-cols-2">
+                    <div class="flex flex-col gap-2">
+                        <span class="font-semibold text-lg">Call or WhatsApp</span>
+                        <a href="tel:+919611288339" class="inline-flex items-center gap-2 text-base font-semibold text-slate-900">
+                            <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-2.836-.184-5.233-2.58-5.417-5.417l1.293-.97c.362-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z"/></svg>
+                            +91 96112 88339
+                        </a>
+                        <a href="https://wa.me/919611288339?text=Hi%20Heritage%20Taxi%20Mysore!%20I%27m%20interested%20in%20the%20Mysore%201-Day%20Tour%20plan.%20Please%20connect%20with%20me." class="inline-flex items-center gap-2 text-base font-semibold text-slate-900">
+                            <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path fill="currentColor" d="M16.003 3C9.384 3 4 8.383 4 14.998c0 2.418.726 4.707 2.101 6.678L4 28.999l7.5-2.035a11.965 11.965 0 0 0 4.502.87h.001c6.62 0 12.003-5.383 12.003-12.001C27.998 8.383 22.624 3 16.003 3Zm6.89 17.008c-.29.817-1.685 1.566-2.32 1.67-.595.096-1.36.137-2.197-.138-.507-.162-1.158-.375-2-1.015-3.527-2.617-5.12-5.586-5.274-5.836-.155-.25-1.26-1.68-1.26-3.2 0-1.518.798-2.265 1.08-2.577.29-.319.768-.464 1.22-.464.146 0 .278.007.398.013.35.015.525.036.755.594.29.706.995 2.442 1.08 2.62.085.174.14.378.026.61-.114.233-.17.378-.32.583-.146.204-.307.457-.437.614-.146.171-.298.36-.128.708.171.343.76 1.253 1.634 2.03 1.124.997 2.07 1.308 2.414 1.452.345.145.548.121.75-.073.204-.195.87-1.015 1.102-1.364.232-.35.465-.291.78-.175.318.117 2.007.945 2.352 1.117.345.171.575.257.661.402.085.146.085.844-.206 1.661Z"/></svg>
+                            Chat on WhatsApp
                         </a>
                     </div>
+                    <div class="flex flex-col gap-4">
+                        <span class="font-semibold text-lg">Share Trip Preferences</span>
+                        <ul class="list-disc list-inside text-base">
+                            <li>Pickup location and preferred start time</li>
+                            <li>Number of travelers and child seats required</li>
+                            <li>Interest areas (heritage, wildlife, shopping, food)</li>
+                            <li>Add-on requests (guide, temple puja, market walk)</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="flex flex-wrap gap-3">
+                    <a href="mailto:info@heritagetaximysore.com" class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-slate-800/20 bg-white/70 text-sm font-semibold text-slate-900 hover:bg-white">
+                        Email Detailed Plan
+                    </a>
+                    <a href="index.html#reviews" class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-slate-800/20 bg-white/40 text-sm font-semibold text-slate-900 hover:bg-white/70">
+                        Read Guest Stories
+                    </a>
                 </div>
             </div>
         </section>
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-secondary-900" aria-labelledby="footer-heading">
-        <h2 id="footer-heading" class="sr-only">Footer</h2>
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Contact Info -->
-                <div>
-                    <h3 class="text-xl font-bold text-white">Heritage Taxi Service Mysore</h3>
-                    <p class="mt-4 text-base text-secondary-300">
-                        Your trusted partner for exploring Mysore and beyond.
-                    </p>
-                    <div class="mt-6 space-y-4">
-                        <p class="flex items-center text-base text-secondary-300">
-                            <svg class="flex-shrink-0 h-5 w-5 text-primary-400 mr-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.06-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path></svg>
-                            <a href="tel:+919611288339" class="hover:text-white">+91 96112 88339</a>
-                        </p>
-                        <p class="flex items-center text-base text-secondary-300">
-                            <svg class="flex-shrink-0 h-5 w-5 text-primary-400 mr-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path></svg>
-                            <a href="mailto:info@heritagetaximysore.com" class="hover:text-white">info@heritagetaximysore.com</a>
-                        </p>
-                    </div>
-                </div>
-                <!-- Quick Links -->
-                <div>
-                    <h3 class="text-sm font-semibold text-secondary-400 tracking-wider uppercase">Quick Links</h3>
-                    <ul role="list" class="mt-4 space-y-4">
-                        <li><a href="index.html#services" class="text-base text-secondary-300 hover:text-white">Our Services</a></li>
-                        <li><a href="index.html#tours" class="text-base text-secondary-300 hover:text-white">Tour Packages</a></li>
-                        <li><a href="index.html#fleet" class="text-base text-secondary-300 hover:text-white">Our Fleet</a></li>
-                        <li><a href="index.html#blog" class="text-base text-secondary-300 hover:text-white">Mysore Travel Guide</a></li>
-                    </ul>
-                </div>
-                <!-- Services -->
-                <div>
-                    <h3 class="text-sm font-semibold text-secondary-400 tracking-wider uppercase">Services</h3>
-                    <ul role="list" class="mt-4 space-y-4">
-                        <li><a href="index.html#services" class="text-base text-secondary-300 hover:text-white">Mysore Local Sightseeing</a></li>
-                        <li><a href="index.html#services" class="text-base text-secondary-300 hover:text-white">Outstation Taxi</a></li>
-                        <li><a href="index.html#services" class="text-base text-secondary-300 hover:text-white">Airport Transfers</a></li>
-                        <li><a href="index.html#tours" class="text-base text-secondary-300 hover:text-white">Coorg & Ooty Packages</a></li>
-                    </ul>
-                </div>
+    <a href="https://wa.me/919611288339?text=Hi%20Heritage%20Taxi%20Mysore!%20I%27m%20interested%20in%20the%20Mysore%201-Day%20Tour%20plan.%20Please%20connect%20with%20me." class="floating-whatsapp" aria-label="Chat on WhatsApp">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" class="h-7 w-7"><path fill="currentColor" d="M16.003 3C9.384 3 4 8.383 4 14.998c0 2.418.726 4.707 2.101 6.678L4 28.999l7.5-2.035a11.965 11.965 0 0 0 4.502.87h.001c6.62 0 12.003-5.383 12.003-12.001C27.998 8.383 22.624 3 16.003 3Zm6.89 17.008c-.29.817-1.685 1.566-2.32 1.67-.595.096-1.36.137-2.197-.138-.507-.162-1.158-.375-2-1.015-3.527-2.617-5.12-5.586-5.274-5.836-.155-.25-1.26-1.68-1.26-3.2 0-1.518.798-2.265 1.08-2.577.29-.319.768-.464 1.22-.464.146 0 .278.007.398.013.35.015.525.036.755.594.29.706.995 2.442 1.08 2.62.085.174.14.378.026.61-.114.233-.17.378-.32.583-.146.204-.307.457-.437.614-.146.171-.298.36-.128.708.171.343.76 1.253 1.634 2.03 1.124.997 2.07 1.308 2.414 1.452.345.145.548.121.75-.073.204-.195.87-1.015 1.102-1.364.232-.35.465-.291.78-.175.318.117 2.007.945 2.352 1.117.345.171.575.257.661.402.085.146.085.844-.206 1.661Z"/></svg>
+    </a>
+
+    <footer class="py-12">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-10 grid gap-10 md:grid-cols-3">
+            <div class="space-y-3">
+                <h3 class="text-xl font-semibold text-white">Heritage Taxi Mysore</h3>
+                <p class="text-slate-300/85 text-sm">
+                    Reliable chauffeurs, curated stays, and thoughtful itineraries across Karnataka, Kerala, and Tamil Nadu.
+                </p>
             </div>
-            <div class="mt-8 border-t border-secondary-700 pt-8 text-center">
-                <p class="text-base text-secondary-400">&copy; 2025 Heritage Taxi Service Mysore. All rights reserved.</p>
+            <div class="space-y-2">
+                <h4 class="font-semibold text-slate-100 text-sm uppercase tracking-wide">Contact</h4>
+                <a href="tel:+919611288339">+91 96112 88339</a><br>
+                <a href="mailto:info@heritagetaximysore.com">info@heritagetaximysore.com</a>
             </div>
+            <div class="space-y-2">
+                <h4 class="font-semibold text-slate-100 text-sm uppercase tracking-wide">Useful Links</h4>
+                <a href="index.html#tours">Tour Packages</a><br>
+                <a href="index.html#fleet">Our Fleet</a><br>
+                <a href="index.html#booking-example">Booking Process</a>
+            </div>
+        </div>
+        <div class="mt-10 text-center text-xs text-slate-400/80">
+            © <span id="current-year"></span> Heritage Taxi Mysore. All rights reserved.
         </div>
     </footer>
 
-    <!-- Floating WhatsApp Button -->
-    <a href="https://wa.me/919611288339?text=Hi%20Heritage%20Taxi"
-       target="_blank"
-       class="fixed bottom-6 right-6 z-50 p-4 bg-green-500 rounded-full shadow-lg text-white hover:bg-green-600 transition-transform hover:scale-110">
-        <span class="sr-only">Chat on WhatsApp</span>
-        <svg class="h-8 w-8" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
-          <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
-        </svg>
-    </a>
-    <!-- Booking Inquiry Modal -->
-    <div id="booking-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 hidden">
-        <div class="bg-white rounded-lg shadow-xl p-6 md:p-8 max-w-sm mx-auto text-center">
-            <h3 class="text-2xl font-bold text-secondary-900">Inquiry Sent!</h3>
-            <p class="mt-4 text-secondary-600">Your WhatsApp is opening. Please review the pre-filled details and send the message. We will confirm your booking and send a payment link shortly!</p>
-            <button id="close-modal-btn" class="mt-6 w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-primary-600 text-base font-medium text-white hover:bg-primary-700">
-                Got it
-            </button>
-        </div>
-    </div>
     <script>
-        // --- Mobile Menu Toggle ---
-        const menuButton = document.getElementById('mobile-menu-button');
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
         const mobileMenu = document.getElementById('mobile-menu');
-        const mobileLinks = mobileMenu.querySelectorAll('a');
-        menuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-        // Close menu when a link is clicked
-        mobileLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-            });
-        });
-        // --- Booking Widget Logic ---
-        // These elements are not present on this page, so this part of the script won't execute,
-        // but it won't cause errors as the elements won't be found.
-        const serviceTypeSelect = document.getElementById('serviceType');
-        const localOptions = document.getElementById('localOptions');
-        const outstationOptions = document.getElementById('outstationOptions');
-        const airportOptions = document.getElementById('airportOptions');
-        if (serviceTypeSelect) { // Check if element exists before adding listener
-            serviceTypeSelect.addEventListener('change', () => {
-                if (localOptions) localOptions.classList.add('hidden');
-                if (outstationOptions) outstationOptions.classList.add('hidden');
-                if (airportOptions) airportOptions.classList.add('hidden');
-                const selectedService = serviceTypeSelect.value;
-                if (selectedService === 'local' && localOptions) {
-                    localOptions.classList.remove('hidden');
-                } else if (selectedService === 'outstation' && outstationOptions) {
-                    outstationOptions.classList.remove('hidden');
-                } else if (selectedService === 'airport' && airportOptions) {
-                    airportOptions.classList.remove('hidden');
-                }
+        if (mobileMenuButton) {
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
             });
         }
-        // --- Set minimum date for date pickers to today ---
-        const pickupDateInput = document.getElementById('pickupDate');
-        const returnDateInput = document.getElementById('returnDate');
-        const today = new Date().toISOString().split('T')[0];
-        if (pickupDateInput) pickupDateInput.setAttribute('min', today);
-        if (returnDateInput) returnDateInput.setAttribute('min', today);
-
-        // --- Handle Booking Form Submission ---
-        const bookingForm = document.getElementById('booking-form');
-        const bookingModal = document.getElementById('booking-modal');
-        const closeModalBtn = document.getElementById('close-modal-btn');
-
-        if (bookingForm) { // Only add listener if the form exists
-            bookingForm.addEventListener('submit', (event) => {
-                event.preventDefault(); // Stop form from submitting normally
-                
-                // Collect all form data
-                const serviceType = document.getElementById('serviceType').value;
-                const pickupLocation = document.getElementById('pickupLocation').value;
-                const pickupDate = document.getElementById('pickupDate').value;
-                const pickupTime = document.getElementById('pickupTime').value;
-                const vehicleType = document.getElementById('vehicleType').value;
-                let message = '--- New Taxi Booking Inquiry ---\n\n';
-                message += `*Service Type:* ${serviceType}\n`;
-                message += `*Pickup Location:* ${pickupLocation}\n`;
-                message += `*Pickup Date:* ${pickupDate}\n`;
-                message += `*Pickup Time:* ${pickupTime}\n`;
-                message += `*Vehicle:* ${vehicleType}\n\n`;
-                // Add service-specific details
-                if (serviceType === 'local') {
-                    const localPackage = document.getElementById('localPackage').value;
-                    message += `*Package:* ${localPackage}\n`;
-                } else if (serviceType === 'outstation') {
-                    const destination = document.getElementById('outstationDestination').value;
-                    const returnDate = document.getElementById('returnDate').value;
-                    message += `*Destination:* ${destination}\n`;
-                    if (returnDate) {
-                        message += `*Return Date:* ${returnDate}\n`;
-                    } else {
-                        message += `*Trip Type:* One-Way\n`;
-                    }
-                } else if (serviceType === 'airport') {
-                    const airport = document.getElementById('airportName').value;
-                    const transfer = document.getElementById('transferType').value;
-                    message += `*Airport:* ${airport}\n`;
-                    message += `*Transfer:* ${transfer}\n`;
-                    // Add Flight Number field if we had one
-                    // const flightNumber = document.getElementById('flightNumber').value;
-                    // if (flightNumber) message += `*Flight No:* ${flightNumber}\n`;
-                }
-                message += '\n----------------------------------\n';
-                message += 'Please confirm availability and price. My name is:\nMy contact number is:';
-                // --- Open WhatsApp ---
-                const phoneNumber = '919611288339';
-                const encodedMessage = encodeURIComponent(message);
-                const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
-                window.open(whatsappURL, '_blank');
-                // --- Show Modal ---
-                if (bookingModal) bookingModal.classList.remove('hidden');
-            });
-        }
-        if (closeModalBtn) { // Only add listener if the button exists
-            closeModalBtn.addEventListener('click', () => {
-                if (bookingModal) bookingModal.classList.add('hidden');
-            });
+        const yearTarget = document.getElementById('current-year');
+        if (yearTarget) {
+            yearTarget.textContent = new Date().getFullYear();
         }
     </script>
 </body>
