@@ -1,0 +1,385 @@
+﻿<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mysore 8-Day Tour Packages | Heritage Taxi Mysore</title>
+    <meta name="description" content="Handcrafted eight-day private tours looping Mysore, Coorg, Wayanad, Ooty, and Kodaikanal with chauffeur-driven comfort, curated activities, and relaxed pacing." />
+    <link rel="canonical" href="https://www.heritagetaximysore.com/8-days-tour.html">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --color-primary-200: #bfdbfe;
+            --color-primary-300: #93c5fd;
+            --color-primary-500: #2563eb;
+            --color-primary-600: #1d4ed8;
+            --color-primary-700: #1e3a8a;
+            --color-emerald-500: #059669;
+            --color-emerald-600: #047857;
+            --color-amber-400: #fbbf24;
+            --color-amber-500: #f59e0b;
+            --color-midnight: #0f172a;
+            --glass-border: rgba(148, 163, 184, 0.28);
+            --glass-border-strong: rgba(148, 163, 184, 0.45);
+            --glass-shadow: 0 28px 60px -30px rgba(15, 23, 42, 0.58);
+            --glass-shadow-strong: 0 40px 80px -32px rgba(15, 23, 42, 0.75);
+            --radius-xl: 1.5rem;
+            --radius-lg: 1rem;
+            --transition-base: all 0.35s ease;
+        }
+        body {
+            font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+            background-image: url('pictures/mehal2.jpeg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: var(--color-midnight);
+            min-height: 100vh;
+            position: relative;
+            line-height: 1.6;
+        }
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(15, 23, 42, 0.9), rgba(30, 64, 175, 0.7), rgba(6, 95, 70, 0.6));
+            opacity: 0.92;
+            backdrop-filter: blur(8px);
+            z-index: 0;
+        }
+        body > * {
+            position: relative;
+            z-index: 1;
+        }
+        main {
+            display: flex;
+            flex-direction: column;
+            gap: clamp(2.5rem, 6vw, 3.75rem);
+            padding-bottom: 5rem;
+        }
+        .site-header {
+            background: rgba(15, 23, 42, 0.82);
+            backdrop-filter: blur(14px);
+            border-bottom: 1px solid rgba(148, 163, 184, 0.28);
+            box-shadow: 0 22px 48px -28px rgba(15, 23, 42, 0.65);
+        }
+        .logo-text {
+            color: #fff;
+            letter-spacing: 0.02em;
+        }
+        .nav-link {
+            font-weight: 600;
+            color: rgba(226, 232, 240, 0.92);
+            padding: 0.35rem 0.65rem;
+            border-radius: 999px;
+            transition: var(--transition-base);
+        }
+        .nav-link svg { opacity: 0.85; }
+        .nav-link:hover {
+            color: #fff;
+            background: rgba(37, 99, 235, 0.18);
+            box-shadow: 0 12px 26px -18px rgba(37, 99, 235, 0.65);
+        }
+        .dropdown:hover .dropdown-content { display: block; }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            top: calc(100% + 0.5rem);
+            left: 0;
+            background: rgba(10, 14, 23, 0.85);
+            padding: 0.6rem 0;
+            min-width: 220px;
+            border-radius: 1rem;
+            border: 1px solid rgba(148, 163, 184, 0.35);
+            box-shadow: 0 30px 60px -25px rgba(15, 23, 42, 0.7);
+            backdrop-filter: blur(14px);
+            z-index: 50;
+        }
+        .dropdown-content a {
+            display: block;
+            padding: 0.55rem 1rem;
+            font-size: 0.9rem;
+            color: rgba(226, 232, 240, 0.92);
+            transition: var(--transition-base);
+        }
+        .dropdown-content a:hover {
+            background: rgba(37, 99, 235, 0.22);
+            color: #fff;
+            padding-left: 1.2rem;
+        }
+        #mobile-menu {
+            background: rgba(15, 23, 42, 0.94);
+            border-bottom: 1px solid rgba(148, 163, 184, 0.25);
+            box-shadow: 0 20px 45px -30px rgba(15, 23, 42, 0.7);
+        }
+        #mobile-menu a {
+            color: rgba(226, 232, 240, 0.9);
+            border-radius: 0.75rem;
+        }
+        #mobile-menu a:hover {
+            background: rgba(37, 99, 235, 0.18);
+            color: #fff;
+        }
+        .primary-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.35rem;
+            padding: 0.6rem 1.4rem;
+            border-radius: 999px;
+            font-weight: 600;
+            color: var(--color-midnight);
+            background: linear-gradient(135deg, var(--color-amber-400), var(--color-amber-500));
+            box-shadow: 0 18px 32px -20px rgba(245, 158, 11, 0.6);
+            transition: var(--transition-base);
+        }
+        .primary-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 26px 44px -18px rgba(245, 158, 11, 0.7);
+            color: var(--color-midnight);
+        }
+        .inner-hero {
+            position: relative;
+            padding: clamp(4rem, 8vw, 6rem) 0;
+            margin: clamp(1.5rem, 5vw, 3rem) clamp(1rem, 4vw, 3rem) 0;
+            border-radius: var(--radius-xl);
+            overflow: hidden;
+            background: linear-gradient(135deg, rgba(15, 23, 42, 0.9), rgba(30, 64, 175, 0.75));
+            box-shadow: 0 40px 80px -50px rgba(15, 23, 42, 0.8);
+            color: #fff;
+        }
+        .inner-hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at 10% 15%, rgba(59, 130, 246, 0.45), transparent 55%),
+                        radial-gradient(circle at 80% 80%, rgba(6, 95, 70, 0.55), transparent 65%);
+            opacity: 0.9;
+            pointer-events: none;
+        }
+        .inner-hero > * { position: relative; z-index: 1; }
+        .accent-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.4rem 0.9rem;
+            border-radius: 999px;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.18em;
+            background: rgba(236, 254, 255, 0.2);
+            color: rgba(191, 219, 254, 0.95);
+            font-weight: 700;
+        }
+        .inner-hero h1 {
+            margin-top: 1.25rem;
+            font-size: clamp(2.6rem, 5vw, 3.9rem);
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            background: linear-gradient(120deg, #fff, var(--color-primary-300));
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+        .inner-hero p {
+            max-width: 54rem;
+            margin-top: 1rem;
+            color: rgba(226, 232, 240, 0.86);
+            font-size: clamp(1.05rem, 2vw, 1.25rem);
+        }
+        .hero-pills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.65rem;
+            margin-top: 1.75rem;
+        }
+        .hero-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.4rem 0.95rem;
+            border-radius: 999px;
+            background: rgba(148, 163, 184, 0.2);
+            border: 1px solid rgba(191, 219, 254, 0.35);
+            backdrop-filter: blur(10px);
+            font-size: 0.85rem;
+            color: rgba(226, 232, 240, 0.9);
+        }
+        .breadcrumb {
+            margin-top: 1.75rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            font-size: 0.95rem;
+            color: rgba(226, 232, 240, 0.78);
+        }
+        .breadcrumb a {
+            color: rgba(224, 231, 255, 0.95);
+            transition: var(--transition-base);
+        }
+        .breadcrumb a:hover { color: #fff; }
+        .page-section {
+            margin: 0 clamp(1rem, 4vw, 3rem);
+            padding: clamp(2.5rem, 6vw, 3.5rem);
+            border-radius: var(--radius-xl);
+            background: rgba(241, 245, 249, 0.08);
+            border: 1px solid var(--glass-border);
+            box-shadow: var(--glass-shadow);
+            backdrop-filter: blur(18px);
+        }
+        .section-heading {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+            margin-bottom: 2.25rem;
+        }
+        .section-heading h2 {
+            font-size: clamp(1.9rem, 3.8vw, 2.5rem);
+            font-weight: 700;
+            color: #f8fafc;
+        }
+        .section-heading p {
+            color: rgba(226, 232, 240, 0.78);
+            max-width: 48rem;
+            font-size: 1rem;
+        }
+        .stats-grid {
+            display: grid;
+            gap: 1.4rem;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        }
+        .stat-card {
+            padding: 1.6rem;
+            border-radius: var(--radius-lg);
+            background: linear-gradient(155deg, rgba(15, 23, 42, 0.78), rgba(30, 64, 175, 0.55));
+            border: 1px solid var(--glass-border-strong);
+            box-shadow: var(--glass-shadow);
+            color: rgba(226, 232, 240, 0.92);
+        }
+        .stat-label {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.18em;
+            color: rgba(191, 219, 254, 0.75);
+        }
+        .stat-value {
+            margin-top: 0.6rem;
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #fff;
+        }
+        .stat-caption {
+            margin-top: 0.75rem;
+            font-size: 0.95rem;
+            line-height: 1.55;
+            color: rgba(226, 232, 240, 0.75);
+        }
+        .highlight-grid {
+            display: grid;
+            gap: 1.4rem;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        }
+        .highlight-card {
+            padding: 1.85rem;
+            border-radius: var(--radius-lg);
+            background: linear-gradient(160deg, rgba(255, 255, 255, 0.14), rgba(148, 163, 184, 0.12));
+            border: 1px solid rgba(226, 232, 240, 0.28);
+            box-shadow: var(--glass-shadow);
+            color: rgba(226, 232, 240, 0.92);
+        }
+        .highlight-card h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #fff;
+            margin-bottom: 0.75rem;
+        }
+        .highlight-card p {
+            font-size: 0.95rem;
+            color: rgba(226, 232, 240, 0.78);
+        }
+        .itinerary-grid {
+            display: grid;
+            gap: 1.5rem;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        }
+        .itinerary-card {
+            display: flex;
+            flex-direction: column;
+            gap: 1.1rem;
+            padding: 2rem 1.75rem;
+            border-radius: var(--radius-lg);
+            background: linear-gradient(175deg, rgba(15, 23, 42, 0.78), rgba(59, 130, 246, 0.28));
+            border: 1px solid var(--glass-border-strong);
+            box-shadow: var(--glass-shadow-strong);
+            color: rgba(226, 232, 240, 0.9);
+            position: relative;
+            overflow: hidden;
+        }
+        .itinerary-card::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at 15% 15%, rgba(59, 130, 246, 0.32), transparent 55%),
+                        radial-gradient(circle at 85% 85%, rgba(6, 95, 70, 0.32), transparent 65%);
+            opacity: 0.9;
+            pointer-events: none;
+        }
+        .itinerary-card > * { position: relative; z-index: 1; }
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            font-size: 0.75rem;
+            padding: 0.35rem 0.85rem;
+            border-radius: 999px;
+            background: rgba(15, 118, 110, 0.32);
+            border: 1px solid rgba(45, 212, 191, 0.45);
+            color: rgba(209, 250, 229, 0.9);
+            text-transform: uppercase;
+            letter-spacing: 0.16em;
+            font-weight: 600;
+        }
+        .itinerary-card h3 {
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: #fff;
+        }
+        .itinerary-card p {
+            color: rgba(226, 232, 240, 0.8);
+            font-size: 0.98rem;
+        }
+        .itinerary-card ul {
+            display: grid;
+            gap: 0.75rem;
+            padding-left: 0;
+            list-style: none;
+        }
+        .itinerary-card li {
+            font-size: 0.95rem;
+            color: rgba(226, 232, 240, 0.82);
+            line-height: 1.55;
+        }
+        .itinerary-card li span {
+            font-weight: 600;
+            color: #fff;
+        }
+        .card-footer {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.65rem;
+            font-size: 0.85rem;
+            color: rgba(191, 219, 254, 0.85);
+        }
+        .info-grid {
+            display: grid;
+            gap: 1.4rem;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        }
+        .info-card {
+            padding: 1.9rem;
+            border-radius: var(--radius-lg);
+            border: 1px solid rgba(148, 163, 184, 0.35);
+            box-shadow: var(--glass-shadow);
+   
